@@ -1,0 +1,27 @@
+{
+    "get_meals": {
+        "meals": [
+            {
+                "id": 1,
+                "title": "朝食に食べたいサンドイッチ",
+                "summary": "気持ち良い朝の目覚めにぴったり。ルノアールのサンドイッチが食べたいなぁ。",
+                "image_name": "sample1.jpg",
+                "rating": 9.1
+            },
+            {
+                "id": 2,
+                "title": "最強のビーフステーキ",
+                "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
+                "image_name": "sample2.jpg",
+                "rating": 9.6
+            },
+            {
+                "id": 3,
+                "title": "中華料理の前菜",
+                "summary": "中華料理はいつも僕のテンションを上げてくれる。前菜だけでも魅力的である。",
+                "image_name": "sample3.jpg",
+                "rating": 8.7
+            }
+        ]
+    }
+}
