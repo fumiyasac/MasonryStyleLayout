@@ -1,27 +1,34 @@
+// Mock用のJSONレスポンスサーバーの初期化設定
 const jsonServer = require('json-server');
 const server = jsonServer.create();
+
+// Database構築用のJSONファイル
 const router = jsonServer.router('datasource/db.json');
+
+// 各種設定用
 const middlewares = jsonServer.defaults();
+const rewrite_rules = jsonServer.rewriter({
+    "/api/mock/v1/meals/list" : "/get_meal_list",
+    "/api/mock/v1/meals/detail/:id" : "/get_meal_by_id/:id",
+});
 
-// db.jsonに対応させるデータ内容を記載する
-server.use(jsonServer.rewriter({
-    "/api/mock/v1/meals": "/get_meals"
-}))
+// リクエストのルールを設定する
+server.use(rewrite_rules);
 
-// ミドルウェアの設定 (コンソール出力するロガーやキャッシュの設定など)
+// ミドルウェアを設定する (※コンソール出力するロガーやキャッシュの設定等)
 server.use(middlewares);
 
+// 受信したリクエストにおいてGET送信時のみ許可する
 server.use(function (req, res, next) {
-    // GET送信時のみ許可する
     if (req.method === 'GET') {
         next();
     }
-})
+});
 
-// db.jsonを基にデフォルトのルーティングを設定する
+// ルーティングを設定する
 server.use(router);
 
-// サーバをポート 3000 で起動する
+// サーバをポート3000で起動する
 server.listen(3000, () => {
     console.log('JSON Server is running');
 });

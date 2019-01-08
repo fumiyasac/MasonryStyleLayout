@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072A721E4B70E0073963C /* MealsAPIManager.swift */; };
 		DED117CA21E2ED5300ABD919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED117C921E2ED5300ABD919 /* AppDelegate.swift */; };
 		DED117CC21E2ED5300ABD919 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED117CB21E2ED5300ABD919 /* MainViewController.swift */; };
 		DED117CF21E2ED5300ABD919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED117CD21E2ED5300ABD919 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 		083FF03CBA96B988758FAEA2 /* Pods_MasonryStyleLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasonryStyleLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D49ABA57B92FC5AA1B2AE5D /* Pods-MasonryStyleLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.release.xcconfig"; sourceTree = "<group>"; };
 		B971CF1B5CD79F18299B1A47 /* Pods-MasonryStyleLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		DED072A721E4B70E0073963C /* MealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIManager.swift; sourceTree = "<group>"; };
 		DED117C621E2ED5300ABD919 /* MasonryStyleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryStyleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED117C921E2ED5300ABD919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED117CB21E2ED5300ABD919 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DED072A621E4AFF90073963C /* APIManager */ = {
+			isa = PBXGroup;
+			children = (
+				DED072A721E4B70E0073963C /* MealsAPIManager.swift */,
+			);
+			path = APIManager;
+			sourceTree = "<group>";
+		};
 		DED117BD21E2ED5200ABD919 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +142,7 @@
 				DED117D521E2ED5900ABD919 /* Info.plist */,
 				DED117C921E2ED5300ABD919 /* AppDelegate.swift */,
 				DED117D021E2ED5900ABD919 /* Assets.xcassets */,
+				DED072A621E4AFF90073963C /* APIManager */,
 				DED117FA21E34DE900ABD919 /* Extension */,
 				DED117F721E2F05700ABD919 /* Storyboard */,
 				DED117F921E2F07200ABD919 /* View */,
@@ -394,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */,
 				DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */,
 				DED117FD21E34E7300ABD919 /* NSObjectProtocolExtension.swift in Sources */,
 				DED1180321E3551D00ABD919 /* PhotoGalleryCollectionViewCell.swift in Sources */,
