@@ -78,6 +78,7 @@ class MealsAPIManager: APIManagerProtocol {
     // ※ Swift4.1以降では書き方が変わっているのでご注意を!
     // https://stackoverflow.com/questions/48932536/swift4-error-cannot-convert-value-of-type-void-to-expected-argument-typ
 
+    // 食事メニュー一覧を取得する
     func getMealList(perPage: Int) -> Promise<JSON> {
 
         let requestUrl = MealsAPIManager.serverUrl + EndPoint.list.getPath()
@@ -106,6 +107,7 @@ class MealsAPIManager: APIManagerProtocol {
         }
     }
 
+    // 引数のIDに紐づく食事メニューを取得する
     func getMealBy(id: Int) -> Promise<JSON> {
 
         let requestUrl = MealsAPIManager.serverUrl + EndPoint.detail.getPath() + String(id)
