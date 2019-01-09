@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
                 print(error.localizedDescription)
             }
 
-        // (その2) ID指定のデータを取得するテスト
+        // (その2) 正常なID指定のデータを取得するテスト
         MealsAPIManager.shared.getMealBy(id: 1)
             .done { json in
                 // 受け取ったJSONに関する処理をする
@@ -38,5 +38,16 @@ class MainViewController: UIViewController {
                 // エラーを受け取った際の処理をする
                 print(error.localizedDescription)
             }
+
+        // (その3) 異常なID指定のデータを取得するテスト
+        MealsAPIManager.shared.getMealBy(id: 999)
+            .done { json in
+                // 受け取ったJSONに関する処理をする
+                print(json)
+            }
+            .catch { error in
+                // エラーを受け取った際の処理をする
+                print(error.localizedDescription)
+        }
     }
 }

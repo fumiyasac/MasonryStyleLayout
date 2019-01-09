@@ -22,7 +22,11 @@ protocol APIManagerProtocol {
 
 class MealsAPIManager: APIManagerProtocol {
 
-    private static let SERVER_URL = "http://localhost:3000/api/mock/v1/meals/"
+    // MEMO: MockサーバーへのURL
+    private static let serverUrl = "http://localhost:3000/api/mock/v1/meals/"
+
+    // MEMO: 仮のUserAgent
+    private static let requestHeader = ["User-Agent" : Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String]
 
     // MARK: - Singleton Instance
 
@@ -32,20 +36,21 @@ class MealsAPIManager: APIManagerProtocol {
 
     // MARK: - Enum
 
+    // エンドポイントの定義
     private enum EndPoint {
         case list
-        case detail
         case search
+        case detail
         case recommend
 
         func getPath() -> String {
             switch self {
             case .list:
                 return "list"
-            case .detail:
-                return "detail/"
             case .search:
                 return "search"
+            case .detail:
+                return "detail/"
             case .recommend:
                 return "recommend/"
             }
@@ -74,7 +79,7 @@ class MealsAPIManager: APIManagerProtocol {
 
     func getMealList(perPage: Int) -> Promise<JSON> {
 
-        let baseUri = MealsAPIManager.SERVER_URL + EndPoint.list.getPath()
+        let requestUrl = MealsAPIManager.serverUrl + EndPoint.list.getPath()
 
         // JSON Serverの定義に合わせたfilter条件を定義する
         // (参考) https://github.com/typicode/json-server
@@ -83,7 +88,7 @@ class MealsAPIManager: APIManagerProtocol {
         let parameters: [String : Any] = [:]
 
         return Promise { seal in
-            Alamofire.request(baseUri, method: .get, parameters: parameters).validate().responseJSON { response in
+            Alamofire.request(requestUrl, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
 
                 switch response.result {
 
@@ -102,10 +107,10 @@ class MealsAPIManager: APIManagerProtocol {
 
     func getMealBy(id: Int) -> Promise<JSON> {
 
-        let baseUri = MealsAPIManager.SERVER_URL + EndPoint.detail.getPath() + String(id)
+        let requestUrl = MealsAPIManager.serverUrl + EndPoint.detail.getPath() + String(id)
 
         return Promise { seal in
-            Alamofire.request(baseUri, method: .get, parameters: [:]).validate().responseJSON { response in
+            Alamofire.request(requestUrl, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
 
                 switch response.result {
 
