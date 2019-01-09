@@ -26,7 +26,8 @@ class MealsAPIManager: APIManagerProtocol {
     private static let serverUrl = "http://localhost:3000/api/mock/v1/meals/"
 
     // MEMO: 仮のUserAgent
-    private static let requestHeader = ["User-Agent" : Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String]
+    private static let bundleIdentifier = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
+    private static let requestHeader = ["User-Agent" : bundleIdentifier]
 
     // MARK: - Singleton Instance
 
