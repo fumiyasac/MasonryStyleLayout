@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072A721E4B70E0073963C /* MealsAPIManager.swift */; };
+		DED072AB21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072AA21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift */; };
 		DED117CA21E2ED5300ABD919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED117C921E2ED5300ABD919 /* AppDelegate.swift */; };
 		DED117CC21E2ED5300ABD919 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED117CB21E2ED5300ABD919 /* MainViewController.swift */; };
 		DED117CF21E2ED5300ABD919 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DED117CD21E2ED5300ABD919 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		1D49ABA57B92FC5AA1B2AE5D /* Pods-MasonryStyleLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.release.xcconfig"; sourceTree = "<group>"; };
 		B971CF1B5CD79F18299B1A47 /* Pods-MasonryStyleLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		DED072A721E4B70E0073963C /* MealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIManager.swift; sourceTree = "<group>"; };
+		DED072AA21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCollectionViewLayout.swift; sourceTree = "<group>"; };
 		DED117C621E2ED5300ABD919 /* MasonryStyleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryStyleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED117C921E2ED5300ABD919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DED117CB21E2ED5300ABD919 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,28 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
+		DED072A921E710490073963C /* PhotoGalleryCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				DED072AA21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift */,
+			);
+			path = PhotoGalleryCollectionViewLayout;
+			sourceTree = "<group>";
+		};
+		DED072AC21E74D0D0073963C /* PhotoGalleryViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoGalleryViewModel;
+			sourceTree = "<group>";
+		};
+		DED072AD21E74D1E0073963C /* PhotoGalleryModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoGalleryModel;
+			sourceTree = "<group>";
+		};
 		DED117BD21E2ED5200ABD919 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +168,8 @@
 				DED117D021E2ED5900ABD919 /* Assets.xcassets */,
 				DED072A621E4AFF90073963C /* APIManager */,
 				DED117FA21E34DE900ABD919 /* Extension */,
+				DED072AD21E74D1E0073963C /* PhotoGalleryModel */,
+				DED072AC21E74D0D0073963C /* PhotoGalleryViewModel */,
 				DED117F721E2F05700ABD919 /* Storyboard */,
 				DED117F921E2F07200ABD919 /* View */,
 				DED117F821E2F06500ABD919 /* ViewController */,
@@ -189,6 +215,7 @@
 		DED117F921E2F07200ABD919 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				DED072A921E710490073963C /* PhotoGalleryCollectionViewLayout */,
 				DED1180021E353A400ABD919 /* PhotoGalleryCollectionViewCell */,
 			);
 			path = View;
@@ -407,6 +434,7 @@
 			files = (
 				DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */,
 				DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */,
+				DED072AB21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift in Sources */,
 				DED117FD21E34E7300ABD919 /* NSObjectProtocolExtension.swift in Sources */,
 				DED1180321E3551D00ABD919 /* PhotoGalleryCollectionViewCell.swift in Sources */,
 				DED117CC21E2ED5300ABD919 /* MainViewController.swift in Sources */,
