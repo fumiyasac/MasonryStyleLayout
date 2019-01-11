@@ -8,46 +8,61 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+// MEMO: RxSwiftを利用しないMVVMパターンの利用をする
+// → 書籍「iOS設計パターン入門 第6章 MVVM」で紹介されていたコードを参考に構築しました。
 
-    @IBOutlet weak var mainCollectionView: UICollectionView!
+final class MainViewController: UIViewController {
+
+    private let notificationCenter = NotificationCenter()
+    private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter)
+
+    @IBOutlet weak private var mainCollectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // MEMO: APIからの取得テスト
+        setupNotificationsForDataBinding()
+    }
 
-        // (その1) データの一覧を取得するテスト
-        MealsAPIManager.shared.getMealList(perPage: 0)
-            .done{ json in
-                // 受け取ったJSONに関する処理をする
-                print(json)
-            }
-            .catch { error in
-                // エラーを受け取った際の処理をする
-                print(error.localizedDescription)
-            }
+    // MARK: - Private Function
 
-        // (その2) 正常なID指定のデータを取得するテスト
-        MealsAPIManager.shared.getMealBy(id: 1)
-            .done { json in
-                // 受け取ったJSONに関する処理をする
-                print(json)
-            }
-            .catch { error in
-                // エラーを受け取った際の処理をする
-                print(error.localizedDescription)
-            }
+    private func setupNotificationsForDataBinding() {
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(self.updateStateForFetching),
+            name: viewModel.isFetchingPhotoList,
+            object: nil
+        )
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(self.updateStateForSuccess),
+            name: viewModel.successFetchPhotoList,
+            object: nil
+        )
+        notificationCenter.addObserver(
+            self,
+            selector: #selector(self.updateStateForFailure),
+            name: viewModel.failureFetchPhotoList,
+            object: nil
+        )
+        viewModel.fetchPhotoList()
+    }
+}
 
-        // (その3) 異常なID指定のデータを取得するテスト
-        MealsAPIManager.shared.getMealBy(id: 999)
-            .done { json in
-                // 受け取ったJSONに関する処理をする
-                print(json)
-            }
-            .catch { error in
-                // エラーを受け取った際の処理をする
-                print(error.localizedDescription)
-        }
+extension MainViewController {
+
+    // MARK: - Function
+
+    @objc func updateStateForFetching(notification: Notification) {
+        print("updateStateForFetching:")
+    }
+
+    @objc func updateStateForSuccess(notification: Notification) {
+        print("updateStateForSuccess:")
+        print(PhotoGalleryDataObjectManager.shared.photos)
+    }
+
+    @objc func updateStateForFailure(notification: Notification) {
+        print("updateStateForFailure:")
     }
 }

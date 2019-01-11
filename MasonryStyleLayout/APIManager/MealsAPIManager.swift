@@ -14,10 +14,9 @@ import PromiseKit
 protocol APIManagerProtocol {
     func getMealList(perPage: Int) -> Promise<JSON>
     func getMealBy(id: Int) -> Promise<JSON>
-    /*
-    func searchMealBy(keywords: String) -> Promise<JSON>
-    func getRecommendMealsBy(id: String) -> Promise<JSON>
-    */
+
+    //func searchMealBy(keywords: String) -> Promise<JSON>
+    //func getRecommendMealsBy(id: String) -> Promise<JSON>
 }
 
 class MealsAPIManager: APIManagerProtocol {
@@ -27,7 +26,10 @@ class MealsAPIManager: APIManagerProtocol {
 
     // MEMO: 仮のUserAgent
     private static let bundleIdentifier = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
-    private static let requestHeader = ["User-Agent" : bundleIdentifier]
+    private static let requestHeader = [
+        "User-Agent" : bundleIdentifier,
+        "Content-Type" : "application/x-www-from-urlencoded"
+    ]
 
     // MARK: - Singleton Instance
 
@@ -83,28 +85,11 @@ class MealsAPIManager: APIManagerProtocol {
 
         let requestUrl = MealsAPIManager.serverUrl + EndPoint.list.getPath()
 
-        // JSON Serverの定義に合わせたfilter条件を定義する
-        // (参考) https://github.com/typicode/json-server
-        // 設定するパラメーター:
-        // page: ページ番号
+        // TODO: 設定するパラメーターは下記の通り
+        // (page) ページ番号
         let parameters: [String : Any] = [:]
 
-        return Promise { seal in
-            Alamofire.request(requestUrl, method: .get, parameters: parameters, encoding: JSONEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
-
-                switch response.result {
-
-                // 成功時の処理(表示に必要な部分だけを抜き出して返す)
-                case .success(let response):
-                    let json = JSON(response)
-                    seal.fulfill(json["meals"])
-
-                // 失敗時の処理(エラーの結果をそのまま返す)
-                case .failure(let error):
-                    seal.reject(error)
-                }
-            }
-        }
+        return MealsAPIManager.handleMealsApiRequest(url: requestUrl, params: parameters)
     }
 
     // 引数のIDに紐づく食事メニューを取得する
@@ -112,8 +97,19 @@ class MealsAPIManager: APIManagerProtocol {
 
         let requestUrl = MealsAPIManager.serverUrl + EndPoint.detail.getPath() + String(id)
 
+        return MealsAPIManager.handleMealsApiRequest(url: requestUrl)
+    }
+
+    //func searchMealBy(keywords: String) -> Promise<JSON> {}
+    //func getRecommendMealsBy(id: String) -> Promise<JSON> {}
+
+    // MARK: - Private Function
+
+    // Promise型のデータを返却するための共通処理
+    private class func handleMealsApiRequest(url: String, params: [String : Any] = [:]) -> Promise<JSON> {
+
         return Promise { seal in
-            Alamofire.request(requestUrl, method: .get, parameters: [:], encoding: JSONEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
+            Alamofire.request(url, method: .get, parameters: params, encoding: JSONEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
 
                 switch response.result {
 
@@ -129,10 +125,4 @@ class MealsAPIManager: APIManagerProtocol {
             }
         }
     }
-
-    /*
-    func searchMealBy(keywords: String) -> Promise<JSON> {}
-
-    func getRecommendMealsBy(id: String) -> Promise<JSON> {}
-    */
 }
