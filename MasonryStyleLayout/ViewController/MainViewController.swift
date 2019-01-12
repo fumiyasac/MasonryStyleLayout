@@ -16,6 +16,13 @@ final class MainViewController: UIViewController {
     private let notificationCenter = NotificationCenter()
     private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter)
 
+    // MEMO: プロパティの変更タイミングに応じてCollectionViewの更新を実行する
+    private var photoGalleryLists: [PhotoEntity] = [] {
+        didSet {
+            self.mainCollectionView.reloadData()
+        }
+    }
+
     @IBOutlet weak private var mainCollectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -49,6 +56,8 @@ final class MainViewController: UIViewController {
     }
 }
 
+// MARK: - MainViewController
+
 extension MainViewController {
 
     // MARK: - Function
@@ -59,7 +68,7 @@ extension MainViewController {
 
     @objc func updateStateForSuccess(notification: Notification) {
         print("updateStateForSuccess:")
-        print(PhotoGalleryDataObjectManager.shared.photos)
+        print(PhotoGalleryListState.shared.photos)
     }
 
     @objc func updateStateForFailure(notification: Notification) {

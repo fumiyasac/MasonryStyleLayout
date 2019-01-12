@@ -10,7 +10,7 @@
 		DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072A721E4B70E0073963C /* MealsAPIManager.swift */; };
 		DED072AB21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072AA21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift */; };
 		DED072AF21E855C10073963C /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */; };
-		DED072B221E85F640073963C /* PhotoGalleryDataObjectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072B121E85F640073963C /* PhotoGalleryDataObjectManager.swift */; };
+		DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072B121E85F640073963C /* PhotoGalleryListState.swift */; };
 		DED072B421E862D60073963C /* PhotoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072B321E862D60073963C /* PhotoEntity.swift */; };
 		DED117CA21E2ED5300ABD919 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED117C921E2ED5300ABD919 /* AppDelegate.swift */; };
 		DED117CC21E2ED5300ABD919 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED117CB21E2ED5300ABD919 /* MainViewController.swift */; };
@@ -50,7 +50,7 @@
 		DED072A721E4B70E0073963C /* MealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIManager.swift; sourceTree = "<group>"; };
 		DED072AA21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCollectionViewLayout.swift; sourceTree = "<group>"; };
 		DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
-		DED072B121E85F640073963C /* PhotoGalleryDataObjectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryDataObjectManager.swift; sourceTree = "<group>"; };
+		DED072B121E85F640073963C /* PhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryListState.swift; sourceTree = "<group>"; };
 		DED072B321E862D60073963C /* PhotoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoEntity.swift; sourceTree = "<group>"; };
 		DED117C621E2ED5300ABD919 /* MasonryStyleLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MasonryStyleLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DED117C921E2ED5300ABD919 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,12 +146,12 @@
 			path = PhotoGalleryModel;
 			sourceTree = "<group>";
 		};
-		DED072B021E859850073963C /* DataObjectManager */ = {
+		DED072B021E859850073963C /* State */ = {
 			isa = PBXGroup;
 			children = (
-				DED072B121E85F640073963C /* PhotoGalleryDataObjectManager.swift */,
+				DED072B121E85F640073963C /* PhotoGalleryListState.swift */,
 			);
-			path = DataObjectManager;
+			path = State;
 			sourceTree = "<group>";
 		};
 		DED117BD21E2ED5200ABD919 = {
@@ -183,7 +183,7 @@
 				DED117C921E2ED5300ABD919 /* AppDelegate.swift */,
 				DED117D021E2ED5900ABD919 /* Assets.xcassets */,
 				DED072A621E4AFF90073963C /* APIManager */,
-				DED072B021E859850073963C /* DataObjectManager */,
+				DED072B021E859850073963C /* State */,
 				DED117FA21E34DE900ABD919 /* Extension */,
 				DED072AD21E74D1E0073963C /* PhotoGalleryModel */,
 				DED072AC21E74D0D0073963C /* PhotoGalleryViewModel */,
@@ -449,7 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DED072B221E85F640073963C /* PhotoGalleryDataObjectManager.swift in Sources */,
+				DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */,
 				DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */,
 				DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */,
 				DED072AB21E7109F0073963C /* PhotoGalleryCollectionViewLayout.swift in Sources */,

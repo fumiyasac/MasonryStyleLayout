@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 final class PhotoGalleryViewModel {
 
@@ -46,15 +47,12 @@ final class PhotoGalleryViewModel {
         MealsAPIManager.shared.getMealList(perPage: nextPage)
             .done{ json in
 
-                // データ保持用のインスタンスへ格納する
-                let hasNextPage = json["has_next_page"].boolValue
-                let mealPhotoList = json["meals"].map{ (_, targetJSON) in
-                    return PhotoEntity(targetJSON)
-                }
-                PhotoGalleryDataObjectManager.shared.appendNextPhotos(mealPhotoList, hasNextPage: hasNextPage)
+                // データ保持用のStateクラスのインスタンスへ格納する
+                let responseResult = self.parseJSON(json)
+                PhotoGalleryListState.shared.appendNextPhotos(responseResult.mealPhotoList, hasNextPage: responseResult.hasNextPage)
 
                 // データ取得処理成功時のNotification送信
-                self.nextPage = PhotoGalleryDataObjectManager.shared.currentPage
+                self.nextPage = PhotoGalleryListState.shared.currentPage
                 self.notificationCenter.post(name: self.successFetchPhotoList, object: nil)
             }
             .catch { error in
@@ -63,5 +61,15 @@ final class PhotoGalleryViewModel {
                 self.notificationCenter.post(name: self.failureFetchPhotoList, object: nil)
                 print(error.localizedDescription)
             }
+    }
+
+    // MARK: - Private Function
+
+    private func parseJSON(_ json: JSON) -> (mealPhotoList: [PhotoEntity], hasNextPage: Bool) {
+
+        // 取得できたJSONを元にStateへ格納するためのデータを生成する
+        let hasNextPage   = json["has_next_page"].boolValue
+        let mealPhotoList = json["meals"].map{ PhotoEntity($1) }
+        return (mealPhotoList: mealPhotoList, hasNextPage: hasNextPage)
     }
 }
