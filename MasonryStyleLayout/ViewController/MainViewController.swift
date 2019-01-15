@@ -29,6 +29,7 @@ final class MainViewController: UIViewController {
         super.viewDidLoad()
 
         setupNotificationsForDataBinding()
+        setupMainCollectionView()
     }
 
     // MARK: - Private Function
@@ -54,6 +55,36 @@ final class MainViewController: UIViewController {
         )
         viewModel.fetchPhotoList()
     }
+
+    private func setupMainCollectionView() {
+        mainCollectionView.registerCustomCell(PhotoGalleryCollectionViewCell.self)
+        mainCollectionView.dataSource = self
+        mainCollectionView.delegate = self
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+
+extension MainViewController: UICollectionViewDelegate {}
+
+// MARK: - UICollectionViewDataSource
+
+extension MainViewController: UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return photoGalleryLists.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCustomCell(with: PhotoGalleryCollectionViewCell.self, indexPath: indexPath)
+        let targetPhoto = photoGalleryLists[indexPath.row]
+        cell.setCellDisplayData(targetPhoto)
+        return cell
+    }
 }
 
 // MARK: - MainViewController
@@ -69,6 +100,7 @@ extension MainViewController {
     @objc func updateStateForSuccess(notification: Notification) {
         print("updateStateForSuccess:")
         print(PhotoGalleryListState.shared.photos)
+        photoGalleryLists = PhotoGalleryListState.shared.photos
     }
 
     @objc func updateStateForFailure(notification: Notification) {

@@ -13,15 +13,76 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoGalleryCollectionViewCell" customModule="MasonryStyleLayout" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="160" height="210"/>
+            <rect key="frame" x="0.0" y="0.0" width="160" height="250"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="160" height="210"/>
+                <rect key="frame" x="0.0" y="0.0" width="160" height="250"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwk-Jz-pph">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="210"/>
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="250"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトルが入ります。タイトルが入ります。タイトルが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-WE-me0">
+                                <rect key="frame" x="8" y="8" width="144" height="36"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HyJ-pK-lei">
+                                <rect key="frame" x="8" y="52" width="144" height="136"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キャッチコピーが入ります。キャッチコピーが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-3k-ASr">
+                                <rect key="frame" x="8" y="196" width="144" height="22"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
+                                <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rC0-W0-jmu">
+                                <rect key="frame" x="8" y="226" width="144" height="16"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uca-n6-2Tf">
+                                        <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="16" id="cuL-e1-6Vq"/>
+                                            <constraint firstAttribute="width" constant="16" id="hgq-Jd-BqI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投稿者名が入ります。" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ih-5j-NkX">
+                                        <rect key="frame" x="22" y="0.0" width="122" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0ih-5j-NkX" secondAttribute="bottom" id="B9r-ui-cd8"/>
+                                    <constraint firstAttribute="bottom" secondItem="Uca-n6-2Tf" secondAttribute="bottom" id="FXC-Vq-Q50"/>
+                                    <constraint firstItem="Uca-n6-2Tf" firstAttribute="leading" secondItem="rC0-W0-jmu" secondAttribute="leading" id="I7E-sT-aat"/>
+                                    <constraint firstItem="0ih-5j-NkX" firstAttribute="leading" secondItem="Uca-n6-2Tf" secondAttribute="trailing" constant="6" id="VFF-yn-Sc5"/>
+                                    <constraint firstAttribute="height" constant="16" id="bDi-sc-DZV"/>
+                                    <constraint firstAttribute="trailing" secondItem="0ih-5j-NkX" secondAttribute="trailing" id="kUY-hK-3WI"/>
+                                    <constraint firstItem="0ih-5j-NkX" firstAttribute="top" secondItem="rC0-W0-jmu" secondAttribute="top" id="sn1-kZ-Hj5"/>
+                                    <constraint firstItem="Uca-n6-2Tf" firstAttribute="top" secondItem="rC0-W0-jmu" secondAttribute="top" id="vSu-6G-C9O"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rC0-W0-jmu" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="8" id="0Hz-Du-2FB"/>
+                            <constraint firstAttribute="bottom" secondItem="rC0-W0-jmu" secondAttribute="bottom" constant="8" id="2hC-Hj-kQz"/>
+                            <constraint firstItem="M3b-WE-me0" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="8" id="4yo-ty-kdq"/>
+                            <constraint firstAttribute="trailing" secondItem="M3b-WE-me0" secondAttribute="trailing" constant="8" id="BVT-C4-BJa"/>
+                            <constraint firstItem="HyJ-pK-lei" firstAttribute="top" secondItem="M3b-WE-me0" secondAttribute="bottom" constant="8" id="FFJ-Ir-1wQ"/>
+                            <constraint firstAttribute="trailing" secondItem="6IA-3k-ASr" secondAttribute="trailing" constant="8" id="HFc-bP-6gA"/>
+                            <constraint firstItem="6IA-3k-ASr" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="8" id="Iab-m8-TX6"/>
+                            <constraint firstAttribute="trailing" secondItem="HyJ-pK-lei" secondAttribute="trailing" constant="8" id="N8t-b4-TUf"/>
+                            <constraint firstItem="M3b-WE-me0" firstAttribute="top" secondItem="kwk-Jz-pph" secondAttribute="top" constant="8" id="Vdp-8j-aMm"/>
+                            <constraint firstAttribute="trailing" secondItem="rC0-W0-jmu" secondAttribute="trailing" constant="8" id="kZv-cc-l53"/>
+                            <constraint firstItem="6IA-3k-ASr" firstAttribute="top" secondItem="HyJ-pK-lei" secondAttribute="bottom" constant="8" id="omM-LI-KCw"/>
+                            <constraint firstItem="HyJ-pK-lei" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="8" id="rGF-kW-iEd"/>
+                            <constraint firstItem="rC0-W0-jmu" firstAttribute="top" secondItem="6IA-3k-ASr" secondAttribute="bottom" constant="8" id="x3Z-Kf-wX1"/>
+                        </constraints>
                     </view>
                 </subviews>
             </view>
@@ -32,6 +93,13 @@
                 <constraint firstItem="kwk-Jz-pph" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="wtv-IM-x9E"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="authorLabel" destination="0ih-5j-NkX" id="m6m-Hs-wk0"/>
+                <outlet property="iconImageView" destination="Uca-n6-2Tf" id="y9Y-H5-Kz2"/>
+                <outlet property="summaryLabel" destination="6IA-3k-ASr" id="gv1-uC-0g4"/>
+                <outlet property="thumbnailImageView" destination="HyJ-pK-lei" id="vdu-7q-OuX"/>
+                <outlet property="titleLabel" destination="M3b-WE-me0" id="I2u-jF-0Xl"/>
+            </connections>
             <point key="canvasLocation" x="137.59999999999999" y="153.82308845577214"/>
         </collectionViewCell>
     </objects>

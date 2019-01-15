@@ -3,24 +3,83 @@
         "meals": [
             {
                 "id": 1,
+                "author": "fumiyasac(Sample)",
                 "title": "朝食に食べたいサンドイッチ",
                 "summary": "気持ち良い朝の目覚めにぴったり。ルノアールのサンドイッチが食べたいなぁ。",
-                "image_name": "sample1.jpg",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample1.jpg",
                 "rating": "9.1"
             },
             {
                 "id": 2,
+                "author": "fumiyasac(Sample)",
                 "title": "最強のビーフステーキ",
                 "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
-                "image_name": "sample2.jpg",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample2.jpg",
                 "rating": "9.6"
             },
             {
                 "id": 3,
+                "author": "fumiyasac(Sample)",
                 "title": "中華料理の前菜",
                 "summary": "中華料理はいつも僕のテンションを上げてくれる。前菜だけでも魅力的である。",
-                "image_name": "sample3.jpg",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample3.jpg",
                 "rating": "8.7"
+            },
+            {
+                "id": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "オードブルの前菜",
+                "summary": "生のチースは僕はとっても苦手ですが、サーモンとクリームチーズの組み合わせは好きです。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample4.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "アンチョビのシンプルなピザ",
+                "summary": "みんなで食べるピザも美味しいですね。勉強会などでもよく出てくるのでどんなものに出会えるか楽しみです。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample5.jpg",
+                "rating": "8.2"
+            },
+            {
+                "id": 6,
+                "author": "fumiyasac(Sample)",
+                "title": "オマール海老のビスク的な何かのスープ",
+                "summary": "前菜として出てきても、バケットを浸けて食べても美味しい。スープが美味しいと次もなぜか期待してしまう。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample6.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 7,
+                "author": "fumiyasac(Sample)",
+                "title": "東欧周辺でよく食べられているであろうジャガイモ料理",
+                "summary": "寒い地方ではごくごく当たり前なジャガイモ料理ではありますが向こうでは主食になるんですね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample7.jpg",
+                "rating": "8.5"
+            },
+            {
+                "id": 8,
+                "author": "fumiyasac(Sample)",
+                "title": "ボリュームがめっちゃ多いヨーグルトドリンク",
+                "summary": "めっちゃ美味しそうではあるんですが、おやつには多すぎるし朝食でも多すぎる。でもグイッと飲みたい。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample8.jpg",
+                "rating": "8.1"
+            },
+            {
+                "id": 9,
+                "author": "fumiyasac(Sample)",
+                "title": "なぜか美味しそうでついつい買って食べてしまうタコス",
+                "summary": "軽食や朝食で食べたいと思うタコス。毎日ではないけど1つなら朝食にもちょうどいい量ですね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample9.jpg",
+                "rating": "9.1"
+            },
+            {
+                "id": 10,
+                "author": "fumiyasac(Sample)",
+                "title": "ランチでいっぱい食べたい時にオススメな豚バラグリルの定食",
+                "summary": "定食でよく見かける豚バラの焼肉だけども、こんな感じでランチで出てくればめっちゃ豪華なご馳走である。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample10.jpg",
+                "rating": "9.7"
             }
         ],
         "has_next_page": true
@@ -28,24 +87,83 @@
     "get_meal_by_id": [
         {
             "id": 1,
+            "author": "fumiyasac(Sample)",
             "title": "朝食に食べたいサンドイッチ",
             "summary": "気持ち良い朝の目覚めにぴったり。ルノアールのサンドイッチが食べたいなぁ。",
-            "image_name": "sample1.jpg",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample1.jpg",
             "rating": "9.1"
         },
         {
             "id": 2,
+            "author": "fumiyasac(Sample)",
             "title": "最強のビーフステーキ",
             "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
-            "image_name": "sample2.jpg",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample2.jpg",
             "rating": "9.6"
         },
         {
             "id": 3,
+            "author": "fumiyasac(Sample)",
             "title": "中華料理の前菜",
             "summary": "中華料理はいつも僕のテンションを上げてくれる。前菜だけでも魅力的である。",
-            "image_name": "sample3.jpg",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample3.jpg",
             "rating": "8.7"
+        },
+        {
+            "id": 4,
+            "author": "fumiyasac(Sample)",
+            "title": "オードブルの前菜",
+            "summary": "生のチースは僕はとっても苦手ですが、サーモンとクリームチーズの組み合わせは好きです。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample4.jpg",
+            "rating": "8.0"
+        },
+        {
+            "id": 5,
+            "author": "fumiyasac(Sample)",
+            "title": "アンチョビのシンプルなピザ",
+            "summary": "みんなで食べるピザも美味しいですね。勉強会などでもよく出てくるのでどんなものに出会えるか楽しみです。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample5.jpg",
+            "rating": "8.2"
+        },
+        {
+            "id": 6,
+            "author": "fumiyasac(Sample)",
+            "title": "オマール海老のビスク的な何かのスープ",
+            "summary": "前菜として出てきても、バケットを浸けて食べても美味しい。スープが美味しいと次もなぜか期待してしまう。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample6.jpg",
+            "rating": "8.0"
+        },
+        {
+            "id": 7,
+            "author": "fumiyasac(Sample)",
+            "title": "東欧周辺でよく食べられているであろうジャガイモ料理",
+            "summary": "寒い地方ではごくごく当たり前なジャガイモ料理ではありますが向こうでは主食になるんですね。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample7.jpg",
+            "rating": "8.5"
+        },
+        {
+            "id": 8,
+            "author": "fumiyasac(Sample)",
+            "title": "ボリュームがめっちゃ多いヨーグルトドリンク",
+            "summary": "めっちゃ美味しそうではあるんですが、おやつには多すぎるし朝食でも多すぎる。でもグイッと飲みたい。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample8.jpg",
+            "rating": "8.1"
+        },
+        {
+            "id": 9,
+            "author": "fumiyasac(Sample)",
+            "title": "なぜか美味しそうでついつい買って食べてしまうタコス",
+            "summary": "軽食や朝食で食べたいと思うタコス。毎日ではないけど1つなら朝食にもちょうどいい量ですね。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample9.jpg",
+            "rating": "9.1"
+        },
+        {
+            "id": 10,
+            "author": "fumiyasac(Sample)",
+            "title": "ランチでいっぱい食べたい時にオススメな豚バラグリルの定食",
+            "summary": "定食でよく見かける豚バラの焼肉だけども、こんな感じでランチで出てくればめっちゃ豪華なご馳走である。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample10.jpg",
+            "rating": "9.7"
         }
     ]
 }

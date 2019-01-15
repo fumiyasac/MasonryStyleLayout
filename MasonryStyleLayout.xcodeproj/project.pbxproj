@@ -23,6 +23,7 @@
 		DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED117FE21E352EC00ABD919 /* UICollectionViewExtension.swift */; };
 		DED1180321E3551D00ABD919 /* PhotoGalleryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED1180121E3551C00ABD919 /* PhotoGalleryCollectionViewCell.swift */; };
 		DED1180421E3551D00ABD919 /* PhotoGalleryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DED1180221E3551C00ABD919 /* PhotoGalleryCollectionViewCell.xib */; };
+		DEFFA02B21EDC2F3006C1C1B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFA02A21EDC2F3006C1C1B /* UIColorExtension.swift */; };
 		FCEBE954614D8AAB609896C6 /* Pods_MasonryStyleLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 083FF03CBA96B988758FAEA2 /* Pods_MasonryStyleLayout.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		DED117FE21E352EC00ABD919 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
 		DED1180121E3551C00ABD919 /* PhotoGalleryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DED1180221E3551C00ABD919 /* PhotoGalleryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryCollectionViewCell.xib; sourceTree = "<group>"; };
+		DEFFA02A21EDC2F3006C1C1B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,6 +245,7 @@
 			children = (
 				DED117FC21E34E7300ABD919 /* NSObjectProtocolExtension.swift */,
 				DED117FE21E352EC00ABD919 /* UICollectionViewExtension.swift */,
+				DEFFA02A21EDC2F3006C1C1B /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -457,6 +460,7 @@
 				DED072AF21E855C10073963C /* PhotoGalleryViewModel.swift in Sources */,
 				DED072B421E862D60073963C /* PhotoEntity.swift in Sources */,
 				DED1180321E3551D00ABD919 /* PhotoGalleryCollectionViewCell.swift in Sources */,
+				DEFFA02B21EDC2F3006C1C1B /* UIColorExtension.swift in Sources */,
 				DED117CC21E2ED5300ABD919 /* MainViewController.swift in Sources */,
 				DED117CA21E2ED5300ABD919 /* AppDelegate.swift in Sources */,
 			);

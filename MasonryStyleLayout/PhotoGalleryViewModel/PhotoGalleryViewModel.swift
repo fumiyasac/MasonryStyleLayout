@@ -49,6 +49,7 @@ final class PhotoGalleryViewModel {
 
                 // データ保持用のStateクラスのインスタンスへ格納する
                 let responseResult = self.parseJSON(json)
+                print(responseResult)
                 PhotoGalleryListState.shared.appendNextPhotos(responseResult.mealPhotoList, hasNextPage: responseResult.hasNextPage)
 
                 // データ取得処理成功時のNotification送信

@@ -12,6 +12,7 @@ import SwiftyJSON
 struct PhotoEntity {
 
     private (set)var id: Int = 0
+    private (set)var author: String = ""
     private (set)var title: String = ""
     private (set)var summary: String = ""
     private (set)var imageUrl: URL? = nil
@@ -22,6 +23,9 @@ struct PhotoEntity {
     init(_ json: JSON) {
         if let id = json["id"].int {
             self.id = id
+        }
+        if let author = json["author"].string {
+            self.author = author
         }
         if let title = json["title"].string {
             self.title = title
