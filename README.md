@@ -1,4 +1,4 @@
-[ING] - Pinterest風のアプリUIを実装するサンプル
+# Pinterest風のアプリUIを実装するサンプル
 
 ### 1. 概要
 
