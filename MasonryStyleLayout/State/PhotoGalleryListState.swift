@@ -40,11 +40,8 @@ class PhotoGalleryListState {
     // APIより取得した情報をこのインスタンスのプロパティへ格納する
     func appendNextPhotos(_ targetPhotos: [PhotoEntity], hasNextPage: Bool) {
 
-        // 次のページがあるかを判定し、なければ以降の処理を実行しない
-        isTotalCount = !hasNextPage
-        if isTotalCount { return }
-
         // JSON経由で取得したデータをセットする
+        isTotalCount = !hasNextPage
         let _ = targetPhotos.map{ photos.append($0) }
     }
 

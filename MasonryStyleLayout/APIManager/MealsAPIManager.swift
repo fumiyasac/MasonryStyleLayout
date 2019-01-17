@@ -49,7 +49,7 @@ class MealsAPIManager: APIManagerProtocol {
         func getPath() -> String {
             switch self {
             case .list:
-                return "list"
+                return "list/"
             case .search:
                 return "search"
             case .detail:
@@ -82,21 +82,13 @@ class MealsAPIManager: APIManagerProtocol {
 
     // 食事メニュー一覧を取得する
     func getMealList(perPage: Int) -> Promise<JSON> {
-
-        let requestUrl = MealsAPIManager.serverUrl + EndPoint.list.getPath()
-
-        // TODO: 設定するパラメーターは下記の通り
-        // (page) ページ番号
-        let parameters: [String : Any] = [:]
-
-        return MealsAPIManager.handleMealsApiRequest(url: requestUrl, params: parameters)
+        let requestUrl = MealsAPIManager.serverUrl + EndPoint.list.getPath() + "?page=" + String(perPage)
+        return MealsAPIManager.handleMealsApiRequest(url: requestUrl)
     }
 
     // 引数のIDに紐づく食事メニューを取得する
     func getMealBy(id: Int) -> Promise<JSON> {
-
         let requestUrl = MealsAPIManager.serverUrl + EndPoint.detail.getPath() + String(id)
-
         return MealsAPIManager.handleMealsApiRequest(url: requestUrl)
     }
 

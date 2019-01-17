@@ -12,7 +12,7 @@ import AlamofireImage
 // MEMO: RxSwiftを利用しないMVVMパターンの利用をする
 // → 書籍「iOS設計パターン入門 第6章 MVVM」で紹介されていたコードを参考に構築しました。
 
-final class MainViewController: UIViewController {
+final class MainContentsViewController: UIViewController {
 
     private let notificationCenter = NotificationCenter()
     private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter)
@@ -20,17 +20,23 @@ final class MainViewController: UIViewController {
     // MEMO: プロパティの変更タイミングに応じてCollectionViewの更新を実行する
     private var photoGalleryLists: [PhotoEntity] = [] {
         didSet {
-            self.mainCollectionView.reloadData()
+            self.mainContentsCollectionView.reloadData()
+            self.mainContentsCollectionView.performBatchUpdates(nil, completion: { _ in
+                self.mainContentsCollectionViewHeightConstraint.constant = self.mainContentsCollectionView.contentSize.height
+            })
         }
     }
 
-    @IBOutlet weak private var mainCollectionView: UICollectionView!
+    @IBOutlet weak private var mainContentsCollectionViewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak private var mainContentsCollectionView: UICollectionView!
+    @IBOutlet weak private var mainContentsHandleButtonView: PhotoGalleryHandleButtonView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupNotificationsForDataBinding()
         setupMainCollectionView()
+        setupMainContentsHandleButtonView()
     }
 
     // MARK: - Private Function
@@ -62,24 +68,43 @@ final class MainViewController: UIViewController {
         // WaterfallLayoutのインスタンスを作成して設定を適用する
         let layout = WaterfallLayout()
         layout.delegate = self
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 8.0, bottom: 8.0, right: 8.0)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 10.0, bottom: 8.0, right: 10.0)
         layout.minimumLineSpacing = 8.0
         layout.minimumInteritemSpacing = 8.0
         layout.headerHeight = 58.0
-        mainCollectionView.setCollectionViewLayout(layout, animated: true)
-        mainCollectionView.collectionViewLayout = layout
+        mainContentsCollectionView.setCollectionViewLayout(layout, animated: true)
+        mainContentsCollectionView.collectionViewLayout = layout
 
         // 表示用のUICollectionViewを設定する
-        mainCollectionView.registerCustomReusableHeaderView(PhotoGalleryCollectionHeaderView.self)
-        mainCollectionView.registerCustomCell(PhotoGalleryCollectionViewCell.self)
-        mainCollectionView.dataSource = self
-        mainCollectionView.delegate = self
+        mainContentsCollectionView.registerCustomReusableHeaderView(PhotoGalleryCollectionHeaderView.self)
+        mainContentsCollectionView.registerCustomCell(PhotoGalleryCollectionViewCell.self)
+        mainContentsCollectionView.dataSource = self
+        mainContentsCollectionView.delegate = self
+
+        // 表示用のUICollectionViewの初期高さ制約を0にしておく
+        mainContentsCollectionViewHeightConstraint.constant = mainContentsCollectionView.contentSize.height
+    }
+
+    private func setupMainContentsHandleButtonView() {
+        mainContentsHandleButtonView.requestApiButtonAction = {
+            self.viewModel.fetchPhotoList()
+        }
+    }
+
+    private func allowUserInterations() {
+        mainContentsCollectionView.alpha = 1
+        mainContentsCollectionView.isUserInteractionEnabled = true
+    }
+
+    private func denyUserInterations() {
+        mainContentsCollectionView.alpha = 0.6
+        mainContentsCollectionView.isUserInteractionEnabled = false
     }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainContentsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
     // セクションの個数を設定する
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -98,6 +123,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let shouldDisplayHeader = (kind == UICollectionView.elementKindSectionHeader)
         if shouldDisplayHeader {
             let header = collectionView.dequeueReusableCustomHeaderView(with: PhotoGalleryCollectionHeaderView.self, indexPath: indexPath)
+            header.setSectionTitle("食べ物紹介のセクション")
             return header
         } else {
             return UICollectionReusableView()
@@ -118,7 +144,7 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
 
 // MARK: - WaterfallLayoutDelegate
 
-extension MainViewController: WaterfallLayoutDelegate {
+extension MainContentsViewController: WaterfallLayoutDelegate {
 
     func collectionView(_ collectionView: UICollectionView, layout: WaterfallLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
@@ -147,23 +173,38 @@ extension MainViewController: WaterfallLayoutDelegate {
     }
 }
 
-// MARK: - MainViewController
+// MARK: - MainContentsViewController
 
-extension MainViewController {
+extension MainContentsViewController {
 
     // MARK: - Function
 
     @objc func updateStateForFetching(notification: Notification) {
         print("updateStateForFetching:")
+
+        // View描画に関わる変更
+        denyUserInterations()
+        mainContentsHandleButtonView.changeState(isFetchingData: true)
     }
 
     @objc func updateStateForSuccess(notification: Notification) {
         print("updateStateForSuccess:")
-        print(PhotoGalleryListState.shared.photos)
+        print("取得済みのデータ一覧:", PhotoGalleryListState.shared.photos)
+
+        // View描画に関わる変更
+        allowUserInterations()
+        mainContentsHandleButtonView.changeState(isFetchingData: false)
+        mainContentsHandleButtonView.isHidden = PhotoGalleryListState.shared.isTotalCount
+
+        // データ表示に関わる変更
         photoGalleryLists = PhotoGalleryListState.shared.photos
     }
 
     @objc func updateStateForFailure(notification: Notification) {
         print("updateStateForFailure:")
+
+        // View描画に関わる変更
+        allowUserInterations()
+        mainContentsHandleButtonView.changeState(isFetchingData: false)
     }
 }
