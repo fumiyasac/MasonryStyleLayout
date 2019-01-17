@@ -163,9 +163,12 @@ public class WaterfallLayout: UICollectionViewLayout {
     }
     
     public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return newBounds.width != (collectionView?.bounds ?? .zero).width
+        //return newBounds.width != (collectionView?.bounds ?? .zero).width
+        
+        // MEMO: 2019/01/17: Forked by @fumiyasac
+        return true
     }
-    
+
     override public func shouldInvalidateLayout(forPreferredLayoutAttributes preferredAttributes: UICollectionViewLayoutAttributes, withOriginalAttributes originalAttributes: UICollectionViewLayoutAttributes) -> Bool {
         if let delegate = delegate {
             // For .waterfall mode, disabling shouldInvalidateLayout will prevent infinite loop to occur due to unstable constraints.

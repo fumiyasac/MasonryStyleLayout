@@ -73,6 +73,7 @@ final class MainContentsViewController: UIViewController {
         mainContentsCollectionView.collectionViewLayout = layout
 
         // 表示用のUICollectionViewを設定する
+        mainContentsCollectionView.isScrollEnabled = false
         mainContentsCollectionView.registerCustomReusableHeaderView(PhotoGalleryCollectionHeaderView.self)
         mainContentsCollectionView.registerCustomCell(PhotoGalleryCollectionViewCell.self)
         mainContentsCollectionView.dataSource = self
