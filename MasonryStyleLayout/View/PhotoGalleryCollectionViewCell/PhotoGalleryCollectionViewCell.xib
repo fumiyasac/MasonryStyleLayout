@@ -13,14 +13,14 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoGalleryCollectionViewCell" customModule="MasonryStyleLayout" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="160" height="254"/>
+            <rect key="frame" x="0.0" y="0.0" width="160" height="264"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="160" height="254"/>
+                <rect key="frame" x="0.0" y="0.0" width="160" height="264"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kwk-Jz-pph">
-                        <rect key="frame" x="0.0" y="0.0" width="160" height="254"/>
+                        <rect key="frame" x="0.0" y="0.0" width="160" height="264"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトルが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3b-WE-me0">
                                 <rect key="frame" x="10" y="12" width="140" height="12"/>
@@ -32,10 +32,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HyJ-pK-lei">
-                                <rect key="frame" x="8" y="32" width="144" height="158"/>
+                                <rect key="frame" x="8" y="32" width="144" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="750" id="EYB-Tz-Mtf"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rC0-W0-jmu">
-                                <rect key="frame" x="8" y="230" width="144" height="16"/>
+                                <rect key="frame" x="8" y="240" width="144" height="16"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uca-n6-2Tf">
                                         <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
@@ -64,10 +67,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nsu-Kc-GIf">
-                                <rect key="frame" x="6" y="196" width="148" height="28"/>
+                                <rect key="frame" x="8" y="204" width="144" height="28"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キャッチコピーが入ります。キャッチコピーが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6IA-3k-ASr">
-                                        <rect key="frame" x="0.0" y="0.0" width="148" height="28"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="144" height="28"/>
                                         <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                                         <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -90,12 +93,12 @@
                             <constraint firstItem="M3b-WE-me0" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="10" id="4yo-ty-kdq"/>
                             <constraint firstAttribute="trailing" secondItem="M3b-WE-me0" secondAttribute="trailing" constant="10" id="BVT-C4-BJa"/>
                             <constraint firstItem="HyJ-pK-lei" firstAttribute="top" secondItem="M3b-WE-me0" secondAttribute="bottom" constant="8" id="FFJ-Ir-1wQ"/>
-                            <constraint firstItem="nsu-Kc-GIf" firstAttribute="top" secondItem="HyJ-pK-lei" secondAttribute="bottom" constant="6" id="Hkp-OR-foz"/>
+                            <constraint firstItem="nsu-Kc-GIf" firstAttribute="top" secondItem="HyJ-pK-lei" secondAttribute="bottom" constant="12" id="Hkp-OR-foz"/>
                             <constraint firstAttribute="trailing" secondItem="HyJ-pK-lei" secondAttribute="trailing" constant="8" id="N8t-b4-TUf"/>
-                            <constraint firstItem="rC0-W0-jmu" firstAttribute="top" secondItem="nsu-Kc-GIf" secondAttribute="bottom" constant="6" id="Osc-ed-3z0"/>
-                            <constraint firstItem="nsu-Kc-GIf" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="6" id="UMH-eW-afd"/>
+                            <constraint firstItem="rC0-W0-jmu" firstAttribute="top" secondItem="nsu-Kc-GIf" secondAttribute="bottom" constant="8" id="Osc-ed-3z0"/>
+                            <constraint firstItem="nsu-Kc-GIf" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="8" id="UMH-eW-afd"/>
                             <constraint firstItem="M3b-WE-me0" firstAttribute="top" secondItem="kwk-Jz-pph" secondAttribute="top" constant="12" id="Vdp-8j-aMm"/>
-                            <constraint firstAttribute="trailing" secondItem="nsu-Kc-GIf" secondAttribute="trailing" constant="6" id="Ywv-i0-yIO"/>
+                            <constraint firstAttribute="trailing" secondItem="nsu-Kc-GIf" secondAttribute="trailing" constant="8" id="Ywv-i0-yIO"/>
                             <constraint firstAttribute="trailing" secondItem="rC0-W0-jmu" secondAttribute="trailing" constant="8" id="kZv-cc-l53"/>
                             <constraint firstItem="HyJ-pK-lei" firstAttribute="leading" secondItem="kwk-Jz-pph" secondAttribute="leading" constant="8" id="rGF-kW-iEd"/>
                         </constraints>

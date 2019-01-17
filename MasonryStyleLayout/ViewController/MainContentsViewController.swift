@@ -20,10 +20,7 @@ final class MainContentsViewController: UIViewController {
     // MEMO: プロパティの変更タイミングに応じてCollectionViewの更新を実行する
     private var photoGalleryLists: [PhotoEntity] = [] {
         didSet {
-            self.mainContentsCollectionView.reloadData()
-            self.mainContentsCollectionView.performBatchUpdates(nil, completion: { _ in
-                self.mainContentsCollectionViewHeightConstraint.constant = self.mainContentsCollectionView.contentSize.height
-            })
+            self.reloadMainContentsCollectionView()
         }
     }
 
@@ -89,6 +86,13 @@ final class MainContentsViewController: UIViewController {
         mainContentsHandleButtonView.requestApiButtonAction = {
             self.viewModel.fetchPhotoList()
         }
+    }
+
+    private func reloadMainContentsCollectionView() {
+        mainContentsCollectionView.reloadData()
+        mainContentsCollectionView.performBatchUpdates(nil, completion: { _ in
+            self.mainContentsCollectionViewHeightConstraint.constant = self.mainContentsCollectionView.contentSize.height
+        })
     }
 
     private func allowUserInterations() {

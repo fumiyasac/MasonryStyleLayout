@@ -134,12 +134,12 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
-		DED072A921E710490073963C /* PhotoGalleryCollectionViewLayout */ = {
+		DED072A921E710490073963C /* WaterFallLayout */ = {
 			isa = PBXGroup;
 			children = (
 				DEFFA03121EEEE7D006C1C1B /* WaterFallLayout.swift */,
 			);
-			path = PhotoGalleryCollectionViewLayout;
+			path = WaterFallLayout;
 			sourceTree = "<group>";
 		};
 		DED072AC21E74D0D0073963C /* PhotoGalleryViewModel */ = {
@@ -247,7 +247,7 @@
 				DEFFA03421F04FA0006C1C1B /* CustomViewBase.swift */,
 				DEFFA03321F04E72006C1C1B /* PhotoGalleryHandleButtonView */,
 				DEFFA02C21EEE25F006C1C1B /* PhotoGalleryCollectionHeaderView */,
-				DED072A921E710490073963C /* PhotoGalleryCollectionViewLayout */,
+				DED072A921E710490073963C /* WaterFallLayout */,
 				DED1180021E353A400ABD919 /* PhotoGalleryCollectionViewCell */,
 			);
 			path = View;

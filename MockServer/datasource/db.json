@@ -7,7 +7,7 @@
                     "id": 1,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "朝食に食べたいサンドイッチ",
+                    "title": "朝食にゆっくりと味わって食べたいサンドイッチ",
                     "summary": "気持ち良い朝の目覚めにぴったり。ルノアールのサンドイッチが食べたいなぁ。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample1.jpg",
                     "rating": "9.1"
@@ -16,7 +16,7 @@
                     "id": 2,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "最強のビーフステーキ",
+                    "title": "A5ランクの国産牛を使った最強のビーフステーキ",
                     "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample2.jpg",
                     "rating": "9.6"
@@ -25,7 +25,7 @@
                     "id": 3,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "中華料理の前菜",
+                    "title": "紹興酒との最高のおともになる中華料理の前菜",
                     "summary": "中華料理はいつも僕のテンションを上げてくれる。前菜だけでも魅力的である。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample3.jpg",
                     "rating": "8.7"
@@ -34,7 +34,7 @@
                     "id": 4,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "オードブルの前菜",
+                    "title": "サーモンとクリームチーズのクラッカー",
                     "summary": "生のチースは僕はとっても苦手ですが、サーモンとクリームチーズの組み合わせは好きです。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample4.jpg",
                     "rating": "8.0"
@@ -43,7 +43,7 @@
                     "id": 5,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "アンチョビのシンプルなピザ",
+                    "title": "エビとカニをたくさん使った豪華なピザ",
                     "summary": "みんなで食べるピザも美味しいですね。勉強会などでもよく出てくるのでどんなものに出会えるか楽しみです。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample5.jpg",
                     "rating": "8.2"
@@ -112,7 +112,7 @@
                     "id": 12,
                     "category_number": 2,
                     "author": "fumiyasac(Sample)",
-                    "title": "風格あるバナナチョコレート",
+                    "title": "風格あるバナナチョコレートを使ったデザート",
                     "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample12.jpg",
                     "rating": "9.6"
@@ -121,7 +121,7 @@
                     "id": 13,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "トルティーヤ",
+                    "title": "中南米エリアの定番料理トルティーヤ",
                     "summary": "誠に申し訳ございません。「タコス」と「トルティーヤ」の違いがイマイチよくわかっておりません...。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample13.jpg",
                     "rating": "8.7"
@@ -148,7 +148,7 @@
                     "id": 16,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "小ぶりで可愛らしいエビフライ",
+                    "title": "小ぶりで可愛らしいけど美味しいエビフライ",
                     "summary": "夕食のおかずに出てくると思わずテンションが上がるラインナップですね。子供も大人も嬉しくなるメニューです。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample16.jpg",
                     "rating": "8.0"
@@ -157,7 +157,7 @@
                     "id": 17,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "家庭的焼肉料理",
+                    "title": "家庭的なおかずのような焼肉料理",
                     "summary": "人類はいつからご馳走を焼肉とするようになってしまったのか...。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample17.jpg",
                     "rating": "8.5"
@@ -175,7 +175,7 @@
                     "id": 19,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "韓国料理の定番スンドゥブチゲ",
+                    "title": "韓国料理の煮込み料理の定番スンドゥブチゲ",
                     "summary": "冬の寒い季節には最高ですね。体も温まるし栄養もたっぷりなので助かります。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample19.jpg",
                     "rating": "9.1"
@@ -208,7 +208,7 @@
                     "id": 22,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "韓国の滋養たっぷりな参鶏湯",
+                    "title": "韓国の滋養たっぷりな薬膳メニュー参鶏湯",
                     "summary": "薬膳要素もたっぷり含まれているので健康にも抜群な人気メニューですね。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample22.jpg",
                     "rating": "9.6"
@@ -217,7 +217,7 @@
                     "id": 23,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "ラムチョップ",
+                    "title": "豪華なメインディッシュにぴったりのラムチョップ",
                     "summary": "丁寧に焼かれたラムのローストは本当に美味しいですよね。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample23.jpg",
                     "rating": "8.7"
@@ -226,7 +226,7 @@
                     "id": 24,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "タコス1皿盛り合わせ",
+                    "title": "シンプルだけど美味しいタコス1皿盛り合わせ",
                     "summary": "メキシコ料理はお酒にもマッチするし、印象とは裏腹に辛さが本当に心地よいですね。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample24.jpg",
                     "rating": "8.0"
@@ -235,7 +235,7 @@
                     "id": 25,
                     "category_number": 2,
                     "author": "fumiyasac(Sample)",
-                    "title": "ベリーが乗ったパンケーキ",
+                    "title": "ベリーが乗った可愛いパンケーキ",
                     "summary": "家のホットケーキミックスで作るものとは桁違いの美味しさとフワフワ感を感じてみよ。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample25.jpg",
                     "rating": "8.2"
@@ -244,7 +244,7 @@
                     "id": 26,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "海鮮丼づくしのラインナップ",
+                    "title": "豪華海鮮丼づくしのラインナップ",
                     "summary": "彩り豊かで新鮮な海の幸をこれでもかと言わんばかりに盛り込んだものは宝石箱のごたる。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample26.jpg",
                     "rating": "8.0"
@@ -253,7 +253,7 @@
                     "id": 27,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "ひとくちサイズのハンバーガー",
+                    "title": "ひとくちサイズの可愛いハンバーガー",
                     "summary": "1個の大きさは小さいけれども、味は本物なのは間違いない！",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample27.jpg",
                     "rating": "8.5"
@@ -262,7 +262,7 @@
                     "id": 28,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "あさりがたっぷりのボンゴレパスタ",
+                    "title": "あさりの美味しさがたっぷりのボンゴレパスタ",
                     "summary": "濃厚な貝特有の美味しさをシンプルにかつダイレクトに味わえるメニューです。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample28.jpg",
                     "rating": "8.1"
@@ -280,7 +280,7 @@
                     "id": 30,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "アジの握り寿司",
+                    "title": "なかなか味わえない地アジの握り寿司",
                     "summary": "そういえばなかなか刺身でアジを食べる機会は少ない。何気ないけど将来的には高級魚になってしまうのかな？",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample30.jpg",
                     "rating": "9.7"
@@ -295,7 +295,7 @@
                     "id": 31,
                     "category_number": 1,
                     "author": "fumiyasac(Sample)",
-                    "title": "大盛りフライドポテト",
+                    "title": "おつまみの定番大盛りフライドポテト",
                     "summary": "定番中の定番のファストメニューではあるけれど手元にあるとついつい取っちゃうヤツですね。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample31.jpg",
                     "rating": "8.9"
@@ -331,7 +331,7 @@
                     "id": 35,
                     "category_number": 2,
                     "author": "fumiyasac(Sample)",
-                    "title": "チョコレートムース",
+                    "title": "甘くて心がおどりそうなチョコレートムース",
                     "summary": "チョコレートの濃厚な甘さと滑らかな口当たりがポイント。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample35.jpg",
                     "rating": "8.2"
@@ -345,7 +345,7 @@
             "id": 1,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "朝食に食べたいサンドイッチ",
+            "title": "朝食にゆっくりと味わって食べたいサンドイッチ",
             "summary": "気持ち良い朝の目覚めにぴったり。ルノアールのサンドイッチが食べたいなぁ。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample1.jpg",
             "rating": "9.1"
@@ -354,7 +354,7 @@
             "id": 2,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "最強のビーフステーキ",
+            "title": "A5ランクの国産牛を使った最強のビーフステーキ",
             "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample2.jpg",
             "rating": "9.6"
@@ -363,7 +363,7 @@
             "id": 3,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "中華料理の前菜",
+            "title": "紹興酒との最高のおともになる中華料理の前菜",
             "summary": "中華料理はいつも僕のテンションを上げてくれる。前菜だけでも魅力的である。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample3.jpg",
             "rating": "8.7"
@@ -372,7 +372,7 @@
             "id": 4,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "オードブルの前菜",
+            "title": "サーモンとクリームチーズのクラッカー",
             "summary": "生のチースは僕はとっても苦手ですが、サーモンとクリームチーズの組み合わせは好きです。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample4.jpg",
             "rating": "8.0"
@@ -444,7 +444,7 @@
             "id": 12,
             "category_number": 2,
             "author": "fumiyasac(Sample)",
-            "title": "風格あるバナナチョコレート",
+            "title": "風格あるバナナチョコレートを使ったデザート",
             "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample12.jpg",
             "rating": "9.6"
@@ -453,7 +453,7 @@
             "id": 13,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "トルティーヤ",
+            "title": "中南米エリアの定番料理トルティーヤ",
             "summary": "誠に申し訳ございません。「タコス」と「トルティーヤ」の違いがイマイチよくわかっておりません...。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample13.jpg",
             "rating": "8.7"
@@ -480,7 +480,7 @@
             "id": 16,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "小ぶりで可愛らしいエビフライ",
+            "title": "小ぶりで可愛らしいけど美味しいエビフライ",
             "summary": "夕食のおかずに出てくると思わずテンションが上がるラインナップですね。子供も大人も嬉しくなるメニューです。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample16.jpg",
             "rating": "8.0"
@@ -489,7 +489,7 @@
             "id": 17,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "家庭的焼肉料理",
+            "title": "家庭的なおかずのような焼肉料理",
             "summary": "人類はいつからご馳走を焼肉とするようになってしまったのか...。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample17.jpg",
             "rating": "8.5"
@@ -507,7 +507,7 @@
             "id": 19,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "韓国料理の定番スンドゥブチゲ",
+            "title": "韓国料理の煮込み料理の定番スンドゥブチゲ",
             "summary": "冬の寒い季節には最高ですね。体も温まるし栄養もたっぷりなので助かります。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample19.jpg",
             "rating": "9.1"
@@ -522,19 +522,10 @@
             "rating": "9.7"
         },
         {
-            "id": 21,
-            "category_number": 1,
-            "author": "fumiyasac(Sample)",
-            "title": "シンプルに美味そうなエビのバター炒め",
-            "summary": "ビールのおつまみにもご飯のおかずの一皿にもぴったりのシンプルな一皿ですね。",
-            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample21.jpg",
-            "rating": "8.9"
-        },
-        {
             "id": 22,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "韓国の滋養たっぷりな参鶏湯",
+            "title": "韓国の滋養たっぷりな薬膳メニュー参鶏湯",
             "summary": "薬膳要素もたっぷり含まれているので健康にも抜群な人気メニューですね。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample22.jpg",
             "rating": "9.6"
@@ -543,7 +534,7 @@
             "id": 23,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "ラムチョップ",
+            "title": "豪華なメインディッシュにぴったりのラムチョップ",
             "summary": "丁寧に焼かれたラムのローストは本当に美味しいですよね。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample23.jpg",
             "rating": "8.7"
@@ -552,7 +543,7 @@
             "id": 24,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "タコス1皿盛り合わせ",
+            "title": "シンプルだけど美味しいタコス1皿盛り合わせ",
             "summary": "メキシコ料理はお酒にもマッチするし、印象とは裏腹に辛さが本当に心地よいですね。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample24.jpg",
             "rating": "8.0"
@@ -561,7 +552,7 @@
             "id": 25,
             "category_number": 2,
             "author": "fumiyasac(Sample)",
-            "title": "ベリーが乗ったパンケーキ",
+            "title": "ベリーが乗った可愛いパンケーキ",
             "summary": "家のホットケーキミックスで作るものとは桁違いの美味しさとフワフワ感を感じてみよ。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample25.jpg",
             "rating": "8.2"
@@ -570,7 +561,7 @@
             "id": 26,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "海鮮丼づくしのラインナップ",
+            "title": "豪華海鮮丼づくしのラインナップ",
             "summary": "彩り豊かで新鮮な海の幸をこれでもかと言わんばかりに盛り込んだものは宝石箱のごたる。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample26.jpg",
             "rating": "8.0"
@@ -579,7 +570,7 @@
             "id": 27,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "ひとくちサイズのハンバーガー",
+            "title": "ひとくちサイズの可愛いハンバーガー",
             "summary": "1個の大きさは小さいけれども、味は本物なのは間違いない！",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample27.jpg",
             "rating": "8.5"
@@ -588,7 +579,7 @@
             "id": 28,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "あさりがたっぷりのボンゴレパスタ",
+            "title": "あさりの美味しさがたっぷりのボンゴレパスタ",
             "summary": "濃厚な貝特有の美味しさをシンプルにかつダイレクトに味わえるメニューです。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample28.jpg",
             "rating": "8.1"
@@ -606,7 +597,7 @@
             "id": 30,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "アジの握り寿司",
+            "title": "なかなか味わえない地アジの握り寿司",
             "summary": "そういえばなかなか刺身でアジを食べる機会は少ない。何気ないけど将来的には高級魚になってしまうのかな？",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample30.jpg",
             "rating": "9.7"
@@ -615,7 +606,7 @@
             "id": 31,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "大盛りフライドポテト",
+            "title": "おつまみの定番大盛りフライドポテト",
             "summary": "定番中の定番のファストメニューではあるけれど手元にあるとついつい取っちゃうヤツですね。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample31.jpg",
             "rating": "8.9"
@@ -651,7 +642,7 @@
             "id": 35,
             "category_number": 2,
             "author": "fumiyasac(Sample)",
-            "title": "チョコレートムース",
+            "title": "甘くて心がおどりそうなチョコレートムース",
             "summary": "チョコレートの濃厚な甘さと滑らかな口当たりがポイント。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample35.jpg",
             "rating": "8.2"

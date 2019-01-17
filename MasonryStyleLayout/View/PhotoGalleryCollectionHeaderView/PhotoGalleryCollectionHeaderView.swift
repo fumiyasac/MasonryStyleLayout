@@ -10,7 +10,7 @@ import UIKit
 
 class PhotoGalleryCollectionHeaderView: UICollectionReusableView {
 
-    static let viewSize: CGSize = CGSize(width: UIScreen.main.bounds.width, height: 50.0)
+    static let viewSize: CGSize = CGSize(width: UIScreen.main.bounds.width, height: 56.0)
 
     @IBOutlet weak private var sectionTitleLabel: UILabel!
 
