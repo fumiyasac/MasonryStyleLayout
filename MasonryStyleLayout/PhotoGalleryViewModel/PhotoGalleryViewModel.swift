@@ -19,8 +19,6 @@ final class PhotoGalleryViewModel {
 
     private let notificationCenter: NotificationCenter
 
-    private var nextPage: Int = 1
-
     // MARK: - Enum
 
     private enum ViewModelNotification: String {
@@ -44,7 +42,14 @@ final class PhotoGalleryViewModel {
         // データ取得処理実行中のNotification送信
         notificationCenter.post(name: isFetchingPhotoList, object: nil)
 
-        MealsAPIManager.shared.getMealList(perPage: nextPage)
+        // 合計数に到達したなら以降の作業を実行しない
+        if PhotoGalleryListState.shared.isTotalCount {
+            self.notificationCenter.post(name: self.successFetchPhotoList, object: nil)
+            return
+        }
+
+        let targetPage = PhotoGalleryListState.shared.currentPage + 1
+        MealsAPIManager.shared.getMealList(perPage: targetPage)
             .done{ json in
 
                 // データ保持用のStateクラスのインスタンスへ格納する
@@ -53,7 +58,6 @@ final class PhotoGalleryViewModel {
                 PhotoGalleryListState.shared.appendNextPhotos(responseResult.mealPhotoList, hasNextPage: responseResult.hasNextPage)
 
                 // データ取得処理成功時のNotification送信
-                self.nextPage = PhotoGalleryListState.shared.currentPage
                 self.notificationCenter.post(name: self.successFetchPhotoList, object: nil)
             }
             .catch { error in
@@ -69,8 +73,8 @@ final class PhotoGalleryViewModel {
     private func parseJSON(_ json: JSON) -> (mealPhotoList: [PhotoEntity], hasNextPage: Bool) {
 
         // 取得できたJSONを元にStateへ格納するためのデータを生成する
-        let hasNextPage   = json["has_next_page"].boolValue
-        let mealPhotoList = json["meals"].map{ PhotoEntity($1) }
+        let hasNextPage   = json[0]["has_next_page"].boolValue
+        let mealPhotoList = json[0]["meals"].map{ PhotoEntity($1) }
         return (mealPhotoList: mealPhotoList, hasNextPage: hasNextPage)
     }
 }

@@ -51,6 +51,9 @@
                 <constraint firstItem="fdC-eR-4HS" firstAttribute="top" secondItem="VXr-Tz-HHm" secondAttribute="top" id="tjk-XV-ljk"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="sectionTitleLabel" destination="N8l-Ly-cDM" id="Lt7-j8-jaU"/>
+            </connections>
             <point key="canvasLocation" x="140.80000000000001" y="135.832083958021"/>
         </collectionReusableView>
     </objects>

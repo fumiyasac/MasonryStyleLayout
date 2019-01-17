@@ -8,7 +8,7 @@ const router = jsonServer.router('datasource/db.json');
 // 各種設定用
 const middlewares = jsonServer.defaults();
 const rewrite_rules = jsonServer.rewriter({
-    "/api/mock/v1/meals/list" : "/get_meal_list",
+    "/api/mock/v1/meals/list/?page=:page" : "/get_meal_list/?page=:page",
     "/api/mock/v1/meals/detail/:id" : "/get_meal_by_id/:id",
 });
 

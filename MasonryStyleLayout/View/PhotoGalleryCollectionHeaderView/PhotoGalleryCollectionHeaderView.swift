@@ -12,7 +12,11 @@ class PhotoGalleryCollectionHeaderView: UICollectionReusableView {
 
     static let viewSize: CGSize = CGSize(width: UIScreen.main.bounds.width, height: 50.0)
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    @IBOutlet weak private var sectionTitleLabel: UILabel!
+
+    // MARK: - Function
+
+    func setSectionTitle(_ title: String) {
+        sectionTitleLabel.text = title
     }
 }
