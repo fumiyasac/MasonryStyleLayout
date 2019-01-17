@@ -11,6 +11,7 @@ import UIKit
 
 // ライブラリ: WaterfallLayoutを利用したレイアウト実装
 // https://github.com/sgr-ksmt/WaterfallLayout
+// 【Thanks】素敵なライブラリをありがとうございます！
 
 public protocol WaterfallLayoutDelegate: class {
 
