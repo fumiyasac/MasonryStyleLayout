@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE1A0D9121F0D88D004EBAF9 /* CategoryNumberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */; };
 		DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072A721E4B70E0073963C /* MealsAPIManager.swift */; };
 		DED072AF21E855C10073963C /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */; };
 		DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072B121E85F640073963C /* PhotoGalleryListState.swift */; };
@@ -53,6 +54,7 @@
 		083FF03CBA96B988758FAEA2 /* Pods_MasonryStyleLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasonryStyleLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D49ABA57B92FC5AA1B2AE5D /* Pods-MasonryStyleLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.release.xcconfig"; sourceTree = "<group>"; };
 		B971CF1B5CD79F18299B1A47 /* Pods-MasonryStyleLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNumberType.swift; sourceTree = "<group>"; };
 		DED072A721E4B70E0073963C /* MealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIManager.swift; sourceTree = "<group>"; };
 		DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
 		DED072B121E85F640073963C /* PhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryListState.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		DE1A0D8F21F0C951004EBAF9 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		DED072A621E4AFF90073963C /* APIManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,10 +205,11 @@
 				DED117C921E2ED5300ABD919 /* AppDelegate.swift */,
 				DED117D021E2ED5900ABD919 /* Assets.xcassets */,
 				DED072A621E4AFF90073963C /* APIManager */,
-				DED072B021E859850073963C /* State */,
+				DE1A0D8F21F0C951004EBAF9 /* Enum */,
 				DED117FA21E34DE900ABD919 /* Extension */,
 				DED072AD21E74D1E0073963C /* PhotoGalleryModel */,
 				DED072AC21E74D0D0073963C /* PhotoGalleryViewModel */,
+				DED072B021E859850073963C /* State */,
 				DED117F721E2F05700ABD919 /* Storyboard */,
 				DED117F921E2F07200ABD919 /* View */,
 				DED117F821E2F06500ABD919 /* ViewController */,
@@ -490,6 +501,7 @@
 				DEFFA03221EEEE7D006C1C1B /* WaterFallLayout.swift in Sources */,
 				DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */,
 				DED117FD21E34E7300ABD919 /* NSObjectProtocolExtension.swift in Sources */,
+				DE1A0D9121F0D88D004EBAF9 /* CategoryNumberType.swift in Sources */,
 				DED072AF21E855C10073963C /* PhotoGalleryViewModel.swift in Sources */,
 				DEFFA03521F04FA0006C1C1B /* CustomViewBase.swift in Sources */,
 				DED072B421E862D60073963C /* PhotoEntity.swift in Sources */,

@@ -18,7 +18,7 @@ final class MainContentsViewController: UIViewController {
     private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter)
 
     // MEMO: プロパティの変更タイミングに応じてCollectionViewの更新を実行する
-    private var photoGalleryLists: [PhotoEntity] = [] {
+    private var photoGalleryLists: [(categoryNumber: Int, photos: [PhotoEntity])] = [] {
         didSet {
             self.reloadMainContentsCollectionView()
         }
@@ -65,7 +65,7 @@ final class MainContentsViewController: UIViewController {
         // WaterfallLayoutのインスタンスを作成して設定を適用する
         let layout = WaterfallLayout()
         layout.delegate = self
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 10.0, bottom: 8.0, right: 10.0)
+        layout.sectionInset = UIEdgeInsets(top: 8.0, left: 10.0, bottom: 8.0, right: 10.0)
         layout.minimumLineSpacing = 8.0
         layout.minimumInteritemSpacing = 8.0
         layout.headerHeight = 58.0
@@ -82,6 +82,19 @@ final class MainContentsViewController: UIViewController {
         mainContentsCollectionViewHeightConstraint.constant = mainContentsCollectionView.contentSize.height
     }
 
+    private func showAlertWith(completionHandler: (() -> ())? = nil) {
+        let alert = UIAlertController(
+            title: "エラーが発生しました",
+            message: "APIからのデータの取得に失敗しました。通信環境等を確認の上再度お試し下さい。",
+            preferredStyle: .alert
+        )
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: { _ in
+            completionHandler?()
+        })
+        alert.addAction(okAction)
+        self.present(alert, animated: true, completion: nil)
+    }
+
     private func setupMainContentsHandleButtonView() {
         mainContentsHandleButtonView.requestApiButtonAction = {
             self.viewModel.fetchPhotoList()
@@ -90,7 +103,7 @@ final class MainContentsViewController: UIViewController {
 
     private func reloadMainContentsCollectionView() {
         mainContentsCollectionView.reloadData()
-        mainContentsCollectionView.performBatchUpdates(nil, completion: { _ in
+        mainContentsCollectionView.performBatchUpdates({
             self.mainContentsCollectionViewHeightConstraint.constant = self.mainContentsCollectionView.contentSize.height
         })
     }
@@ -112,7 +125,7 @@ extension MainContentsViewController: UICollectionViewDelegate, UICollectionView
 
     // セクションの個数を設定する
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 1
+        return photoGalleryLists.count
     }
 
     // 配置するUICollectionReusableViewのサイズを設定する
@@ -124,24 +137,30 @@ extension MainContentsViewController: UICollectionViewDelegate, UICollectionView
     // 配置するUICollectionReusableViewの設定する
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
-        let shouldDisplayHeader = (kind == UICollectionView.elementKindSectionHeader)
-        if shouldDisplayHeader {
+        if kind == UICollectionView.elementKindSectionHeader {
+
+            // ヘッダーのインスタンスを取得する
             let header = collectionView.dequeueReusableCustomHeaderView(with: PhotoGalleryCollectionHeaderView.self, indexPath: indexPath)
-            header.setSectionTitle("食べ物紹介のセクション")
+
+            // ヘッダーに設定する文言を取得してセットする
+            let targetCategoryNumber = photoGalleryLists[indexPath.section].categoryNumber
+            if let categoryNumberType = CategoryNumberType(rawValue: targetCategoryNumber) {
+                header.setSectionTitle(categoryNumberType.getCategoryTitle())
+            }
             return header
+
         } else {
             return UICollectionReusableView()
         }
     }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photoGalleryLists.count
+        return photoGalleryLists[section].photos.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCustomCell(with: PhotoGalleryCollectionViewCell.self, indexPath: indexPath)
-        let targetPhoto = photoGalleryLists[indexPath.row]
-        cell.setCellDisplayData(targetPhoto)
+        cell.setCellDisplayData(photoGalleryLists[indexPath.section].photos[indexPath.row])
         return cell
     }
 }
@@ -158,7 +177,7 @@ extension MainContentsViewController: WaterfallLayoutDelegate {
         var cellHeight: CGFloat = 120
 
         // 取得した画像を元に高さの調節を行う
-        let targetPhoto = photoGalleryLists[indexPath.row]
+        let targetPhoto = photoGalleryLists[indexPath.section].photos[indexPath.row]
         if let imageURL = targetPhoto.imageUrl {
             do {
                 let data = try Data(contentsOf: imageURL)
@@ -193,7 +212,6 @@ extension MainContentsViewController {
 
     @objc func updateStateForSuccess(notification: Notification) {
         print("updateStateForSuccess:")
-        print("取得済みのデータ一覧:", PhotoGalleryListState.shared.photos)
 
         // View描画に関わる変更
         allowUserInterations()
@@ -201,7 +219,7 @@ extension MainContentsViewController {
         mainContentsHandleButtonView.isHidden = PhotoGalleryListState.shared.isTotalCount
 
         // データ表示に関わる変更
-        photoGalleryLists = PhotoGalleryListState.shared.photos
+        photoGalleryLists = PhotoGalleryListState.shared.getPhotoListMappedByCategories()
     }
 
     @objc func updateStateForFailure(notification: Notification) {
@@ -210,5 +228,6 @@ extension MainContentsViewController {
         // View描画に関わる変更
         allowUserInterations()
         mainContentsHandleButtonView.changeState(isFetchingData: false)
+        showAlertWith(completionHandler: nil)
     }
 }

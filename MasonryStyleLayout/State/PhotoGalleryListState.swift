@@ -19,7 +19,7 @@ class PhotoGalleryListState {
     // Singletonなインスタンスではあるが基本的には読み取り専用としたい　→ 「private (set)var」or「Computed Property」として保持する
 
     // 写真データとして利用するためのEntity
-    private (set)var photos: [PhotoEntity] = []
+    private var photos: [PhotoEntity] = []
 
     // 総数に到達したかを判定するフラグ
     private (set)var isTotalCount: Bool = false
@@ -36,6 +36,19 @@ class PhotoGalleryListState {
     private init() {}
 
     // MARK: - Function
+
+    func getPhotoListMappedByCategories() -> [(categoryNumber: Int, photos: [PhotoEntity])] {
+
+        // MEMO: PhotoEntityの配列いおいてカテゴリ番号のプロパティ(categoryNumber)一覧の配列データを重複を除いた形にして取得する
+        let targetcategoryNumbers = NSOrderedSet(array: photos.map{ $0.categoryNumber }).array as! [Int]
+
+        // MEMO: 引数に合わせたデータ形式に変換したものを生成する
+        return targetcategoryNumbers.map {
+            let targetcategoryNumber = $0
+            let targetPhotos = photos.filter{ targetcategoryNumber == $0.categoryNumber }.map{ $0 }
+            return (categoryNumber: targetcategoryNumber, photos: targetPhotos)
+        }
+    }
 
     // APIより取得した情報をこのインスタンスのプロパティへ格納する
     func appendNextPhotos(_ targetPhotos: [PhotoEntity], hasNextPage: Bool) {

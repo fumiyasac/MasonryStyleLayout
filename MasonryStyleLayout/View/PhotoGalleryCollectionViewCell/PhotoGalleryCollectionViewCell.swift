@@ -33,7 +33,7 @@ class PhotoGalleryCollectionViewCell: UICollectionViewCell {
         
         // 画像データを表示する
         if let photoImageURL = photo.imageUrl {
-            thumbnailImageView.af_setImage(withURL: photoImageURL, imageTransition: .crossDissolve(0.24))
+            thumbnailImageView.af_setImage(withURL: photoImageURL)
         }
 
         // タイトル表示用ラベルの装飾を適用して表示する

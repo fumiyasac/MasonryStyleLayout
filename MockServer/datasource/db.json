@@ -77,7 +77,7 @@
                 },
                 {
                     "id": 9,
-                    "category_number": 1,
+                    "category_number": 2,
                     "author": "fumiyasac(Sample)",
                     "title": "なぜか美味しそうでついつい買って食べてしまうタコス",
                     "summary": "軽食や朝食で食べたいと思うタコス。毎日ではないけど1つなら朝食にもちょうどいい量ですね。",
@@ -86,7 +86,7 @@
                 },
                 {
                     "id": 10,
-                    "category_number": 1,
+                    "category_number": 2,
                     "author": "fumiyasac(Sample)",
                     "title": "ランチでいっぱい食べたい時にオススメな豚バラグリルの定食",
                     "summary": "定食でよく見かける豚バラの焼肉だけども、こんな感じでランチで出てくればめっちゃ豪華なご馳走である。",
@@ -101,7 +101,7 @@
             "meals": [
                 {
                     "id": 11,
-                    "category_number": 1,
+                    "category_number": 2,
                     "author": "fumiyasac(Sample)",
                     "title": "マヨネーズと明太子の組み合わせが嬉しいどんぶりもの",
                     "summary": "マヨネーズと明太子の組み合わせが相性抜群で手応えも食べ応えもバッチリな一品です。",
@@ -119,7 +119,7 @@
                 },
                 {
                     "id": 13,
-                    "category_number": 1,
+                    "category_number": 2,
                     "author": "fumiyasac(Sample)",
                     "title": "中南米エリアの定番料理トルティーヤ",
                     "summary": "誠に申し訳ございません。「タコス」と「トルティーヤ」の違いがイマイチよくわかっておりません...。",
@@ -128,7 +128,7 @@
                 },
                 {
                     "id": 14,
-                    "category_number": 1,
+                    "category_number": 2,
                     "author": "fumiyasac(Sample)",
                     "title": "ワインにぴったりなおつまみの盛り合わせ",
                     "summary": "生のチースは僕はとっても苦手ですが、サーモンとクリームチーズの組み合わせは好きです。",
@@ -137,7 +137,7 @@
                 },
                 {
                     "id": 15,
-                    "category_number": 1,
+                    "category_number": 3,
                     "author": "fumiyasac(Sample)",
                     "title": "僕の大好物の1つでもある味噌ラーメン",
                     "summary": "味噌ラーメンとはなんとも不思議だ。元々は違う文化から発展した食べ物であるにも関わらず、日本文化の色が根強く残っていると感じる。",
@@ -146,7 +146,7 @@
                 },
                 {
                     "id": 16,
-                    "category_number": 1,
+                    "category_number": 3,
                     "author": "fumiyasac(Sample)",
                     "title": "小ぶりで可愛らしいけど美味しいエビフライ",
                     "summary": "夕食のおかずに出てくると思わずテンションが上がるラインナップですね。子供も大人も嬉しくなるメニューです。",
@@ -155,7 +155,7 @@
                 },
                 {
                     "id": 17,
-                    "category_number": 1,
+                    "category_number": 3,
                     "author": "fumiyasac(Sample)",
                     "title": "家庭的なおかずのような焼肉料理",
                     "summary": "人類はいつからご馳走を焼肉とするようになってしまったのか...。",
@@ -164,7 +164,7 @@
                 },
                 {
                     "id": 18,
-                    "category_number": 1,
+                    "category_number": 3,
                     "author": "fumiyasac(Sample)",
                     "title": "高級感としずる感が半端ではないステーキ",
                     "summary": "ご馳走と呼ぶにふさわしいステーキですね。思わず誘惑にぼろ負けしそうである。",
@@ -173,7 +173,7 @@
                 },
                 {
                     "id": 19,
-                    "category_number": 1,
+                    "category_number": 3,
                     "author": "fumiyasac(Sample)",
                     "title": "韓国料理の煮込み料理の定番スンドゥブチゲ",
                     "summary": "冬の寒い季節には最高ですね。体も温まるし栄養もたっぷりなので助かります。",
@@ -182,7 +182,7 @@
                 },
                 {
                     "id": 20,
-                    "category_number": 1,
+                    "category_number": 3,
                     "author": "fumiyasac(Sample)",
                     "title": "中華料理の定番メニューにも関わらす奥深い炒飯",
                     "summary": "家で作って食べても、冷凍食品でも、お店で食べてもあまりハズレがない気がします。",
@@ -197,7 +197,7 @@
             "meals": [
                 {
                     "id": 21,
-                    "category_number": 1,
+                    "category_number": 3,
                     "author": "fumiyasac(Sample)",
                     "title": "シンプルに美味そうなエビのバター炒め",
                     "summary": "ビールのおつまみにもご飯のおかずの一皿にもぴったりのシンプルな一皿ですね。",
@@ -206,7 +206,7 @@
                 },
                 {
                     "id": 22,
-                    "category_number": 1,
+                    "category_number": 4,
                     "author": "fumiyasac(Sample)",
                     "title": "韓国の滋養たっぷりな薬膳メニュー参鶏湯",
                     "summary": "薬膳要素もたっぷり含まれているので健康にも抜群な人気メニューですね。",
@@ -215,7 +215,7 @@
                 },
                 {
                     "id": 23,
-                    "category_number": 1,
+                    "category_number": 4,
                     "author": "fumiyasac(Sample)",
                     "title": "豪華なメインディッシュにぴったりのラムチョップ",
                     "summary": "丁寧に焼かれたラムのローストは本当に美味しいですよね。",
@@ -224,7 +224,7 @@
                 },
                 {
                     "id": 24,
-                    "category_number": 1,
+                    "category_number": 4,
                     "author": "fumiyasac(Sample)",
                     "title": "シンプルだけど美味しいタコス1皿盛り合わせ",
                     "summary": "メキシコ料理はお酒にもマッチするし、印象とは裏腹に辛さが本当に心地よいですね。",
@@ -233,7 +233,7 @@
                 },
                 {
                     "id": 25,
-                    "category_number": 2,
+                    "category_number": 4,
                     "author": "fumiyasac(Sample)",
                     "title": "ベリーが乗った可愛いパンケーキ",
                     "summary": "家のホットケーキミックスで作るものとは桁違いの美味しさとフワフワ感を感じてみよ。",
@@ -242,7 +242,7 @@
                 },
                 {
                     "id": 26,
-                    "category_number": 1,
+                    "category_number": 4,
                     "author": "fumiyasac(Sample)",
                     "title": "豪華海鮮丼づくしのラインナップ",
                     "summary": "彩り豊かで新鮮な海の幸をこれでもかと言わんばかりに盛り込んだものは宝石箱のごたる。",
@@ -251,7 +251,7 @@
                 },
                 {
                     "id": 27,
-                    "category_number": 1,
+                    "category_number": 4,
                     "author": "fumiyasac(Sample)",
                     "title": "ひとくちサイズの可愛いハンバーガー",
                     "summary": "1個の大きさは小さいけれども、味は本物なのは間違いない！",
@@ -260,7 +260,7 @@
                 },
                 {
                     "id": 28,
-                    "category_number": 1,
+                    "category_number": 4,
                     "author": "fumiyasac(Sample)",
                     "title": "あさりの美味しさがたっぷりのボンゴレパスタ",
                     "summary": "濃厚な貝特有の美味しさをシンプルにかつダイレクトに味わえるメニューです。",
@@ -269,7 +269,7 @@
                 },
                 {
                     "id": 29,
-                    "category_number": 1,
+                    "category_number": 5,
                     "author": "fumiyasac(Sample)",
                     "title": "みんな大好き間違いないポークジンジャー",
                     "summary": "ご飯のおかずには最高なポークジンジャーですね。これこそ日本が作り出した最高のおかず！",
@@ -278,7 +278,7 @@
                 },
                 {
                     "id": 30,
-                    "category_number": 1,
+                    "category_number": 5,
                     "author": "fumiyasac(Sample)",
                     "title": "なかなか味わえない地アジの握り寿司",
                     "summary": "そういえばなかなか刺身でアジを食べる機会は少ない。何気ないけど将来的には高級魚になってしまうのかな？",
@@ -293,7 +293,7 @@
             "meals": [
                 {
                     "id": 31,
-                    "category_number": 1,
+                    "category_number": 5,
                     "author": "fumiyasac(Sample)",
                     "title": "おつまみの定番大盛りフライドポテト",
                     "summary": "定番中の定番のファストメニューではあるけれど手元にあるとついつい取っちゃうヤツですね。",
@@ -302,7 +302,7 @@
                 },
                 {
                     "id": 32,
-                    "category_number": 1,
+                    "category_number": 5,
                     "author": "fumiyasac(Sample)",
                     "title": "チーズと牡蠣の相性が良いグラタン",
                     "summary": "牡蠣も本当に日本でもポピュラーで調理バリエーションが多いので本当に嬉しいです。",
@@ -311,7 +311,7 @@
                 },
                 {
                     "id": 33,
-                    "category_number": 2,
+                    "category_number": 5,
                     "author": "fumiyasac(Sample)",
                     "title": "自分が一番好きなケーキでもあるティラミス",
                     "summary": "甘さがきつくないマスカルポーネチーズの美味しさが際立つ優しいケーキだと思います。",
@@ -320,7 +320,7 @@
                 },
                 {
                     "id": 34,
-                    "category_number": 2,
+                    "category_number": 5,
                     "author": "fumiyasac(Sample)",
                     "title": "おやつにテンションが上がるシュークリーム",
                     "summary": "子供だった頃に憧れていたおやつは僕の場合はシュークリームでした。",
@@ -329,12 +329,57 @@
                 },
                 {
                     "id": 35,
-                    "category_number": 2,
+                    "category_number": 5,
                     "author": "fumiyasac(Sample)",
                     "title": "甘くて心がおどりそうなチョコレートムース",
                     "summary": "チョコレートの濃厚な甘さと滑らかな口当たりがポイント。",
                     "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample35.jpg",
                     "rating": "8.2"
+                },
+                {
+                    "id": 36,
+                    "category_number": 6,
+                    "author": "fumiyasac(Sample)",
+                    "title": "めっちゃ辛いけどその味が病みつきになるタイ風レッドカレー",
+                    "summary": "野菜もたっぷりで栄養満点のカレーに激辛スパイスが加わってご飯がとまらない美味しさです。",
+                    "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample36.jpg",
+                    "rating": "8.0"
+                },
+                {
+                    "id": 37,
+                    "category_number": 6,
+                    "author": "fumiyasac(Sample)",
+                    "title": "見た目からしても食べるのが勿体無いキノコのマリネ",
+                    "summary": "ヘルシーなとれたてのキノコに旨味を引き出すドレッシングを合わせればあら不思議！",
+                    "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample37.jpg",
+                    "rating": "8.5"
+                },
+                {
+                    "id": 38,
+                    "category_number": 6,
+                    "author": "fumiyasac(Sample)",
+                    "title": "握り寿司と巻き寿司の盛り合わせ10種類",
+                    "summary": "ご馳走メニューにふさわしいラインナップを揃えた豪華バージョン。",
+                    "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample38.jpg",
+                    "rating": "8.1"
+                },
+                {
+                    "id": 39,
+                    "category_number": 6,
+                    "author": "fumiyasac(Sample)",
+                    "title": "朝食の一品にもあると嬉しい生サラミ",
+                    "summary": "ハムともソーセージとも違うパンにも相性が抜群な一品です。",
+                    "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample39.jpg",
+                    "rating": "9.1"
+                },
+                {
+                    "id": 40,
+                    "category_number": 6,
+                    "author": "fumiyasac(Sample)",
+                    "title": "いちごのちょっと変わったショートケーキ",
+                    "summary": "子供の頃に誰もが憧れていたいちごのショートケーキ。",
+                    "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample40.jpg",
+                    "rating": "9.7"
                 }
             ],
             "has_next_page": false
@@ -381,7 +426,7 @@
             "id": 5,
             "category_number": 1,
             "author": "fumiyasac(Sample)",
-            "title": "アンチョビのシンプルなピザ",
+            "title": "エビとカニをたくさん使った豪華なピザ",
             "summary": "みんなで食べるピザも美味しいですね。勉強会などでもよく出てくるのでどんなものに出会えるか楽しみです。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample5.jpg",
             "rating": "8.2"
@@ -415,7 +460,7 @@
         },
         {
             "id": 9,
-            "category_number": 1,
+            "category_number": 2,
             "author": "fumiyasac(Sample)",
             "title": "なぜか美味しそうでついつい買って食べてしまうタコス",
             "summary": "軽食や朝食で食べたいと思うタコス。毎日ではないけど1つなら朝食にもちょうどいい量ですね。",
@@ -424,7 +469,7 @@
         },
         {
             "id": 10,
-            "category_number": 1,
+            "category_number": 2,
             "author": "fumiyasac(Sample)",
             "title": "ランチでいっぱい食べたい時にオススメな豚バラグリルの定食",
             "summary": "定食でよく見かける豚バラの焼肉だけども、こんな感じでランチで出てくればめっちゃ豪華なご馳走である。",
@@ -433,7 +478,7 @@
         },
         {
             "id": 11,
-            "category_number": 1,
+            "category_number": 2,
             "author": "fumiyasac(Sample)",
             "title": "マヨネーズと明太子の組み合わせが嬉しいどんぶりもの",
             "summary": "マヨネーズと明太子の組み合わせが相性抜群で手応えも食べ応えもバッチリな一品です。",
@@ -451,7 +496,7 @@
         },
         {
             "id": 13,
-            "category_number": 1,
+            "category_number": 2,
             "author": "fumiyasac(Sample)",
             "title": "中南米エリアの定番料理トルティーヤ",
             "summary": "誠に申し訳ございません。「タコス」と「トルティーヤ」の違いがイマイチよくわかっておりません...。",
@@ -460,7 +505,7 @@
         },
         {
             "id": 14,
-            "category_number": 1,
+            "category_number": 2,
             "author": "fumiyasac(Sample)",
             "title": "ワインにぴったりなおつまみの盛り合わせ",
             "summary": "生のチースは僕はとっても苦手ですが、サーモンとクリームチーズの組み合わせは好きです。",
@@ -469,7 +514,7 @@
         },
         {
             "id": 15,
-            "category_number": 1,
+            "category_number": 3,
             "author": "fumiyasac(Sample)",
             "title": "僕の大好物の1つでもある味噌ラーメン",
             "summary": "味噌ラーメンとはなんとも不思議だ。元々は違う文化から発展した食べ物であるにも関わらず、日本文化の色が根強く残っていると感じる。",
@@ -478,7 +523,7 @@
         },
         {
             "id": 16,
-            "category_number": 1,
+            "category_number": 3,
             "author": "fumiyasac(Sample)",
             "title": "小ぶりで可愛らしいけど美味しいエビフライ",
             "summary": "夕食のおかずに出てくると思わずテンションが上がるラインナップですね。子供も大人も嬉しくなるメニューです。",
@@ -487,7 +532,7 @@
         },
         {
             "id": 17,
-            "category_number": 1,
+            "category_number": 3,
             "author": "fumiyasac(Sample)",
             "title": "家庭的なおかずのような焼肉料理",
             "summary": "人類はいつからご馳走を焼肉とするようになってしまったのか...。",
@@ -496,7 +541,7 @@
         },
         {
             "id": 18,
-            "category_number": 1,
+            "category_number": 3,
             "author": "fumiyasac(Sample)",
             "title": "高級感としずる感が半端ではないステーキ",
             "summary": "ご馳走と呼ぶにふさわしいステーキですね。思わず誘惑にぼろ負けしそうである。",
@@ -505,7 +550,7 @@
         },
         {
             "id": 19,
-            "category_number": 1,
+            "category_number": 3,
             "author": "fumiyasac(Sample)",
             "title": "韓国料理の煮込み料理の定番スンドゥブチゲ",
             "summary": "冬の寒い季節には最高ですね。体も温まるし栄養もたっぷりなので助かります。",
@@ -514,7 +559,7 @@
         },
         {
             "id": 20,
-            "category_number": 1,
+            "category_number": 3,
             "author": "fumiyasac(Sample)",
             "title": "中華料理の定番メニューにも関わらす奥深い炒飯",
             "summary": "家で作って食べても、冷凍食品でも、お店で食べてもあまりハズレがない気がします。",
@@ -522,8 +567,17 @@
             "rating": "9.7"
         },
         {
+            "id": 21,
+            "category_number": 3,
+            "author": "fumiyasac(Sample)",
+            "title": "シンプルに美味そうなエビのバター炒め",
+            "summary": "ビールのおつまみにもご飯のおかずの一皿にもぴったりのシンプルな一皿ですね。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample21.jpg",
+            "rating": "8.9"
+        },
+        {
             "id": 22,
-            "category_number": 1,
+            "category_number": 4,
             "author": "fumiyasac(Sample)",
             "title": "韓国の滋養たっぷりな薬膳メニュー参鶏湯",
             "summary": "薬膳要素もたっぷり含まれているので健康にも抜群な人気メニューですね。",
@@ -532,7 +586,7 @@
         },
         {
             "id": 23,
-            "category_number": 1,
+            "category_number": 4,
             "author": "fumiyasac(Sample)",
             "title": "豪華なメインディッシュにぴったりのラムチョップ",
             "summary": "丁寧に焼かれたラムのローストは本当に美味しいですよね。",
@@ -541,7 +595,7 @@
         },
         {
             "id": 24,
-            "category_number": 1,
+            "category_number": 4,
             "author": "fumiyasac(Sample)",
             "title": "シンプルだけど美味しいタコス1皿盛り合わせ",
             "summary": "メキシコ料理はお酒にもマッチするし、印象とは裏腹に辛さが本当に心地よいですね。",
@@ -550,7 +604,7 @@
         },
         {
             "id": 25,
-            "category_number": 2,
+            "category_number": 4,
             "author": "fumiyasac(Sample)",
             "title": "ベリーが乗った可愛いパンケーキ",
             "summary": "家のホットケーキミックスで作るものとは桁違いの美味しさとフワフワ感を感じてみよ。",
@@ -559,7 +613,7 @@
         },
         {
             "id": 26,
-            "category_number": 1,
+            "category_number": 4,
             "author": "fumiyasac(Sample)",
             "title": "豪華海鮮丼づくしのラインナップ",
             "summary": "彩り豊かで新鮮な海の幸をこれでもかと言わんばかりに盛り込んだものは宝石箱のごたる。",
@@ -568,7 +622,7 @@
         },
         {
             "id": 27,
-            "category_number": 1,
+            "category_number": 4,
             "author": "fumiyasac(Sample)",
             "title": "ひとくちサイズの可愛いハンバーガー",
             "summary": "1個の大きさは小さいけれども、味は本物なのは間違いない！",
@@ -577,7 +631,7 @@
         },
         {
             "id": 28,
-            "category_number": 1,
+            "category_number": 4,
             "author": "fumiyasac(Sample)",
             "title": "あさりの美味しさがたっぷりのボンゴレパスタ",
             "summary": "濃厚な貝特有の美味しさをシンプルにかつダイレクトに味わえるメニューです。",
@@ -586,7 +640,7 @@
         },
         {
             "id": 29,
-            "category_number": 1,
+            "category_number": 5,
             "author": "fumiyasac(Sample)",
             "title": "みんな大好き間違いないポークジンジャー",
             "summary": "ご飯のおかずには最高なポークジンジャーですね。これこそ日本が作り出した最高のおかず！",
@@ -595,7 +649,7 @@
         },
         {
             "id": 30,
-            "category_number": 1,
+            "category_number": 5,
             "author": "fumiyasac(Sample)",
             "title": "なかなか味わえない地アジの握り寿司",
             "summary": "そういえばなかなか刺身でアジを食べる機会は少ない。何気ないけど将来的には高級魚になってしまうのかな？",
@@ -604,7 +658,7 @@
         },
         {
             "id": 31,
-            "category_number": 1,
+            "category_number": 5,
             "author": "fumiyasac(Sample)",
             "title": "おつまみの定番大盛りフライドポテト",
             "summary": "定番中の定番のファストメニューではあるけれど手元にあるとついつい取っちゃうヤツですね。",
@@ -613,7 +667,7 @@
         },
         {
             "id": 32,
-            "category_number": 1,
+            "category_number": 5,
             "author": "fumiyasac(Sample)",
             "title": "チーズと牡蠣の相性が良いグラタン",
             "summary": "牡蠣も本当に日本でもポピュラーで調理バリエーションが多いので本当に嬉しいです。",
@@ -622,7 +676,7 @@
         },
         {
             "id": 33,
-            "category_number": 2,
+            "category_number": 5,
             "author": "fumiyasac(Sample)",
             "title": "自分が一番好きなケーキでもあるティラミス",
             "summary": "甘さがきつくないマスカルポーネチーズの美味しさが際立つ優しいケーキだと思います。",
@@ -631,7 +685,7 @@
         },
         {
             "id": 34,
-            "category_number": 2,
+            "category_number": 5,
             "author": "fumiyasac(Sample)",
             "title": "おやつにテンションが上がるシュークリーム",
             "summary": "子供だった頃に憧れていたおやつは僕の場合はシュークリームでした。",
@@ -640,12 +694,57 @@
         },
         {
             "id": 35,
-            "category_number": 2,
+            "category_number": 5,
             "author": "fumiyasac(Sample)",
             "title": "甘くて心がおどりそうなチョコレートムース",
             "summary": "チョコレートの濃厚な甘さと滑らかな口当たりがポイント。",
             "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample35.jpg",
             "rating": "8.2"
+        },
+        {
+            "id": 36,
+            "category_number": 6,
+            "author": "fumiyasac(Sample)",
+            "title": "めっちゃ辛いけどその味が病みつきになるタイ風レッドカレー",
+            "summary": "野菜もたっぷりで栄養満点のカレーに激辛スパイスが加わってご飯がとまらない美味しさです。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample36.jpg",
+            "rating": "8.0"
+        },
+        {
+            "id": 37,
+            "category_number": 6,
+            "author": "fumiyasac(Sample)",
+            "title": "見た目からしても食べるのが勿体無いキノコのマリネ",
+            "summary": "ヘルシーなとれたてのキノコに旨味を引き出すドレッシングを合わせればあら不思議！",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample37.jpg",
+            "rating": "8.5"
+        },
+        {
+            "id": 38,
+            "category_number": 6,
+            "author": "fumiyasac(Sample)",
+            "title": "握り寿司と巻き寿司の盛り合わせ10種類",
+            "summary": "ご馳走メニューにふさわしいラインナップを揃えた豪華バージョン。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample38.jpg",
+            "rating": "8.1"
+        },
+        {
+            "id": 39,
+            "category_number": 6,
+            "author": "fumiyasac(Sample)",
+            "title": "朝食の一品にもあると嬉しい生サラミ",
+            "summary": "ハムともソーセージとも違うパンにも相性が抜群な一品です。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample39.jpg",
+            "rating": "9.1"
+        },
+        {
+            "id": 40,
+            "category_number": 6,
+            "author": "fumiyasac(Sample)",
+            "title": "いちごのちょっと変わったショートケーキ",
+            "summary": "子供の頃に誰もが憧れていたいちごのショートケーキ。",
+            "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample40.jpg",
+            "rating": "9.7"
         }
     ]
 }
