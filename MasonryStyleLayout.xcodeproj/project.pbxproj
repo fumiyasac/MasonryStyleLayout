@@ -256,10 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				DEFFA03421F04FA0006C1C1B /* CustomViewBase.swift */,
-				DEFFA03321F04E72006C1C1B /* PhotoGalleryHandleButtonView */,
 				DEFFA02C21EEE25F006C1C1B /* PhotoGalleryCollectionHeaderView */,
-				DED072A921E710490073963C /* WaterFallLayout */,
 				DED1180021E353A400ABD919 /* PhotoGalleryCollectionViewCell */,
+				DEFFA03321F04E72006C1C1B /* PhotoGalleryHandleButtonView */,
+				DED072A921E710490073963C /* WaterFallLayout */,
 			);
 			path = View;
 			sourceTree = "<group>";
