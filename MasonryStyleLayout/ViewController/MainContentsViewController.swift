@@ -31,12 +31,18 @@ final class MainContentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setupNavigationBar()
         setupNotificationsForDataBinding()
         setupMainCollectionView()
         setupMainContentsHandleButtonView()
     }
 
     // MARK: - Private Function
+
+    private func setupNavigationBar() {
+        setupNavigationBarTitle("グルメ写真一覧サンプル")
+        removeBackButtonText()
+    }
 
     private func setupNotificationsForDataBinding() {
         notificationCenter.addObserver(
