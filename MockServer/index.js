@@ -1,3 +1,6 @@
+// 参考: json-serverに関するもの
+// https://blog.eleven-labs.com/en/json-server
+
 // Mock用のJSONレスポンスサーバーの初期化設定
 const jsonServer = require('json-server');
 const server = jsonServer.create();
