@@ -32,7 +32,7 @@ class MockMealsAPIManager: APIManagerProtocol {
         if let path = path {
             let data = try! Data(contentsOf: URL(fileURLWithPath: path))
             return Promise { seal in
-                return seal.fulfill(JSON(data))
+                seal.fulfill(JSON(data))
             }
         } else {
             fatalError("Invalid json format or existence of file.")
