@@ -49,7 +49,9 @@ class MasonryStyleLayoutTests: XCTestCase {
 
         // サブスレッドでViewModelのメソッドを実行する
         DispatchQueue.global().async {
+
             viewModel.fetchPhotoList()
+
             // メインスレッドでStateのデータを取得する
             DispatchQueue.main.async {
                 photosForTesting = MockPhotoGalleryListState.shared.getPhotoListMappedByCategories()
@@ -59,14 +61,30 @@ class MasonryStyleLayoutTests: XCTestCase {
 
         // 引数で指定したタイムアウト時間内に処理された場合
         waitForExpectations(timeout: timeOutSec, handler: { _ in
+
             // ページングに必要な変数のテスト
             XCTAssertEqual(false, MockPhotoGalleryListState.shared.isTotalCount, "isTotalCountはfalseである")
             XCTAssertEqual(1, MockPhotoGalleryListState.shared.currentPage, "currentPageは1である")
-            // スタブから取得したデータのテスト
-            XCTAssertEqual(1, photosForTesting[0].categoryNumber, "categoryNumberは1である")
-            XCTAssertEqual(7, photosForTesting[0].photos.count, "photos.countは7である")
-            XCTAssertEqual(2, photosForTesting[1].categoryNumber, "categoryNumberは2である")
-            XCTAssertEqual(3, photosForTesting[1].photos.count, "photos.countは3である")
+
+            // スタブから取得したデータで合致する値のペアを定義
+            let testCases: [(expectedCategoryNumber: Int, expectedPhotosCount: Int)] = [
+                (expectedCategoryNumber: 1, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 2, expectedPhotosCount: 3),
+            ]
+
+            // 期待する数と合致するかのテスト
+            photosForTesting.enumerated().forEach{ (index, element) in
+                
+                // その1: カテゴリ番号のテスト
+                let expectedCategoryNumber = testCases[index].expectedCategoryNumber
+                let categoryNumberResult = (element.categoryNumber == expectedCategoryNumber)
+                XCTAssertTrue(categoryNumberResult, "\(index)番目のcategoryNumberは\(expectedCategoryNumber)と合致する。")
+
+                // その2: カテゴリ番号に紐づく写真の枚数のテスト
+                let expectedPhotosCount = testCases[index].expectedPhotosCount
+                let photosCountResult = (element.photos.count == expectedPhotosCount)
+                XCTAssertTrue(photosCountResult, "\(index)番目のphotos.countは\(expectedPhotosCount)と合致する。")
+            }
         })
     }
 
@@ -78,7 +96,9 @@ class MasonryStyleLayoutTests: XCTestCase {
 
         // サブスレッドでViewModelのメソッドを実行する
         DispatchQueue.global().async {
+
             viewModel.fetchPhotoList()
+
             // メインスレッドでStateのデータを取得する
             DispatchQueue.main.async {
                 photosForTesting = MockPhotoGalleryListState.shared.getPhotoListMappedByCategories()
@@ -88,16 +108,31 @@ class MasonryStyleLayoutTests: XCTestCase {
 
         // 引数で指定したタイムアウト時間内に処理された場合
         waitForExpectations(timeout: timeOutSec, handler: { _ in
+
             // ページングに必要な変数のテスト
             XCTAssertEqual(false, MockPhotoGalleryListState.shared.isTotalCount, "isTotalCountはfalseである")
             XCTAssertEqual(2, MockPhotoGalleryListState.shared.currentPage, "currentPageは2である")
-            // スタブから取得したデータのテスト
-            XCTAssertEqual(1, photosForTesting[0].categoryNumber, "categoryNumberは1である")
-            XCTAssertEqual(7, photosForTesting[0].photos.count, "photos.countは7である")
-            XCTAssertEqual(2, photosForTesting[1].categoryNumber, "categoryNumberは2である")
-            XCTAssertEqual(7, photosForTesting[1].photos.count, "photos.countは7である")
-            XCTAssertEqual(3, photosForTesting[2].categoryNumber, "categoryNumberは3である")
-            XCTAssertEqual(6, photosForTesting[2].photos.count, "photos.countは6である")
+
+            // スタブから取得したデータで合致する値のペアを定義
+            let testCases: [(expectedCategoryNumber: Int, expectedPhotosCount: Int)] = [
+                (expectedCategoryNumber: 1, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 2, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 3, expectedPhotosCount: 6),
+            ]
+
+            // 期待する数と合致するかのテスト
+            photosForTesting.enumerated().forEach{ (index, element) in
+
+                // その1: カテゴリ番号のテスト
+                let expectedCategoryNumber = testCases[index].expectedCategoryNumber
+                let categoryNumberResult = (element.categoryNumber == expectedCategoryNumber)
+                XCTAssertTrue(categoryNumberResult, "\(index)番目のcategoryNumberは\(expectedCategoryNumber)と合致する。")
+
+                // その2: カテゴリ番号に紐づく写真の枚数のテスト
+                let expectedPhotosCount = testCases[index].expectedPhotosCount
+                let photosCountResult = (element.photos.count == expectedPhotosCount)
+                XCTAssertTrue(photosCountResult, "\(index)番目のphotos.countは\(expectedPhotosCount)と合致する。")
+            }
         })
     }
 
@@ -109,7 +144,9 @@ class MasonryStyleLayoutTests: XCTestCase {
 
         // サブスレッドでViewModelのメソッドを実行する
         DispatchQueue.global().async {
+
             viewModel.fetchPhotoList()
+
             // メインスレッドでStateのデータを取得する
             DispatchQueue.main.async {
                 photosForTesting = MockPhotoGalleryListState.shared.getPhotoListMappedByCategories()
@@ -119,20 +156,33 @@ class MasonryStyleLayoutTests: XCTestCase {
 
         // 引数で指定したタイムアウト時間内に処理された場合
         waitForExpectations(timeout: timeOutSec, handler: { _ in
+
             // ページングに必要な変数のテスト
             XCTAssertEqual(false, MockPhotoGalleryListState.shared.isTotalCount, "isTotalCountはfalseである")
             XCTAssertEqual(3, MockPhotoGalleryListState.shared.currentPage, "currentPageは3である")
-            // スタブから取得したデータのテスト
-            XCTAssertEqual(1, photosForTesting[0].categoryNumber, "categoryNumberは1である")
-            XCTAssertEqual(7, photosForTesting[0].photos.count, "photos.countは7である")
-            XCTAssertEqual(2, photosForTesting[1].categoryNumber, "categoryNumberは2である")
-            XCTAssertEqual(7, photosForTesting[1].photos.count, "photos.countは7である")
-            XCTAssertEqual(3, photosForTesting[2].categoryNumber, "categoryNumberは3である")
-            XCTAssertEqual(7, photosForTesting[2].photos.count, "photos.countは7である")
-            XCTAssertEqual(4, photosForTesting[3].categoryNumber, "categoryNumberは4である")
-            XCTAssertEqual(7, photosForTesting[3].photos.count, "photos.countは7である")
-            XCTAssertEqual(5, photosForTesting[4].categoryNumber, "categoryNumberは5である")
-            XCTAssertEqual(2, photosForTesting[4].photos.count, "photos.countは2である")
+
+            // スタブから取得したデータで合致する値のペアを定義
+            let testCases: [(expectedCategoryNumber: Int, expectedPhotosCount: Int)] = [
+                (expectedCategoryNumber: 1, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 2, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 3, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 4, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 5, expectedPhotosCount: 2),
+            ]
+
+            // 期待する数と合致するかのテスト
+            photosForTesting.enumerated().forEach{ (index, element) in
+
+                // その1: カテゴリ番号のテスト
+                let expectedCategoryNumber = testCases[index].expectedCategoryNumber
+                let categoryNumberResult = (element.categoryNumber == expectedCategoryNumber)
+                XCTAssertTrue(categoryNumberResult, "\(index)番目のcategoryNumberは\(expectedCategoryNumber)と合致する。")
+
+                // その2: カテゴリ番号に紐づく写真の枚数のテスト
+                let expectedPhotosCount = testCases[index].expectedPhotosCount
+                let photosCountResult = (element.photos.count == expectedPhotosCount)
+                XCTAssertTrue(photosCountResult, "\(index)番目のphotos.countは\(expectedPhotosCount)と合致する。")
+            }
         })
     }
 
@@ -144,7 +194,9 @@ class MasonryStyleLayoutTests: XCTestCase {
         
         // サブスレッドでViewModelのメソッドを実行する
         DispatchQueue.global().async {
+
             viewModel.fetchPhotoList()
+
             // メインスレッドでStateのデータを取得する
             DispatchQueue.main.async {
                 photosForTesting = MockPhotoGalleryListState.shared.getPhotoListMappedByCategories()
@@ -154,22 +206,34 @@ class MasonryStyleLayoutTests: XCTestCase {
         
         // 引数で指定したタイムアウト時間内に処理された場合
         waitForExpectations(timeout: timeOutSec, handler: { _ in
+
             // ページングに必要な変数のテスト
             XCTAssertEqual(true, MockPhotoGalleryListState.shared.isTotalCount, "isTotalCountはtrueである")
             XCTAssertEqual(4, MockPhotoGalleryListState.shared.currentPage, "currentPageは4である")
-            // スタブから取得したデータのテスト
-            XCTAssertEqual(1, photosForTesting[0].categoryNumber, "categoryNumberは1である")
-            XCTAssertEqual(7, photosForTesting[0].photos.count, "photos.countは7である")
-            XCTAssertEqual(2, photosForTesting[1].categoryNumber, "categoryNumberは2である")
-            XCTAssertEqual(7, photosForTesting[1].photos.count, "photos.countは7である")
-            XCTAssertEqual(3, photosForTesting[2].categoryNumber, "categoryNumberは3である")
-            XCTAssertEqual(7, photosForTesting[2].photos.count, "photos.countは7である")
-            XCTAssertEqual(4, photosForTesting[3].categoryNumber, "categoryNumberは4である")
-            XCTAssertEqual(7, photosForTesting[3].photos.count, "photos.countは7である")
-            XCTAssertEqual(5, photosForTesting[4].categoryNumber, "categoryNumberは5である")
-            XCTAssertEqual(7, photosForTesting[4].photos.count, "photos.countは7である")
-            XCTAssertEqual(6, photosForTesting[5].categoryNumber, "categoryNumberは6である")
-            XCTAssertEqual(5, photosForTesting[5].photos.count, "photos.countは5である")
+
+            // スタブから取得したデータで合致する値のペアを定義
+            let testCases: [(expectedCategoryNumber: Int, expectedPhotosCount: Int)] = [
+                (expectedCategoryNumber: 1, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 2, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 3, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 4, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 5, expectedPhotosCount: 7),
+                (expectedCategoryNumber: 6, expectedPhotosCount: 5),
+            ]
+
+            // 期待する数と合致するかのテスト
+            photosForTesting.enumerated().forEach{ (index, element) in
+
+                // その1: カテゴリ番号のテスト
+                let expectedCategoryNumber = testCases[index].expectedCategoryNumber
+                let categoryNumberResult = (element.categoryNumber == expectedCategoryNumber)
+                XCTAssertTrue(categoryNumberResult, "\(index)番目のcategoryNumberは\(expectedCategoryNumber)と合致する。")
+
+                // その2: カテゴリ番号に紐づく写真の枚数のテスト
+                let expectedPhotosCount = testCases[index].expectedPhotosCount
+                let photosCountResult = (element.photos.count == expectedPhotosCount)
+                XCTAssertTrue(photosCountResult, "\(index)番目のphotos.countは\(expectedPhotosCount)と合致する。")
+            }
         })
     }
 }
