@@ -7,8 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6962692B8CE9CF4740829139 /* Pods_MasonryStyleLayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A4C14690FA320780EEB20B /* Pods_MasonryStyleLayoutTests.framework */; };
 		DE1A0D9121F0D88D004EBAF9 /* CategoryNumberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */; };
 		DE57379821F1E9E6006DE44A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE57379721F1E9E6006DE44A /* UIViewControllerExtension.swift */; };
+		DE5737AF21F5B08B006DE44A /* page3.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AA21F5B08B006DE44A /* page3.json */; };
+		DE5737B021F5B08B006DE44A /* page1.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AB21F5B08B006DE44A /* page1.json */; };
+		DE5737B121F5B08B006DE44A /* page4.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AC21F5B08B006DE44A /* page4.json */; };
+		DE5737B221F5B08B006DE44A /* page2.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AD21F5B08B006DE44A /* page2.json */; };
+		DE5737B321F5B08B006DE44A /* detail.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AE21F5B08B006DE44A /* detail.json */; };
+		DE5737B521F5B0E2006DE44A /* MockPhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737B421F5B0E2006DE44A /* MockPhotoGalleryListState.swift */; };
+		DE5737B721F5B15B006DE44A /* MockMealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */; };
 		DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072A721E4B70E0073963C /* MealsAPIManager.swift */; };
 		DED072AF21E855C10073963C /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */; };
 		DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072B121E85F640073963C /* PhotoGalleryListState.swift */; };
@@ -54,9 +62,19 @@
 /* Begin PBXFileReference section */
 		083FF03CBA96B988758FAEA2 /* Pods_MasonryStyleLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasonryStyleLayout.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D49ABA57B92FC5AA1B2AE5D /* Pods-MasonryStyleLayout.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.release.xcconfig"; sourceTree = "<group>"; };
+		51A4C14690FA320780EEB20B /* Pods_MasonryStyleLayoutTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasonryStyleLayoutTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D1B8B6AE08192F41080C15E /* Pods-MasonryStyleLayoutTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayoutTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests.release.xcconfig"; sourceTree = "<group>"; };
 		B971CF1B5CD79F18299B1A47 /* Pods-MasonryStyleLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.debug.xcconfig"; sourceTree = "<group>"; };
+		CEA5238B3B8CCEAA9E6C8ED6 /* Pods-MasonryStyleLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNumberType.swift; sourceTree = "<group>"; };
 		DE57379721F1E9E6006DE44A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		DE5737AA21F5B08B006DE44A /* page3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page3.json; sourceTree = "<group>"; };
+		DE5737AB21F5B08B006DE44A /* page1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page1.json; sourceTree = "<group>"; };
+		DE5737AC21F5B08B006DE44A /* page4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page4.json; sourceTree = "<group>"; };
+		DE5737AD21F5B08B006DE44A /* page2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page2.json; sourceTree = "<group>"; };
+		DE5737AE21F5B08B006DE44A /* detail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = detail.json; sourceTree = "<group>"; };
+		DE5737B421F5B0E2006DE44A /* MockPhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoGalleryListState.swift; sourceTree = "<group>"; };
+		DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsAPIManager.swift; sourceTree = "<group>"; };
 		DED072A721E4B70E0073963C /* MealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIManager.swift; sourceTree = "<group>"; };
 		DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
 		DED072B121E85F640073963C /* PhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryListState.swift; sourceTree = "<group>"; };
@@ -100,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6962692B8CE9CF4740829139 /* Pods_MasonryStyleLayoutTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +137,8 @@
 			children = (
 				B971CF1B5CD79F18299B1A47 /* Pods-MasonryStyleLayout.debug.xcconfig */,
 				1D49ABA57B92FC5AA1B2AE5D /* Pods-MasonryStyleLayout.release.xcconfig */,
+				CEA5238B3B8CCEAA9E6C8ED6 /* Pods-MasonryStyleLayoutTests.debug.xcconfig */,
+				7D1B8B6AE08192F41080C15E /* Pods-MasonryStyleLayoutTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -126,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				083FF03CBA96B988758FAEA2 /* Pods_MasonryStyleLayout.framework */,
+				51A4C14690FA320780EEB20B /* Pods_MasonryStyleLayoutTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -136,6 +158,36 @@
 				DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		DE5737A821F5AFA9006DE44A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				DE5737B421F5B0E2006DE44A /* MockPhotoGalleryListState.swift */,
+				DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		DE5737B821F5B965006DE44A /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				DE5737AE21F5B08B006DE44A /* detail.json */,
+				DE5737AB21F5B08B006DE44A /* page1.json */,
+				DE5737AD21F5B08B006DE44A /* page2.json */,
+				DE5737AA21F5B08B006DE44A /* page3.json */,
+				DE5737AC21F5B08B006DE44A /* page4.json */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		DE5737B921F5B98D006DE44A /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				DE5737B821F5B965006DE44A /* Stub */,
+				DE5737A821F5AFA9006DE44A /* Mock */,
+			);
+			path = Testing;
 			sourceTree = "<group>";
 		};
 		DED072A621E4AFF90073963C /* APIManager */ = {
@@ -222,8 +274,9 @@
 		DED117DD21E2ED5900ABD919 /* MasonryStyleLayoutTests */ = {
 			isa = PBXGroup;
 			children = (
-				DED117DE21E2ED5900ABD919 /* MasonryStyleLayoutTests.swift */,
 				DED117E021E2ED5900ABD919 /* Info.plist */,
+				DED117DE21E2ED5900ABD919 /* MasonryStyleLayoutTests.swift */,
+				DE5737B921F5B98D006DE44A /* Testing */,
 			);
 			path = MasonryStyleLayoutTests;
 			sourceTree = "<group>";
@@ -330,9 +383,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DED117F121E2ED5900ABD919 /* Build configuration list for PBXNativeTarget "MasonryStyleLayoutTests" */;
 			buildPhases = (
+				7908C8A04FDCBACCB4E97B33 /* [CP] Check Pods Manifest.lock */,
 				DED117D621E2ED5900ABD919 /* Sources */,
 				DED117D721E2ED5900ABD919 /* Frameworks */,
 				DED117D821E2ED5900ABD919 /* Resources */,
+				14BB993BDDEEF403E4798765 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -423,6 +478,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE5737B021F5B08B006DE44A /* page1.json in Resources */,
+				DE5737B221F5B08B006DE44A /* page2.json in Resources */,
+				DE5737AF21F5B08B006DE44A /* page3.json in Resources */,
+				DE5737B321F5B08B006DE44A /* detail.json in Resources */,
+				DE5737B121F5B08B006DE44A /* page4.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,6 +530,30 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		14BB993BDDEEF403E4798765 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		6B370375C5D5D069D2392424 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -486,6 +570,28 @@
 			);
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-MasonryStyleLayout-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7908C8A04FDCBACCB4E97B33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MasonryStyleLayoutTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -523,6 +629,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DED117DF21E2ED5900ABD919 /* MasonryStyleLayoutTests.swift in Sources */,
+				DE5737B521F5B0E2006DE44A /* MockPhotoGalleryListState.swift in Sources */,
+				DE5737B721F5B15B006DE44A /* MockMealsAPIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -725,6 +833,7 @@
 		};
 		DED117F221E2ED5900ABD919 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEA5238B3B8CCEAA9E6C8ED6 /* Pods-MasonryStyleLayoutTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -746,6 +855,7 @@
 		};
 		DED117F321E2ED5900ABD919 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D1B8B6AE08192F41080C15E /* Pods-MasonryStyleLayoutTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

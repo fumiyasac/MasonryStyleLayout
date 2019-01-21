@@ -1,0 +1,98 @@
+[
+    {
+        "page": 2,
+        "meals": [
+            {
+                "id": 11,
+                "category_number": 2,
+                "author": "fumiyasac(Sample)",
+                "title": "マヨネーズと明太子の組み合わせが嬉しいどんぶりもの",
+                "summary": "マヨネーズと明太子の組み合わせが相性抜群で手応えも食べ応えもバッチリな一品です。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample11.jpg",
+                "rating": "8.9"
+            },
+            {
+                "id": 12,
+                "category_number": 2,
+                "author": "fumiyasac(Sample)",
+                "title": "風格あるバナナチョコレートを使ったデザート",
+                "summary": "これこそまさに最高の贅沢。いいことがあったから今夜は食べよう。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample12.jpg",
+                "rating": "9.6"
+            },
+            {
+                "id": 13,
+                "category_number": 2,
+                "author": "fumiyasac(Sample)",
+                "title": "中南米エリアの定番料理トルティーヤ",
+                "summary": "誠に申し訳ございません。「タコス」と「トルティーヤ」の違いがイマイチよくわかっておりません...。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample13.jpg",
+                "rating": "8.7"
+            },
+            {
+                "id": 14,
+                "category_number": 2,
+                "author": "fumiyasac(Sample)",
+                "title": "ワインにぴったりなおつまみの盛り合わせ",
+                "summary": "生のチースは僕はとっても苦手ですが、サーモンとクリームチーズの組み合わせは好きです。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample14.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 15,
+                "category_number": 3,
+                "author": "fumiyasac(Sample)",
+                "title": "僕の大好物の1つでもある味噌ラーメン",
+                "summary": "味噌ラーメンとはなんとも不思議だ。元々は違う文化から発展した食べ物であるにも関わらず、日本文化の色が根強く残っていると感じる。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample15.jpg",
+                "rating": "8.2"
+            },
+            {
+                "id": 16,
+                "category_number": 3,
+                "author": "fumiyasac(Sample)",
+                "title": "小ぶりで可愛らしいけど美味しいエビフライ",
+                "summary": "夕食のおかずに出てくると思わずテンションが上がるラインナップですね。子供も大人も嬉しくなるメニューです。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample16.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 17,
+                "category_number": 3,
+                "author": "fumiyasac(Sample)",
+                "title": "家庭的なおかずのような焼肉料理",
+                "summary": "人類はいつからご馳走を焼肉とするようになってしまったのか...。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample17.jpg",
+                "rating": "8.5"
+            },
+            {
+                "id": 18,
+                "category_number": 3,
+                "author": "fumiyasac(Sample)",
+                "title": "高級感としずる感が半端ではないステーキ",
+                "summary": "ご馳走と呼ぶにふさわしいステーキですね。思わず誘惑にぼろ負けしそうである。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample18.jpg",
+                "rating": "8.1"
+            },
+            {
+                "id": 19,
+                "category_number": 3,
+                "author": "fumiyasac(Sample)",
+                "title": "韓国料理の煮込み料理の定番スンドゥブチゲ",
+                "summary": "冬の寒い季節には最高ですね。体も温まるし栄養もたっぷりなので助かります。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample19.jpg",
+                "rating": "9.1"
+            },
+            {
+                "id": 20,
+                "category_number": 3,
+                "author": "fumiyasac(Sample)",
+                "title": "中華料理の定番メニューにも関わらす奥深い炒飯",
+                "summary": "家で作って食べても、冷凍食品でも、お店で食べてもあまりハズレがない気がします。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample20.jpg",
+                "rating": "9.7"
+            }
+        ],
+        "has_next_page": true
+    }
+]

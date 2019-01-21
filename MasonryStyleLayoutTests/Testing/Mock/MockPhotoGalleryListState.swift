@@ -1,31 +1,18 @@
 //
-//  PhotoGalleryListState.swift
-//  MasonryStyleLayout
+//  MockPhotoGalleryListState.swift
+//  MasonryStyleLayoutTests
 //
-//  Created by 酒井文也 on 2019/01/11.
+//  Created by 酒井文也 on 2019/01/21.
 //  Copyright © 2019 酒井文也. All rights reserved.
 //
 
 import Foundation
 
-protocol PhotoGalleryListStateProtocol {
-    var isTotalCount: Bool { get }
-    var currentPage: Int { get }
+@testable import MasonryStyleLayout
 
-    func getPhotoListMappedByCategories() -> [(categoryNumber: Int, photos: [PhotoEntity])]
-    func appendNextPhotos(_ targetPhotos: [PhotoEntity], hasNextPage: Bool)
-    func resetCurrentState()
-}
-
-// MEMO: 取得したデータを一時的に保持するためのクラス
-// ※ 邪道ではあるがReduxで利用するStateのように振る舞わせるための対策
-
-class PhotoGalleryListState: PhotoGalleryListStateProtocol {
+class MockPhotoGalleryListState: PhotoGalleryListStateProtocol {
 
     private let itemsPerPageCount: Int = 10
-
-    // APIから取得したデータを一時的に格納するための変数
-    // Singletonなインスタンスではあるが基本的には読み取り専用としたい　→ 「private (set)var」or「Computed Property」として保持する
 
     // 写真データとして利用するためのEntity
     private var photos: [PhotoEntity] = []
@@ -40,7 +27,7 @@ class PhotoGalleryListState: PhotoGalleryListStateProtocol {
 
     // MARK: - Singleton Instance
 
-    static let shared = PhotoGalleryListState()
+    static let shared = MockPhotoGalleryListState()
 
     private init() {}
 

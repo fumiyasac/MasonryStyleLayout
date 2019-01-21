@@ -15,3 +15,12 @@ target 'MasonryStyleLayout' do
   pod 'AlamofireImage'
   pod 'FontAwesome.swift'
 end
+
+target 'MasonryStyleLayoutTests' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for MasonryStyleLayout
+  pod 'PromiseKit'
+  pod 'SwiftyJSON'
+end

@@ -17,7 +17,10 @@ final class PhotoGalleryViewModel {
     let failureFetchPhotoList = Notification.Name(ViewModelNotification.failureFetchPhotoList.rawValue)
     let resetPhotoList = Notification.Name(ViewModelNotification.resetPhotoList.rawValue)
 
+    // 初期化時に外部から渡されるインスタンス
     private let notificationCenter: NotificationCenter
+    private let state: PhotoGalleryListStateProtocol
+    private let api: APIManagerProtocol
 
     // MARK: - Enum
 
@@ -30,8 +33,10 @@ final class PhotoGalleryViewModel {
 
     // MARK: - Initializer
 
-    init(notificationCenter: NotificationCenter) {
+    init(notificationCenter: NotificationCenter, state: PhotoGalleryListStateProtocol, api: APIManagerProtocol) {
         self.notificationCenter = notificationCenter
+        self.state = state
+        self.api = api
     }
 
     // MARK: - Function
@@ -43,19 +48,19 @@ final class PhotoGalleryViewModel {
         notificationCenter.post(name: isFetchingPhotoList, object: nil)
 
         // 合計数に到達したなら以降の作業を実行しない
-        if PhotoGalleryListState.shared.isTotalCount {
+        if state.isTotalCount {
             self.notificationCenter.post(name: self.successFetchPhotoList, object: nil)
             return
         }
 
-        let targetPage = PhotoGalleryListState.shared.currentPage + 1
-        MealsAPIManager.shared.getMealList(perPage: targetPage)
+        let targetPage = state.currentPage + 1
+        api.getMealList(perPage: targetPage)
             .done{ json in
 
                 // データ保持用のStateクラスのインスタンスへ格納する
                 let responseResult = self.parseJSON(json)
                 print(responseResult)
-                PhotoGalleryListState.shared.appendNextPhotos(responseResult.mealPhotoList, hasNextPage: responseResult.hasNextPage)
+                self.state.appendNextPhotos(responseResult.mealPhotoList, hasNextPage: responseResult.hasNextPage)
 
                 // データ取得処理成功時のNotification送信
                 self.notificationCenter.post(name: self.successFetchPhotoList, object: nil)

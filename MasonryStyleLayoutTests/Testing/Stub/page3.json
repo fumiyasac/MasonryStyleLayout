@@ -1,0 +1,98 @@
+[
+    {
+        "page": 3,
+        "meals": [
+            {
+                "id": 21,
+                "category_number": 3,
+                "author": "fumiyasac(Sample)",
+                "title": "シンプルに美味そうなエビのバター炒め",
+                "summary": "ビールのおつまみにもご飯のおかずの一皿にもぴったりのシンプルな一皿ですね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample21.jpg",
+                "rating": "8.9"
+            },
+            {
+                "id": 22,
+                "category_number": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "韓国の滋養たっぷりな薬膳メニュー参鶏湯",
+                "summary": "薬膳要素もたっぷり含まれているので健康にも抜群な人気メニューですね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample22.jpg",
+                "rating": "9.6"
+            },
+            {
+                "id": 23,
+                "category_number": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "豪華なメインディッシュにぴったりのラムチョップ",
+                "summary": "丁寧に焼かれたラムのローストは本当に美味しいですよね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample23.jpg",
+                "rating": "8.7"
+            },
+            {
+                "id": 24,
+                "category_number": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "シンプルだけど美味しいタコス1皿盛り合わせ",
+                "summary": "メキシコ料理はお酒にもマッチするし、印象とは裏腹に辛さが本当に心地よいですね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample24.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 25,
+                "category_number": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "ベリーが乗った可愛いパンケーキ",
+                "summary": "家のホットケーキミックスで作るものとは桁違いの美味しさとフワフワ感を感じてみよ。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample25.jpg",
+                "rating": "8.2"
+            },
+            {
+                "id": 26,
+                "category_number": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "豪華海鮮丼づくしのラインナップ",
+                "summary": "彩り豊かで新鮮な海の幸をこれでもかと言わんばかりに盛り込んだものは宝石箱のごたる。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample26.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 27,
+                "category_number": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "ひとくちサイズの可愛いハンバーガー",
+                "summary": "1個の大きさは小さいけれども、味は本物なのは間違いない！",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample27.jpg",
+                "rating": "8.5"
+            },
+            {
+                "id": 28,
+                "category_number": 4,
+                "author": "fumiyasac(Sample)",
+                "title": "あさりの美味しさがたっぷりのボンゴレパスタ",
+                "summary": "濃厚な貝特有の美味しさをシンプルにかつダイレクトに味わえるメニューです。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample28.jpg",
+                "rating": "8.1"
+            },
+            {
+                "id": 29,
+                "category_number": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "みんな大好き間違いないポークジンジャー",
+                "summary": "ご飯のおかずには最高なポークジンジャーですね。これこそ日本が作り出した最高のおかず！",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample29.jpg",
+                "rating": "9.1"
+            },
+            {
+                "id": 30,
+                "category_number": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "なかなか味わえない地アジの握り寿司",
+                "summary": "そういえばなかなか刺身でアジを食べる機会は少ない。何気ないけど将来的には高級魚になってしまうのかな？",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample30.jpg",
+                "rating": "9.7"
+            }
+        ],
+        "has_next_page": true
+    }
+]

@@ -15,7 +15,7 @@ import AlamofireImage
 final class MainContentsViewController: UIViewController {
 
     private let notificationCenter = NotificationCenter()
-    private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter)
+    private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter, state: PhotoGalleryListState.shared, api: MealsAPIManager.shared)
 
     // MEMO: プロパティの変更タイミングに応じてCollectionViewの更新を実行する
     private var photoGalleryLists: [(categoryNumber: Int, photos: [PhotoEntity])] = [] {

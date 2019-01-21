@@ -1,0 +1,98 @@
+[
+    {
+        "page": 4,
+        "meals": [
+            {
+                "id": 31,
+                "category_number": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "おつまみの定番大盛りフライドポテト",
+                "summary": "定番中の定番のファストメニューではあるけれど手元にあるとついつい取っちゃうヤツですね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample31.jpg",
+                "rating": "8.9"
+            },
+            {
+                "id": 32,
+                "category_number": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "チーズと牡蠣の相性が良いグラタン",
+                "summary": "牡蠣も本当に日本でもポピュラーで調理バリエーションが多いので本当に嬉しいです。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample32.jpg",
+                "rating": "9.6"
+            },
+            {
+                "id": 33,
+                "category_number": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "自分が一番好きなケーキでもあるティラミス",
+                "summary": "甘さがきつくないマスカルポーネチーズの美味しさが際立つ優しいケーキだと思います。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample33.jpg",
+                "rating": "8.7"
+            },
+            {
+                "id": 34,
+                "category_number": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "おやつにテンションが上がるシュークリーム",
+                "summary": "子供だった頃に憧れていたおやつは僕の場合はシュークリームでした。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample34.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 35,
+                "category_number": 5,
+                "author": "fumiyasac(Sample)",
+                "title": "甘くて心がおどりそうなチョコレートムース",
+                "summary": "チョコレートの濃厚な甘さと滑らかな口当たりがポイント。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample35.jpg",
+                "rating": "8.2"
+            },
+            {
+                "id": 36,
+                "category_number": 6,
+                "author": "fumiyasac(Sample)",
+                "title": "めっちゃ辛いけどその味が病みつきになるタイ風レッドカレー",
+                "summary": "野菜もたっぷりで栄養満点のカレーに激辛スパイスが加わってご飯がとまらない美味しさです。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample36.jpg",
+                "rating": "8.0"
+            },
+            {
+                "id": 37,
+                "category_number": 6,
+                "author": "fumiyasac(Sample)",
+                "title": "見た目からしても食べるのが勿体無いキノコのマリネ",
+                "summary": "ヘルシーなとれたてのキノコに旨味を引き出すドレッシングを合わせればあら不思議！",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample37.jpg",
+                "rating": "8.5"
+            },
+            {
+                "id": 38,
+                "category_number": 6,
+                "author": "fumiyasac(Sample)",
+                "title": "握り寿司と巻き寿司の盛り合わせ10種類",
+                "summary": "ご馳走メニューにふさわしいラインナップを揃えた豪華バージョン。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample38.jpg",
+                "rating": "8.1"
+            },
+            {
+                "id": 39,
+                "category_number": 6,
+                "author": "fumiyasac(Sample)",
+                "title": "朝食の一品にもあると嬉しい生サラミ",
+                "summary": "ハムともソーセージとも違うパンにも相性が抜群な一品です。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample39.jpg",
+                "rating": "9.1"
+            },
+            {
+                "id": 40,
+                "category_number": 6,
+                "author": "fumiyasac(Sample)",
+                "title": "いちごのちょっと変わったショートケーキ",
+                "summary": "子供の頃に誰もが憧れていたいちごのショートケーキ。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/sample40.jpg",
+                "rating": "9.7"
+            }
+        ],
+        "has_next_page": false
+    }
+]
