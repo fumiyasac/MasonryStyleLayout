@@ -12,8 +12,11 @@ import PromiseKit
 
 @testable import MasonryStyleLayout
 
+// MEMO: APIリクエストのMock用のクラス
+// PromiseKitでラッピングしているAPI通信処理をBundleされているJSONファイルの読み込みへ置き換える
+
 class MockMealsAPIManager: APIManagerProtocol {
-    
+
     // MARK: - Singleton Instance
 
     static let shared = MockMealsAPIManager()
@@ -24,12 +27,7 @@ class MockMealsAPIManager: APIManagerProtocol {
 
     // 食事メニュー一覧を取得する
     func getMealList(perPage: Int) -> Promise<JSON> {
-        
-        let t = type(of: self)
-        let bundle = Bundle(for: t.self)
-        let path = bundle.path(forResource: "page\(perPage)", ofType: "json")
-
-        if let path = path {
+        if let path = getStubFilePath(jsonFileName: "page\(perPage)") {
             let data = try! Data(contentsOf: URL(fileURLWithPath: path))
             return Promise { seal in
                 seal.fulfill(JSON(data))
@@ -41,10 +39,7 @@ class MockMealsAPIManager: APIManagerProtocol {
 
     // 引数のIDに紐づく食事メニューを取得する
     func getMealBy(id: Int) -> Promise<JSON> {
-        let t = type(of: self)
-        let bundle = Bundle(for: t.self)
-        let path = bundle.path(forResource: "detail", ofType: "json")
-        if let path = path {
+        if let path = getStubFilePath(jsonFileName: "detail") {
             let data = try! Data(contentsOf: URL(fileURLWithPath: path))
             return Promise { seal in
                 seal.fulfill(JSON(data))
@@ -52,5 +47,13 @@ class MockMealsAPIManager: APIManagerProtocol {
         } else {
             fatalError("Invalid json format or existence of file.")
         }
+    }
+
+    // MARK: - Private Function
+
+    private func getStubFilePath(jsonFileName: String) -> String? {
+        let t = type(of: self)
+        let bundle = Bundle(for: t.self)
+        return bundle.path(forResource: jsonFileName, ofType: "json")
     }
 }

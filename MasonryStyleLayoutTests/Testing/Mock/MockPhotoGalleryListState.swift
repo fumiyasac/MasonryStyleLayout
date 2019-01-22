@@ -10,6 +10,9 @@ import Foundation
 
 @testable import MasonryStyleLayout
 
+// MEMO: 取得したデータを一時的に保持するためのクラスのMock
+// PhotoGalleryListStateはSingletonなので名前が異なるが振る舞いが同じなものとしている
+
 class MockPhotoGalleryListState: PhotoGalleryListStateProtocol {
 
     private let itemsPerPageCount: Int = 10

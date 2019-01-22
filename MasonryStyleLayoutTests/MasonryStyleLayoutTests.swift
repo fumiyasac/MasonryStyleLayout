@@ -41,10 +41,10 @@ class MasonryStyleLayoutTests: XCTestCase {
     
     // MARK: - Private Function
 
+    // 1回目のフェッチを実行
     private func fetchFirst(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
-        // 1回目のフェッチを実行
         let firstFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "firstFetchRequestExpectation")
 
         // サブスレッドでViewModelのメソッドを実行する
@@ -88,10 +88,10 @@ class MasonryStyleLayoutTests: XCTestCase {
         })
     }
 
+    // 2回目のフェッチを実行
     private func fetchSecond(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
-        // 2回目のフェッチを実行
         let secondFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "secondFetchRequestExpectation")
 
         // サブスレッドでViewModelのメソッドを実行する
@@ -136,10 +136,10 @@ class MasonryStyleLayoutTests: XCTestCase {
         })
     }
 
+    // 3回目のフェッチを実行
     private func fetchThird(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
-        // 3回目のフェッチを実行
         let thirdFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "thirdFetchRequestExpectation")
 
         // サブスレッドでViewModelのメソッドを実行する
@@ -186,12 +186,12 @@ class MasonryStyleLayoutTests: XCTestCase {
         })
     }
 
+    // 4回目のフェッチを実行
     private func fetchFourth(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
-        // 4回目のフェッチを実行
         let fourthFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "fourthFetchRequestExpectation")
-        
+
         // サブスレッドでViewModelのメソッドを実行する
         DispatchQueue.global().async {
 
