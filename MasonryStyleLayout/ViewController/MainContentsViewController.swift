@@ -14,8 +14,13 @@ import AlamofireImage
 
 final class MainContentsViewController: UIViewController {
 
+    // ViewModelの初期化に必要な要素の定義
     private let notificationCenter = NotificationCenter()
-    private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter, state: PhotoGalleryListState.shared, api: MealsAPIManager.shared)
+    private let state = PhotoGalleryListState.shared
+    private let api = MealsAPIManager.shared
+
+    // ViewModelの初期化
+    private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter, state: state, api: api)
 
     // MEMO: プロパティの変更タイミングに応じてCollectionViewの更新を実行する
     private var photoGalleryLists: [(categoryNumber: Int, photos: [PhotoEntity])] = [] {
@@ -24,6 +29,7 @@ final class MainContentsViewController: UIViewController {
         }
     }
 
+    // 表示の調整に必要なUI部品やAutoLayoutの制約
     @IBOutlet weak private var mainContentsCollectionViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak private var mainContentsCollectionView: UICollectionView!
     @IBOutlet weak private var mainContentsHandleButtonView: PhotoGalleryHandleButtonView!
@@ -39,11 +45,13 @@ final class MainContentsViewController: UIViewController {
 
     // MARK: - Private Function
 
+    // ナビゲーションバーに関する初期設定をする
     private func setupNavigationBar() {
         setupNavigationBarTitle("グルメ写真一覧サンプル")
         removeBackButtonText()
     }
 
+    // DataBindingを実行するための通知に関する初期設定をする
     private func setupNotificationsForDataBinding() {
         notificationCenter.addObserver(
             self,
@@ -66,9 +74,10 @@ final class MainContentsViewController: UIViewController {
         viewModel.fetchPhotoList()
     }
 
+    // UICollectionViewに関する初期設定をする
     private func setupMainCollectionView() {
 
-        // WaterfallLayoutのインスタンスを作成して設定を適用する
+        // ライブラリ「WaterfallLayout」のインスタンスを作成して設定を適用する
         let layout = WaterfallLayout()
         layout.delegate = self
         layout.sectionInset = UIEdgeInsets(top: 8.0, left: 10.0, bottom: 8.0, right: 10.0)
@@ -89,6 +98,34 @@ final class MainContentsViewController: UIViewController {
         mainContentsCollectionViewHeightConstraint.constant = mainContentsCollectionView.contentSize.height
     }
 
+    // APIリクエスト実行用ボタンを含んだViewに関する初期設定をする
+    private func setupMainContentsHandleButtonView() {
+        mainContentsHandleButtonView.requestApiButtonAction = {
+            self.viewModel.fetchPhotoList()
+        }
+    }
+
+    // 配置したUICollectionViewの表示をリロードする
+    private func reloadMainContentsCollectionView() {
+        mainContentsCollectionView.reloadData()
+        mainContentsCollectionView.performBatchUpdates({
+            self.mainContentsCollectionViewHeightConstraint.constant = self.mainContentsCollectionView.contentSize.height
+        })
+    }
+
+    // この画面におけるユーザー操作を受け付けた状態にする
+    private func allowUserInterations() {
+        mainContentsCollectionView.alpha = 1
+        mainContentsCollectionView.isUserInteractionEnabled = true
+    }
+
+    // この画面におけるユーザー操作を受け付けない状態にする
+    private func denyUserInterations() {
+        mainContentsCollectionView.alpha = 0.6
+        mainContentsCollectionView.isUserInteractionEnabled = false
+    }
+
+    // エラー発生時のアラート表示を設定をする
     private func showAlertWith(completionHandler: (() -> ())? = nil) {
         let alert = UIAlertController(
             title: "エラーが発生しました",
@@ -101,47 +138,24 @@ final class MainContentsViewController: UIViewController {
         alert.addAction(okAction)
         self.present(alert, animated: true, completion: nil)
     }
-
-    private func setupMainContentsHandleButtonView() {
-        mainContentsHandleButtonView.requestApiButtonAction = {
-            self.viewModel.fetchPhotoList()
-        }
-    }
-
-    private func reloadMainContentsCollectionView() {
-        mainContentsCollectionView.reloadData()
-        mainContentsCollectionView.performBatchUpdates({
-            self.mainContentsCollectionViewHeightConstraint.constant = self.mainContentsCollectionView.contentSize.height
-        })
-    }
-
-    private func allowUserInterations() {
-        mainContentsCollectionView.alpha = 1
-        mainContentsCollectionView.isUserInteractionEnabled = true
-    }
-
-    private func denyUserInterations() {
-        mainContentsCollectionView.alpha = 0.6
-        mainContentsCollectionView.isUserInteractionEnabled = false
-    }
 }
 
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
 extension MainContentsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
-    // セクションの個数を設定する
+    // 配置対象のセクションの個数を設定する
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return photoGalleryLists.count
     }
 
-    // 配置するUICollectionReusableViewのサイズを設定する
+    // 配置対象のセクションにおけるUICollectionReusableViewのサイズを設定する
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
 
         return PhotoGalleryCollectionHeaderView.viewSize
     }
 
-    // 配置するUICollectionReusableViewの設定する
+    // 配置対象のセクションにおけるUICollectionReusableViewの設定する
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         if kind == UICollectionView.elementKindSectionHeader {
@@ -161,10 +175,12 @@ extension MainContentsViewController: UICollectionViewDelegate, UICollectionView
         }
     }
 
+    // 配置対象のセクションに配置するセルの個数を設定する
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photoGalleryLists[section].photos.count
     }
-    
+
+    // 配置対象のセクション配置するセル要素を設定する
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCustomCell(with: PhotoGalleryCollectionViewCell.self, indexPath: indexPath)
         cell.setCellDisplayData(photoGalleryLists[indexPath.section].photos[indexPath.row])
@@ -176,6 +192,7 @@ extension MainContentsViewController: UICollectionViewDelegate, UICollectionView
 
 extension MainContentsViewController: WaterfallLayoutDelegate {
 
+    // ライブラリ「WaterfallLayout」における配置対象のセルのサイズを指定する
     func collectionView(_ collectionView: UICollectionView, layout: WaterfallLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
         // セルのサイズ調整用の値
@@ -198,6 +215,7 @@ extension MainContentsViewController: WaterfallLayoutDelegate {
         return CGSize(width: cellWidth, height: cellHeight)
     }
 
+    // ライブラリ「WaterfallLayout」における配置対象のセル表示パターンを指定する
     func collectionViewLayout(for section: Int) -> WaterfallLayout.Layout {
         return .waterfall(column: 2, distributionMethod: .balanced)
     }
@@ -209,28 +227,28 @@ extension MainContentsViewController {
 
     // MARK: - Function
 
+    // 写真データ取得中の通知を受信した際に実行される処理
     @objc func updateStateForFetching(notification: Notification) {
-        print("updateStateForFetching:")
 
         // View描画に関わる変更
         denyUserInterations()
         mainContentsHandleButtonView.changeState(isFetchingData: true)
     }
 
+    // 写真データ取得成功の通知を受信した際に実行される処理
     @objc func updateStateForSuccess(notification: Notification) {
-        print("updateStateForSuccess:")
 
         // View描画に関わる変更
         allowUserInterations()
         mainContentsHandleButtonView.changeState(isFetchingData: false)
-        mainContentsHandleButtonView.isHidden = PhotoGalleryListState.shared.isTotalCount
+        mainContentsHandleButtonView.isHidden = state.isTotalCount
 
         // データ表示に関わる変更
-        photoGalleryLists = PhotoGalleryListState.shared.getPhotoListMappedByCategories()
+        photoGalleryLists = state.getPhotoListMappedByCategories()
     }
 
+    // 写真データ取得失敗の通知を受信した際に実行される処理
     @objc func updateStateForFailure(notification: Notification) {
-        print("updateStateForFailure:")
 
         // View描画に関わる変更
         allowUserInterations()

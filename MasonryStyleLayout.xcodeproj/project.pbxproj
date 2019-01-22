@@ -19,6 +19,8 @@
 		DE5737B721F5B15B006DE44A /* MockMealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */; };
 		DE5737BB21F73405006DE44A /* DetailContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */; };
 		DE5737BD21F73482006DE44A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5737BC21F73481006DE44A /* Detail.storyboard */; };
+		DE5737C021F76D56006DE44A /* PhotoGalleryDetailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737BF21F76D56006DE44A /* PhotoGalleryDetailInformationView.swift */; };
+		DE5737C221F76D66006DE44A /* PhotoGalleryDetailInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5737C121F76D66006DE44A /* PhotoGalleryDetailInformationView.xib */; };
 		DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072A721E4B70E0073963C /* MealsAPIManager.swift */; };
 		DED072AF21E855C10073963C /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */; };
 		DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072B121E85F640073963C /* PhotoGalleryListState.swift */; };
@@ -79,6 +81,8 @@
 		DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsAPIManager.swift; sourceTree = "<group>"; };
 		DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentsViewController.swift; sourceTree = "<group>"; };
 		DE5737BC21F73481006DE44A /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
+		DE5737BF21F76D56006DE44A /* PhotoGalleryDetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryDetailInformationView.swift; sourceTree = "<group>"; };
+		DE5737C121F76D66006DE44A /* PhotoGalleryDetailInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryDetailInformationView.xib; sourceTree = "<group>"; };
 		DED072A721E4B70E0073963C /* MealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIManager.swift; sourceTree = "<group>"; };
 		DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
 		DED072B121E85F640073963C /* PhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryListState.swift; sourceTree = "<group>"; };
@@ -192,6 +196,29 @@
 				DE5737A821F5AFA9006DE44A /* Mock */,
 			);
 			path = Testing;
+			sourceTree = "<group>";
+		};
+		DE5737BE21F76C35006DE44A /* PhotoGalleryDetailInformationView */ = {
+			isa = PBXGroup;
+			children = (
+				DE5737BF21F76D56006DE44A /* PhotoGalleryDetailInformationView.swift */,
+				DE5737C121F76D66006DE44A /* PhotoGalleryDetailInformationView.xib */,
+			);
+			path = PhotoGalleryDetailInformationView;
+			sourceTree = "<group>";
+		};
+		DE5737C321F779E0006DE44A /* PhotoGalleryDetailRatingView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoGalleryDetailRatingView;
+			sourceTree = "<group>";
+		};
+		DE5737C421F77AC4006DE44A /* PhotoGalleryDetailPickButtonView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PhotoGalleryDetailPickButtonView;
 			sourceTree = "<group>";
 		};
 		DED072A621E4AFF90073963C /* APIManager */ = {
@@ -319,6 +346,9 @@
 				DEFFA03421F04FA0006C1C1B /* CustomViewBase.swift */,
 				DEFFA02C21EEE25F006C1C1B /* PhotoGalleryCollectionHeaderView */,
 				DED1180021E353A400ABD919 /* PhotoGalleryCollectionViewCell */,
+				DE5737BE21F76C35006DE44A /* PhotoGalleryDetailInformationView */,
+				DE5737C421F77AC4006DE44A /* PhotoGalleryDetailPickButtonView */,
+				DE5737C321F779E0006DE44A /* PhotoGalleryDetailRatingView */,
 				DEFFA03321F04E72006C1C1B /* PhotoGalleryHandleButtonView */,
 				DED072A921E710490073963C /* WaterFallLayout */,
 			);
@@ -474,6 +504,7 @@
 				DEFFA03921F05082006C1C1B /* PhotoGalleryHandleButtonView.xib in Resources */,
 				DED1180421E3551D00ABD919 /* PhotoGalleryCollectionViewCell.xib in Resources */,
 				DED117D421E2ED5900ABD919 /* LaunchScreen.storyboard in Resources */,
+				DE5737C221F76D66006DE44A /* PhotoGalleryDetailInformationView.xib in Resources */,
 				DEFFA03021EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.xib in Resources */,
 				DE5737BD21F73482006DE44A /* Detail.storyboard in Resources */,
 				DED117D121E2ED5900ABD919 /* Assets.xcassets in Resources */,
@@ -615,6 +646,7 @@
 				DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */,
 				DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */,
 				DEFFA03221EEEE7D006C1C1B /* WaterFallLayout.swift in Sources */,
+				DE5737C021F76D56006DE44A /* PhotoGalleryDetailInformationView.swift in Sources */,
 				DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */,
 				DE57379821F1E9E6006DE44A /* UIViewControllerExtension.swift in Sources */,
 				DED117FD21E34E7300ABD919 /* NSObjectProtocolExtension.swift in Sources */,

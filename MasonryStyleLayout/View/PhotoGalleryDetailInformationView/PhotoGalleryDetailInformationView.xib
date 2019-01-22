@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PhotoGalleryDetailView" customModule="MasonryStyleLayout" customModuleProvider="target">
+            <connections>
+                <outlet property="photoSummaryLabel" destination="MhX-Ck-oHu" id="d7S-a4-MX5"/>
+                <outlet property="photoTitleLabel" destination="AgR-al-Acu" id="3o7-zl-6eo"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="156"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真名 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Asx-RX-8Xr">
+                    <rect key="frame" x="12" y="12" width="40" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="00r-Vg-5cj"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="概要 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-cn-tTB">
+                    <rect key="frame" x="12" y="62" width="40" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="9kN-B9-YX6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトルが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgR-al-Acu">
+                    <rect key="frame" x="12" y="34" width="351" height="12"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="12"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キャッチコピーが入ります。キャッチコピーが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhX-Ck-oHu">
+                    <rect key="frame" x="12" y="84" width="351" height="11"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="著者 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNh-lS-CaO">
+                    <rect key="frame" x="12" y="111" width="40" height="10"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Rd4-U2-sJu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="10"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="著者名が入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nu-8u-2X4">
+                    <rect key="frame" x="12" y="133" width="351" height="11"/>
+                    <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8Nu-8u-2X4" secondAttribute="bottom" constant="12" id="1kq-Zf-rGH"/>
+                <constraint firstItem="AgR-al-Acu" firstAttribute="top" secondItem="Asx-RX-8Xr" secondAttribute="bottom" constant="12" id="4hu-oU-JSO"/>
+                <constraint firstItem="Nh0-cn-tTB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="6PJ-9o-44c"/>
+                <constraint firstItem="Asx-RX-8Xr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="6vf-g7-oXY"/>
+                <constraint firstItem="AgR-al-Acu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="DbA-1t-Zpe"/>
+                <constraint firstItem="Nh0-cn-tTB" firstAttribute="top" secondItem="AgR-al-Acu" secondAttribute="bottom" constant="16" id="Lko-BI-k4o"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AgR-al-Acu" secondAttribute="trailing" constant="12" id="MKN-E3-CaL"/>
+                <constraint firstItem="8Nu-8u-2X4" firstAttribute="top" secondItem="oNh-lS-CaO" secondAttribute="bottom" constant="12" id="aLK-9C-PIj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MhX-Ck-oHu" secondAttribute="trailing" constant="12" id="g0G-F9-Ekq"/>
+                <constraint firstItem="Asx-RX-8Xr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="hsJ-Vs-UuD"/>
+                <constraint firstItem="oNh-lS-CaO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="lc8-8h-nOe"/>
+                <constraint firstItem="oNh-lS-CaO" firstAttribute="top" secondItem="MhX-Ck-oHu" secondAttribute="bottom" constant="16" id="njW-u2-Hxh"/>
+                <constraint firstItem="MhX-Ck-oHu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="nkC-ni-zME"/>
+                <constraint firstItem="MhX-Ck-oHu" firstAttribute="top" secondItem="Nh0-cn-tTB" secondAttribute="bottom" constant="12" id="r2e-9h-3IJ"/>
+                <constraint firstItem="8Nu-8u-2X4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="snc-lI-eyx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8Nu-8u-2X4" secondAttribute="trailing" constant="12" id="x3w-uQ-YRC"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="53.600000000000001" y="99.850074962518747"/>
+        </view>
+    </objects>
+</document>

@@ -62,10 +62,11 @@ class PhotoGalleryCollectionViewCell: UICollectionViewCell {
 
     // ラベルの装飾用(行間やフォント・配色)attributesを取得する
     private func getAttributesForLabel(lineSpacing: CGFloat, font: UIFont, foregroundColor: UIColor) -> [NSAttributedString.Key : Any] {
+
+        // 行間に関する設定をする
+        // MEMO: lineBreakModeの指定しないとはみ出た場合の「...」が出なくなる
         let paragraphStyle = NSMutableParagraphStyle()
         paragraphStyle.lineSpacing = lineSpacing
-
-        // MEMO: これを指定しないとはみ出た場合の「...」が出なくなる
         paragraphStyle.lineBreakMode = .byTruncatingTail
 
         var attributes: [NSAttributedString.Key : Any] = [:]
