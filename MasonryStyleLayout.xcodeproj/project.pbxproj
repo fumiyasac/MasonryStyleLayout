@@ -17,6 +17,8 @@
 		DE5737B321F5B08B006DE44A /* detail.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AE21F5B08B006DE44A /* detail.json */; };
 		DE5737B521F5B0E2006DE44A /* MockPhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737B421F5B0E2006DE44A /* MockPhotoGalleryListState.swift */; };
 		DE5737B721F5B15B006DE44A /* MockMealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */; };
+		DE5737BB21F73405006DE44A /* DetailContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */; };
+		DE5737BD21F73482006DE44A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5737BC21F73481006DE44A /* Detail.storyboard */; };
 		DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072A721E4B70E0073963C /* MealsAPIManager.swift */; };
 		DED072AF21E855C10073963C /* PhotoGalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */; };
 		DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED072B121E85F640073963C /* PhotoGalleryListState.swift */; };
@@ -75,6 +77,8 @@
 		DE5737AE21F5B08B006DE44A /* detail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = detail.json; sourceTree = "<group>"; };
 		DE5737B421F5B0E2006DE44A /* MockPhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoGalleryListState.swift; sourceTree = "<group>"; };
 		DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsAPIManager.swift; sourceTree = "<group>"; };
+		DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentsViewController.swift; sourceTree = "<group>"; };
+		DE5737BC21F73481006DE44A /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		DED072A721E4B70E0073963C /* MealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsAPIManager.swift; sourceTree = "<group>"; };
 		DED072AE21E855C10073963C /* PhotoGalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewModel.swift; sourceTree = "<group>"; };
 		DED072B121E85F640073963C /* PhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryListState.swift; sourceTree = "<group>"; };
@@ -295,6 +299,7 @@
 			children = (
 				DED117D221E2ED5900ABD919 /* LaunchScreen.storyboard */,
 				DED117CD21E2ED5300ABD919 /* Main.storyboard */,
+				DE5737BC21F73481006DE44A /* Detail.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				DED117CB21E2ED5300ABD919 /* MainContentsViewController.swift */,
+				DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -469,6 +475,7 @@
 				DED1180421E3551D00ABD919 /* PhotoGalleryCollectionViewCell.xib in Resources */,
 				DED117D421E2ED5900ABD919 /* LaunchScreen.storyboard in Resources */,
 				DEFFA03021EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.xib in Resources */,
+				DE5737BD21F73482006DE44A /* Detail.storyboard in Resources */,
 				DED117D121E2ED5900ABD919 /* Assets.xcassets in Resources */,
 				DED117CF21E2ED5300ABD919 /* Main.storyboard in Resources */,
 			);
@@ -619,6 +626,7 @@
 				DEFFA02B21EDC2F3006C1C1B /* UIColorExtension.swift in Sources */,
 				DEFFA03721F05066006C1C1B /* PhotoGalleryHandleButtonView.swift in Sources */,
 				DED117CC21E2ED5300ABD919 /* MainContentsViewController.swift in Sources */,
+				DE5737BB21F73405006DE44A /* DetailContentsViewController.swift in Sources */,
 				DED117CA21E2ED5300ABD919 /* AppDelegate.swift in Sources */,
 				DEFFA02F21EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.swift in Sources */,
 			);
