@@ -46,7 +46,7 @@ class PhotoGalleryHandleButtonView: CustomViewBase {
 
     // MARK: - Private Function
 
-    @objc private func executeRequestApiButtonAction(sender: UIButton) {
+    @objc private func executeRequestApiButtonAction() {
         requestApiButtonAction?()
     }
 
@@ -61,6 +61,6 @@ class PhotoGalleryHandleButtonView: CustomViewBase {
         loadingIndicator.startAnimating()
 
         // APIリクエスト用のボタンで必要な初期設定
-        requestApiButton.addTarget(self, action: #selector(self.executeRequestApiButtonAction(sender:)), for: .touchUpInside)
+        requestApiButton.addTarget(self, action: #selector(self.executeRequestApiButtonAction), for: .touchUpInside)
     }
 }

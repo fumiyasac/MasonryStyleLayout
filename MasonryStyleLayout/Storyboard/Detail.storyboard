@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-R2-Tng">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9B5-ct-Q9V">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
@@ -40,6 +40,20 @@
                                                             <constraint firstAttribute="height" constant="24" id="cnj-EY-2gQ"/>
                                                         </constraints>
                                                     </pageControl>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxG-Fd-cUA" customClass="PhotoGalleryDetailPickButtonView" customModule="MasonryStyleLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="323" y="128" width="36" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="36" id="3x8-qQ-8ty"/>
+                                                            <constraint firstAttribute="height" constant="36" id="ZVQ-jO-cnk"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otB-Fv-Nka" customClass="PhotoGalleryDetailRatingView" customModule="MasonryStyleLayout" customModuleProvider="target">
+                                                        <rect key="frame" x="243" y="128" width="72" height="36"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="36" id="EuZ-Y9-52z"/>
+                                                            <constraint firstAttribute="width" constant="72" id="uWS-Iy-QmX"/>
+                                                        </constraints>
+                                                    </view>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -48,11 +62,53 @@
                                                     <constraint firstItem="zOK-Ct-8Qt" firstAttribute="leading" secondItem="9B5-ct-Q9V" secondAttribute="leading" constant="2" id="Ftd-pL-3rY"/>
                                                     <constraint firstAttribute="trailing" secondItem="8W6-cT-gGw" secondAttribute="trailing" id="MET-aX-5Rg"/>
                                                     <constraint firstItem="8W6-cT-gGw" firstAttribute="top" secondItem="9B5-ct-Q9V" secondAttribute="top" id="MTc-OR-beM"/>
+                                                    <constraint firstItem="ZxG-Fd-cUA" firstAttribute="leading" secondItem="otB-Fv-Nka" secondAttribute="trailing" constant="8" id="P0T-WB-OMX"/>
                                                     <constraint firstItem="zOK-Ct-8Qt" firstAttribute="top" secondItem="9B5-ct-Q9V" secondAttribute="top" constant="12" id="PzS-MF-GRq"/>
+                                                    <constraint firstAttribute="bottom" secondItem="ZxG-Fd-cUA" secondAttribute="bottom" constant="16" id="VB0-Ma-5kJ"/>
                                                     <constraint firstAttribute="bottom" secondItem="8W6-cT-gGw" secondAttribute="bottom" id="VhI-aA-ank"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ZxG-Fd-cUA" secondAttribute="trailing" constant="16" id="Woy-VJ-3up"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ZDf-Bp-goD"/>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" id="edJ-Iw-7VN"/>
                                                     <constraint firstItem="8W6-cT-gGw" firstAttribute="leading" secondItem="9B5-ct-Q9V" secondAttribute="leading" id="mAm-3u-GJO"/>
+                                                    <constraint firstAttribute="bottom" secondItem="otB-Fv-Nka" secondAttribute="bottom" constant="16" id="yV0-Sx-M3W"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-7G-bhL" customClass="PhotoGalleryDetailInformationView" customModule="MasonryStyleLayout" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="180" width="375" height="158"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="250" constant="158" id="9ft-wu-2db"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="yLg-xx-jjB"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTK-OR-cFy" customClass="PhotoGalleryRelatedTitleView" customModule="MasonryStyleLayout" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="338" width="375" height="44"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="gVB-7D-mad"/>
+                                                </constraints>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NZ3-qS-OPK">
+                                                <rect key="frame" x="0.0" y="382" width="375" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="250" constant="128" id="9X2-gc-IIo"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="kso-Ww-wfv"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="td1-km-fKb">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPV-EN-viG" customClass="PhotoGalleryRelatedErrorView" customModule="MasonryStyleLayout" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="510" width="375" height="160"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" priority="250" constant="160" id="57V-Ud-Qks"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" id="PF8-lc-OVY"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -76,15 +132,24 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rlN-gv-QYi"/>
                     </view>
+                    <connections>
+                        <outlet property="detailInformationView" destination="qgk-7G-bhL" id="sHf-IF-q3X"/>
+                        <outlet property="detailPhotoCountainer" destination="8W6-cT-gGw" id="4dz-G6-IVY"/>
+                        <outlet property="detailPhotoPageControl" destination="zOK-Ct-8Qt" id="DVc-Ok-tCR"/>
+                        <outlet property="detailPickButtonView" destination="ZxG-Fd-cUA" id="iNt-Jo-1aT"/>
+                        <outlet property="detailRatingView" destination="otB-Fv-Nka" id="Tma-Qv-hiC"/>
+                        <outlet property="relatedCollectionView" destination="NZ3-qS-OPK" id="GHy-HZ-1Ol"/>
+                        <outlet property="relatedErrorView" destination="dPV-EN-viG" id="e4E-Ks-9UW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HLh-Z6-dy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="860" y="26.53673163418291"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail Photo Page View Controller-->
         <scene sceneID="wtP-B3-jg2">
             <objects>
-                <viewController id="4iW-MQ-qTC" sceneMemberID="viewController">
+                <viewController id="4iW-MQ-qTC" customClass="DetailPhotoPageViewController" customModule="MasonryStyleLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ur-G8-Mw3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,7 +165,11 @@
                             <constraint firstItem="OmU-vt-JVI" firstAttribute="top" secondItem="2ur-G8-Mw3" secondAttribute="top" id="JO8-hR-cDF"/>
                             <constraint firstAttribute="bottom" secondItem="OmU-vt-JVI" secondAttribute="bottom" id="aF2-6P-mS6"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="R4K-Ho-aYn"/>
                     </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="OmU-vt-JVI" id="PKM-eJ-5lA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ut7-Ma-q6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

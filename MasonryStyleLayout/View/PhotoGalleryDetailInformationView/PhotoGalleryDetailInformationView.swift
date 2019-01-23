@@ -1,5 +1,5 @@
 //
-//  PhotoGalleryInformationDetailView.swift
+//  PhotoGalleryDetailInformationView.swift
 //  MasonryStyleLayout
 //
 //  Created by 酒井文也 on 2019/01/23.
@@ -9,12 +9,15 @@
 import Foundation
 import UIKit
 
-class PhotoGalleryInformationDetailView: CustomViewBase {
+class PhotoGalleryDetailInformationView: CustomViewBase {
 
-    @IBOutlet weak private var photoTitleLabel: UILabel!
-    @IBOutlet weak private var photoSummaryLabel: UILabel!
+    @IBOutlet weak private var titleLabel: UILabel!
+    @IBOutlet weak private var summaryLabel: UILabel!
+    @IBOutlet weak private var authorLabel: UILabel!
 
     // MARK: - Function
 
-    func setText(_ photo: PhotoEntity) {}
+    func setText(_ photo: PhotoEntity) {
+
+    }
 }
