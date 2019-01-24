@@ -32,7 +32,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="概要 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nh0-cn-tTB">
-                    <rect key="frame" x="12" y="62" width="40" height="10"/>
+                    <rect key="frame" x="12" y="61" width="40" height="10"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="9kN-B9-YX6"/>
                     </constraints>
@@ -41,7 +41,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="著者 :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNh-lS-CaO">
-                    <rect key="frame" x="12" y="111" width="40" height="10"/>
+                    <rect key="frame" x="12" y="109" width="40" height="10"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="40" id="Rd4-U2-sJu"/>
                     </constraints>
@@ -56,13 +56,16 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="キャッチコピーが入ります。キャッチコピーが入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MhX-Ck-oHu">
-                    <rect key="frame" x="12" y="84" width="351" height="11"/>
+                    <rect key="frame" x="12" y="83" width="351" height="11"/>
                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="著者名が入ります。" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Nu-8u-2X4">
-                    <rect key="frame" x="12" y="133" width="351" height="11"/>
+                    <rect key="frame" x="12" y="131" width="351" height="13"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="13" id="GDr-mW-Rtw"/>
+                    </constraints>
                     <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="11"/>
                     <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -75,13 +78,13 @@
                 <constraint firstItem="Nh0-cn-tTB" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="6PJ-9o-44c"/>
                 <constraint firstItem="Asx-RX-8Xr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="12" id="6vf-g7-oXY"/>
                 <constraint firstItem="AgR-al-Acu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="DbA-1t-Zpe"/>
-                <constraint firstItem="Nh0-cn-tTB" firstAttribute="top" secondItem="AgR-al-Acu" secondAttribute="bottom" constant="16" id="Lko-BI-k4o"/>
+                <constraint firstItem="Nh0-cn-tTB" firstAttribute="top" secondItem="AgR-al-Acu" secondAttribute="bottom" constant="15" id="Lko-BI-k4o"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="AgR-al-Acu" secondAttribute="trailing" constant="12" id="MKN-E3-CaL"/>
                 <constraint firstItem="8Nu-8u-2X4" firstAttribute="top" secondItem="oNh-lS-CaO" secondAttribute="bottom" constant="12" id="aLK-9C-PIj"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="MhX-Ck-oHu" secondAttribute="trailing" constant="12" id="g0G-F9-Ekq"/>
                 <constraint firstItem="Asx-RX-8Xr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="hsJ-Vs-UuD"/>
                 <constraint firstItem="oNh-lS-CaO" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="lc8-8h-nOe"/>
-                <constraint firstItem="oNh-lS-CaO" firstAttribute="top" secondItem="MhX-Ck-oHu" secondAttribute="bottom" constant="16" id="njW-u2-Hxh"/>
+                <constraint firstItem="oNh-lS-CaO" firstAttribute="top" secondItem="MhX-Ck-oHu" secondAttribute="bottom" constant="15" id="njW-u2-Hxh"/>
                 <constraint firstItem="MhX-Ck-oHu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="nkC-ni-zME"/>
                 <constraint firstItem="MhX-Ck-oHu" firstAttribute="top" secondItem="Nh0-cn-tTB" secondAttribute="bottom" constant="12" id="r2e-9h-3IJ"/>
                 <constraint firstItem="8Nu-8u-2X4" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="snc-lI-eyx"/>
