@@ -18,8 +18,7 @@ class MasonryStyleLayoutTests: XCTestCase {
     func testPhotoGalleryViewModel() {
 
         // 必要なViewModelを初期化する(APIアクセス部分とState部分はMockを利用)
-        let notificationCenter = NotificationCenter()
-        let viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter, state: MockPhotoGalleryListState.shared, api: MockMealsAPIManager.shared)
+        let viewModel = PhotoGalleryListViewModel(notificationCenter: NotificationCenter(), state: MockPhotoGalleryListState.shared, api: MockMealsAPIManager.shared)
 
         // フェッチを実行前の初期状態
         XCTAssertEqual(false, MockPhotoGalleryListState.shared.isTotalCount, "初回時のisTotalCountはfalseである")
@@ -42,7 +41,7 @@ class MasonryStyleLayoutTests: XCTestCase {
     // MARK: - Private Function
 
     // 1回目のフェッチを実行
-    private func fetchFirst(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
+    private func fetchFirst(viewModel: PhotoGalleryListViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
         let firstFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "firstFetchRequestExpectation")
@@ -89,7 +88,7 @@ class MasonryStyleLayoutTests: XCTestCase {
     }
 
     // 2回目のフェッチを実行
-    private func fetchSecond(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
+    private func fetchSecond(viewModel: PhotoGalleryListViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
         let secondFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "secondFetchRequestExpectation")
@@ -137,7 +136,7 @@ class MasonryStyleLayoutTests: XCTestCase {
     }
 
     // 3回目のフェッチを実行
-    private func fetchThird(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
+    private func fetchThird(viewModel: PhotoGalleryListViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
         let thirdFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "thirdFetchRequestExpectation")
@@ -187,7 +186,7 @@ class MasonryStyleLayoutTests: XCTestCase {
     }
 
     // 4回目のフェッチを実行
-    private func fetchFourth(viewModel: PhotoGalleryViewModel, timeOutSec: TimeInterval) {
+    private func fetchFourth(viewModel: PhotoGalleryListViewModel, timeOutSec: TimeInterval) {
         var photosForTesting: [(categoryNumber: Int, photos: [PhotoEntity])]  = []
 
         let fourthFetchRequestExpectation: XCTestExpectation? = self.expectation(description: "fourthFetchRequestExpectation")

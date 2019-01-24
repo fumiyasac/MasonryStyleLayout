@@ -19,7 +19,7 @@ final class MainContentsViewController: UIViewController {
     private let api = MealsAPIManager.shared
 
     // ViewModelの初期化
-    private lazy var viewModel = PhotoGalleryViewModel(notificationCenter: notificationCenter, state: state, api: api)
+    private lazy var viewModel = PhotoGalleryListViewModel(notificationCenter: notificationCenter, state: state, api: api)
 
     // MEMO: プロパティの変更タイミングに応じてCollectionViewの更新を実行する
     private var photoGalleryLists: [(categoryNumber: Int, photos: [PhotoEntity])] = [] {

@@ -1,5 +1,5 @@
 //
-//  PhotoGalleryViewModel.swift
+//  PhotoGalleryListViewModel.swift
 //  MasonryStyleLayout
 //
 //  Created by 酒井文也 on 2019/01/11.
@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-final class PhotoGalleryViewModel {
+final class PhotoGalleryListViewModel {
 
     // ViewController側で受信できるNotification名を定義する
     let isFetchingPhotoList = Notification.Name(ViewModelNotification.isFetchingPhotoList.rawValue)
