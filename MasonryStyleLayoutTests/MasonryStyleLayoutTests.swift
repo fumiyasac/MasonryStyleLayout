@@ -32,7 +32,7 @@ class MasonryStyleLayoutTests: XCTestCase {
         fetchDetail(state: state, viewModel: viewModel, timeOutSec: 10.0)
 
         // おすすめデータのフェッチを実行
-        fetchRecommend(state: state, viewModel: viewModel, timeOutSec: 20.0)
+        fetchRecommend(state: state, viewModel: viewModel, timeOutSec: 10.0)
     }
 
     // MEMO: こちらはStateがSingletonである場合
@@ -50,13 +50,13 @@ class MasonryStyleLayoutTests: XCTestCase {
         fetchFirst(viewModel: viewModel, timeOutSec: 15.0)
 
         // 2回目のフェッチを実行
-        fetchSecond(viewModel: viewModel, timeOutSec: 45.0)
+        fetchSecond(viewModel: viewModel, timeOutSec: 15.0)
 
         // 3回目のフェッチを実行
-        fetchThird(viewModel: viewModel, timeOutSec: 75.0)
+        fetchThird(viewModel: viewModel, timeOutSec: 15.0)
 
         // 4回目のフェッチを実行
-        fetchFourth(viewModel: viewModel, timeOutSec: 105.0)
+        fetchFourth(viewModel: viewModel, timeOutSec: 15.0)
     }
     
     // MARK: - Private Function
