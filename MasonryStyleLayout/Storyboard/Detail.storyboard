@@ -139,6 +139,7 @@
                         <outlet property="detailPickButtonView" destination="ZxG-Fd-cUA" id="iNt-Jo-1aT"/>
                         <outlet property="detailRatingView" destination="otB-Fv-Nka" id="Tma-Qv-hiC"/>
                         <outlet property="relatedCollectionView" destination="NZ3-qS-OPK" id="GHy-HZ-1Ol"/>
+                        <outlet property="relatedCollectionViewHeightConstraint" destination="9X2-gc-IIo" id="bot-04-EiN"/>
                         <outlet property="relatedErrorView" destination="dPV-EN-viG" id="e4E-Ks-9UW"/>
                     </connections>
                 </viewController>

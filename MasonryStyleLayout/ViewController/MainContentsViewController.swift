@@ -33,6 +33,8 @@ final class MainContentsViewController: UIViewController {
     @IBOutlet weak private var mainContentsCollectionView: UICollectionView!
     @IBOutlet weak private var mainContentsHandleButtonView: PhotoGalleryHandleButtonView!
 
+    // MARK: - Override
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -185,6 +187,14 @@ extension MainContentsViewController: UICollectionViewDelegate, UICollectionView
         cell.setCellDisplayData(photoGalleryLists[indexPath.section].photos[indexPath.row])
         return cell
     }
+
+    // 配置対象のセクション配置するセル要素タップ時の振る舞いを設定する
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let photo = photoGalleryLists[indexPath.section].photos[indexPath.row]
+        let vc = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as! DetailContentsViewController
+        vc.setTargetPhoto(photo)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
 }
 
 // MARK: - WaterfallLayoutDelegate
@@ -208,7 +218,7 @@ extension MainContentsViewController: WaterfallLayoutDelegate {
                 let height = image?.size.height ?? 0
                 cellHeight += height / adjustRation
             } catch let error {
-                print("Error occurred for getting image: ", error.localizedDescription)
+                print(error.localizedDescription)
             }
         }
         return CGSize(width: cellWidth, height: cellHeight)

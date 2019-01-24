@@ -1,0 +1,51 @@
+[
+    {
+        "meals": [
+            {
+                "id": 1,
+                "category_number": 1,
+                "author": "fumiyasac(Sample)",
+                "title": "第1弾は朝に嬉しいサンドイッチの特集",
+                "summary": "どんなボリュームでも対応できて様々なバリエーションが楽しめるものをピックアップしました。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/recommend_sample1.jpg",
+                "rating": "-"
+            },
+            {
+                "id": 2,
+                "category_number": 1,
+                "author": "Media Team(Sample)",
+                "title": "第2弾は日本人の心ともいえるおにぎり特集",
+                "summary": "中の具を変えるも米にこだわるもよし。日本人の心も味わえそうなラインナップをピックアップしました。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/recommend_sample2.jpg",
+                "rating": "-"
+            },
+            {
+                "id": 3,
+                "category_number": 1,
+                "author": "Media Team(Sample)",
+                "title": "第3弾はシンプルだけども美味しいゆで卵特集",
+                "summary": "茹で方の状態や合わせるソースを変化するだけでも楽しめる、ご飯にもパンにもとてもよく合いますね。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/recommend_sample3.jpg",
+                "rating": "-"
+            },
+            {
+                "id": 4,
+                "category_number": 1,
+                "author": "Media Team(Sample)",
+                "title": "第4弾はお正月スペシャルのお雑煮特集",
+                "summary": "お正月の定番メニューでもある伝統料理。全国47都道府県ごとの特色のある味が魅力です。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/recommend_sample4.jpg",
+                "rating": "-"
+            },
+            {
+                "id": 5,
+                "category_number": 1,
+                "author": "Media Team(Sample)",
+                "title": "第5弾は朝食にあると嬉しいおかず特集",
+                "summary": "良い1日は良い朝食から始まります。我がチームから選んだ朝食メニューを精選しました。",
+                "image_url": "https://s3-ap-northeast-1.amazonaws.com/development-image-samples/stocks/recommend_sample5.jpg",
+                "rating": "-"
+            }
+        ]
+    }
+]

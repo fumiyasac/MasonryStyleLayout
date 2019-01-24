@@ -14,9 +14,7 @@ import PromiseKit
 protocol APIManagerProtocol {
     func getMealList(perPage: Int) -> Promise<JSON>
     func getMealBy(id: Int) -> Promise<JSON>
-
-    //func searchMealBy(keywords: String) -> Promise<JSON>
-    //func getRecommendMealsBy(id: String) -> Promise<JSON>
+    func getRecommendMeals() -> Promise<JSON>
 }
 
 class MealsAPIManager: APIManagerProtocol {
@@ -42,7 +40,6 @@ class MealsAPIManager: APIManagerProtocol {
     // エンドポイントの定義
     private enum EndPoint {
         case list
-        case search
         case detail
         case recommend
 
@@ -50,8 +47,6 @@ class MealsAPIManager: APIManagerProtocol {
             switch self {
             case .list:
                 return "list/"
-            case .search:
-                return "search"
             case .detail:
                 return "detail/"
             case .recommend:
@@ -75,8 +70,10 @@ class MealsAPIManager: APIManagerProtocol {
     //        print(error.localizedDescription)
     //    }
     // -----------
+
     // 参考URL:
     // https://medium.com/@guerrix/101-alamofire-promisekit-671436726ff6
+
     // ※ Swift4.1以降では書き方が変わっているのでご注意を!
     // https://stackoverflow.com/questions/48932536/swift4-error-cannot-convert-value-of-type-void-to-expected-argument-typ
 
@@ -92,8 +89,11 @@ class MealsAPIManager: APIManagerProtocol {
         return MealsAPIManager.handleMealsApiRequest(url: requestUrl)
     }
 
-    //func searchMealBy(keywords: String) -> Promise<JSON> {}
-    //func getRecommendMealsBy(id: String) -> Promise<JSON> {}
+    // おすすめの食事メニューを取得する
+    func getRecommendMeals() -> Promise<JSON> {
+        let requestUrl = MealsAPIManager.serverUrl + EndPoint.recommend.getPath()
+        return MealsAPIManager.handleMealsApiRequest(url: requestUrl)
+    }
 
     // MARK: - Private Function
 

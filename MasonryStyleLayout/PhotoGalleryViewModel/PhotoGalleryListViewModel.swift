@@ -41,7 +41,6 @@ final class PhotoGalleryListViewModel {
 
     // MARK: - Function
 
-    // 写真データをAPIから取得する
     func fetchPhotoList()  {
 
         // データ取得処理実行中のNotification送信
@@ -53,6 +52,7 @@ final class PhotoGalleryListViewModel {
             return
         }
 
+        // 写真データをAPIから取得する(一覧表示用)
         let targetPage = state.currentPage + 1
         api.getMealList(perPage: targetPage)
             .done{ json in
@@ -75,9 +75,9 @@ final class PhotoGalleryListViewModel {
 
     // MARK: - Private Function
 
-    private func parseJSON(_ json: JSON) -> (mealPhotoList: [PhotoEntity], hasNextPage: Bool) {
+    // MEMO: 取得できたJSONを元にStateへ格納するためのデータを生成する
 
-        // 取得できたJSONを元にStateへ格納するためのデータを生成する
+    private func parseJSON(_ json: JSON) -> (mealPhotoList: [PhotoEntity], hasNextPage: Bool) {
         let hasNextPage   = json[0]["has_next_page"].boolValue
         let mealPhotoList = json[0]["meals"].map{ PhotoEntity($1) }
         return (mealPhotoList: mealPhotoList, hasNextPage: hasNextPage)
