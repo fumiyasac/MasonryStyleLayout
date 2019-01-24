@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 final class DetailPhotoPageViewController: UIViewController {
 
@@ -14,5 +15,13 @@ final class DetailPhotoPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    // MARK: - Function
+
+    func setPhoto(_ url: URL?) {
+        if let imageUrl = url {
+            photoImageView.af_setImage(withURL: imageUrl)
+        }
     }
 }

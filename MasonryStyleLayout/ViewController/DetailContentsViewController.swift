@@ -24,6 +24,11 @@ final class DetailContentsViewController: UIViewController {
         }
     }
 
+    // 写真表示用のPageViewController
+    private var targetPhotosUrls: [URL?] = []
+    private var pageViewController: UIPageViewController!
+    private var photoPageViewControllers: [UIViewController] = []
+
     // ViewModelの初期化
     private lazy var viewModel = PhotoGalleryDetailViewModel(notificationCenter: notificationCenter, state: state, api: api)
 
@@ -38,6 +43,8 @@ final class DetailContentsViewController: UIViewController {
     @IBOutlet weak private var relatedCollectionView: UICollectionView!
     @IBOutlet weak private var relatedErrorView: PhotoGalleryRelatedErrorView!
 
+    @IBOutlet weak private var imageSlideHeightConstraint: NSLayoutConstraint!
+
     // MARK: - Override
 
     override func viewDidLoad() {
@@ -47,6 +54,7 @@ final class DetailContentsViewController: UIViewController {
         setupRelatedContentsBlockViews()
         setupDetailPhotoBlockViews()
         setupNotificationsForDataBinding()
+        setupPageViewControllers()
     }
 
     // MARK: - Function
@@ -67,12 +75,6 @@ final class DetailContentsViewController: UIViewController {
     private func setupNotificationsForDataBinding() {
         notificationCenter.addObserver(
             self,
-            selector: #selector(self.updateStateForDetailFetching),
-            name: viewModel.isFetchingPhotoDetail,
-            object: nil
-        )
-        notificationCenter.addObserver(
-            self,
             selector: #selector(self.updateStateForDetailSuccess),
             name: viewModel.successFetchPhotoDetail,
             object: nil
@@ -81,12 +83,6 @@ final class DetailContentsViewController: UIViewController {
             self,
             selector: #selector(self.updateStateForDetailFailure),
             name: viewModel.failureFetchPhotoDetail,
-            object: nil
-        )
-        notificationCenter.addObserver(
-            self,
-            selector: #selector(self.updateStateForRecommendFetching),
-            name: viewModel.isFetchingRecommendPhotoList,
             object: nil
         )
         notificationCenter.addObserver(
@@ -105,6 +101,7 @@ final class DetailContentsViewController: UIViewController {
         viewModel.fetchRecommendPhotoList()
     }
 
+    // UICollectionViewに関する初期設定をする
     private func setupRelatedContentsBlockViews() {
 
         // ライブラリ「WaterfallLayout」のインスタンスを作成して設定を適用する
@@ -133,13 +130,60 @@ final class DetailContentsViewController: UIViewController {
             self.viewModel.fetchRecommendPhotoList()
         }
     }
-    
+
+    // 写真の詳細情報に関するViewの初期設定をする
     private func setupDetailPhotoBlockViews() {
         detailPickButtonView.pickPhotoButtonAction = {
             print("ボタンアクションの発火")
         }
         detailPickButtonView.changeState(isPicked: false)
         reloadDetailPhotoBlockViews()
+    }
+
+    // 写真表示用のPageViewControllerに関する初期設定をする
+    private func setupPageViewControllers() {
+
+        targetPhotosUrls = [
+            targetPhotoEntity?.imageUrl,
+
+            // MEMO: UIPageViewControllerを利用することで複数画像でもある程度対応できるようにする
+            //Constants.adImageUrl1,
+            //Constants.adImageUrl2,
+        ]
+
+        let _ = targetPhotosUrls.enumerated().map{
+            
+            // UIPageViewControllerで表示したいViewControllerの一覧を取得する
+            let sb = UIStoryboard(name: "Detail", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "DetailPhotoPageViewController") as! DetailPhotoPageViewController
+
+            // ページングして表示させるViewControllerを保持する配列へ追加する
+            vc.view.tag = $0
+            vc.setPhoto($1)
+            photoPageViewControllers.append(vc)
+        }
+
+        // ContainerViewにEmbedしたUIPageViewControllerを取得する
+        let _ = children.map {
+            if let targetVC = $0 as? UIPageViewController {
+                pageViewController = targetVC
+            }
+        }
+
+        // UIPageViewControllerDelegate & UIPageViewControllerDataSourceの宣言
+        pageViewController!.delegate = self
+        pageViewController!.dataSource = self
+
+        // PageControlの初期設定をする
+        detailPhotoPageControl.isUserInteractionEnabled = false
+        detailPhotoPageControl.numberOfPages = targetPhotosUrls.count
+        detailPhotoPageControl.isHidden = (targetPhotosUrls.count <= 1)
+
+        // サムネイルの高さに合わせた画像の表示エリアを設定する
+        initializeImageSlideHeight(index: 0)
+
+        // MEMO: 表示タイプはInterfaceBuilderでスクロールを設定する
+        pageViewController!.setViewControllers([photoPageViewControllers[0]], direction: .forward, animated: false, completion: nil)
     }
 
     // 配置した写真詳細画面を構成するViewの表示をリロードする
@@ -156,6 +200,83 @@ final class DetailContentsViewController: UIViewController {
         relatedCollectionView.performBatchUpdates({
             self.relatedCollectionViewHeightConstraint.constant = self.relatedCollectionView.contentSize.height
         })
+    }
+
+    // アイキャッチ画像の高さに合わせて写真エリアを調節する
+    private func initializeImageSlideHeight(index: Int) {
+
+        // 実際の写真サイズから縦幅を調整する
+        var height: CGFloat = 180.0
+        if let imageUrl = targetPhotosUrls[index] {
+            do {
+                let data = try Data(contentsOf: imageUrl)
+                let image = UIImage(data: data)
+                if let image = image {
+                    let ratio = UIScreen.main.bounds.width / image.size.width
+                    height = image.size.height * ratio
+                    
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+
+        // 変更したAutoLayout値を反映する
+        imageSlideHeightConstraint.constant = height
+        self.view.layoutIfNeeded()
+    }
+}
+
+// MARK: - UIPageViewControllerDelegate, UIPageViewControllerDataSource
+
+extension DetailContentsViewController: UIPageViewControllerDelegate, UIPageViewControllerDataSource {
+
+    // ページが動いたタイミング（この場合はスワイプアニメーションに該当）に発動する処理を記載する
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+        
+        // スワイプアニメーションが完了していない時には処理をさせなくする
+        if !completed { return }
+        
+        // ここから先はUIPageViewControllerのスワイプアニメーション完了時に発動する
+        if let targetVCList = pageViewController.viewControllers {
+            if let targetVC = targetVCList.last {
+
+                // 受け取ったインデックス値を元にコンテンツ表示を更新する
+                detailPhotoPageControl.currentPage = targetVC.view.tag
+            }
+        }
+    }
+    
+    // 逆方向にページ送りした時に呼ばれるメソッド
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
+
+        // インデックスを取得する
+        guard let index = photoPageViewControllers.index(of: viewController) else {
+            return nil
+        }
+
+        // インデックスの値に応じてコンテンツを動かす
+        if index <= 0 {
+            return nil
+        } else {
+            return photoPageViewControllers[index - 1]
+        }
+    }
+
+    // 順方向にページ送りした時に呼ばれるメソッド
+    func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
+
+        // インデックスを取得する
+        guard let index = photoPageViewControllers.index(of: viewController) else {
+            return nil
+        }
+
+        // インデックスの値に応じてコンテンツを動かす
+        if index >= photoPageViewControllers.count - 1 {
+            return nil
+        } else {
+            return photoPageViewControllers[index + 1]
+        }
     }
 }
 
@@ -195,9 +316,9 @@ extension DetailContentsViewController: WaterfallLayoutDelegate {
 
         // 取得した画像を元に高さの調節を行う
         let targetPhoto = targetRecommendPhotos[indexPath.row]
-        if let imageURL = targetPhoto.imageUrl {
+        if let imageUrl = targetPhoto.imageUrl {
             do {
-                let data = try Data(contentsOf: imageURL)
+                let data = try Data(contentsOf: imageUrl)
                 let image = UIImage(data: data)
                 let height = image?.size.height ?? 0
                 cellHeight += height / adjustRation
@@ -220,10 +341,6 @@ extension DetailContentsViewController {
     
     // MARK: - Function
 
-    // 詳細表示用の写真データ取得中の通知を受信した際に実行される処理
-    @objc func updateStateForDetailFetching(notification: Notification) {
-    }
-
     // 詳細表示用の写真データ取得成功の通知を受信した際に実行される処理
     @objc func updateStateForDetailSuccess(notification: Notification) {
         targetPhotoEntity = state.getTargetPhoto()
@@ -233,10 +350,6 @@ extension DetailContentsViewController {
     // 詳細表示用の写真データ取得失敗の通知を受信した際に実行される処理
     @objc func updateStateForDetailFailure(notification: Notification) {
         reloadDetailPhotoBlockViews()
-    }
-
-    // おすすめ表示用の写真データ取得中の通知を受信した際に実行される処理
-    @objc func updateStateForRecommendFetching(notification: Notification) {
     }
 
     // おすすめ表示用の写真データ取得成功の通知を受信した際に実行される処理

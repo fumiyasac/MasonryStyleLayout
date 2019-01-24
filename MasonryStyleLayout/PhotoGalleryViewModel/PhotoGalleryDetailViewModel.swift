@@ -12,10 +12,8 @@ import SwiftyJSON
 final class PhotoGalleryDetailViewModel {
 
     // ViewController側で受信できるNotification名を定義する
-    let isFetchingPhotoDetail = Notification.Name(ViewModelNotification.isFetchingPhotoDetail.rawValue)
     let successFetchPhotoDetail = Notification.Name(ViewModelNotification.successFetchPhotoDetail.rawValue)
     let failureFetchPhotoDetail = Notification.Name(ViewModelNotification.failureFetchPhotoDetail.rawValue)
-    let isFetchingRecommendPhotoList = Notification.Name(ViewModelNotification.isFetchingRecommendPhotoList.rawValue)
     let successFetchRecommendPhotoList = Notification.Name(ViewModelNotification.successFetchRecommendPhotoList.rawValue)
     let failureFetchRecommendPhotoList = Notification.Name(ViewModelNotification.failureFetchRecommendPhotoList.rawValue)
 
@@ -27,10 +25,8 @@ final class PhotoGalleryDetailViewModel {
     // MARK: - Enum
 
     private enum ViewModelNotification: String {
-        case isFetchingPhotoDetail = "IsFetchingPhotoDetail"
         case successFetchPhotoDetail = "SuccessFetchPhotoDetail"
         case failureFetchPhotoDetail = "FailureFetchPhotoDetail"
-        case isFetchingRecommendPhotoList = "IsFetchingRecommendPhotoList"
         case successFetchRecommendPhotoList = "SuccessFetchRecommendPhotoList"
         case failureFetchRecommendPhotoList = "FailureFetchRecommendPhotoList"
     }
@@ -46,9 +42,6 @@ final class PhotoGalleryDetailViewModel {
     // MARK: - Function
 
     func fetchDetailPhotoBy(targetId: Int)  {
-
-        // データ取得処理実行中のNotification送信
-        notificationCenter.post(name: isFetchingPhotoDetail, object: nil)
 
         // 写真データをAPIから取得する(詳細表示用)
         api.getMealBy(id: targetId)
@@ -71,9 +64,6 @@ final class PhotoGalleryDetailViewModel {
     }
 
     func fetchRecommendPhotoList()  {
-
-        // データ取得処理実行中のNotification送信
-        notificationCenter.post(name: isFetchingRecommendPhotoList, object: nil)
 
         // 写真データをAPIから取得する(おすすめ表示用)
         api.getRecommendMeals()

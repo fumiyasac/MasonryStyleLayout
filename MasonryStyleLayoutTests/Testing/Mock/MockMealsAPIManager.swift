@@ -49,6 +49,18 @@ class MockMealsAPIManager: APIManagerProtocol {
         }
     }
 
+    // おすすめの食事メニュー一覧を取得する
+    func getRecommendMeals() -> Promise<JSON> {
+        if let path = getStubFilePath(jsonFileName: "recommend") {
+            let data = try! Data(contentsOf: URL(fileURLWithPath: path))
+            return Promise { seal in
+                seal.fulfill(JSON(data))
+            }
+        } else {
+            fatalError("Invalid json format or existence of file.")
+        }
+    }
+
     // MARK: - Private Function
 
     private func getStubFilePath(jsonFileName: String) -> String? {

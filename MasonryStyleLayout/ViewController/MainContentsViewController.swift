@@ -211,9 +211,9 @@ extension MainContentsViewController: WaterfallLayoutDelegate {
 
         // 取得した画像を元に高さの調節を行う
         let targetPhoto = photoGalleryLists[indexPath.section].photos[indexPath.row]
-        if let imageURL = targetPhoto.imageUrl {
+        if let imageUrl = targetPhoto.imageUrl {
             do {
-                let data = try Data(contentsOf: imageURL)
+                let data = try Data(contentsOf: imageUrl)
                 let image = UIImage(data: data)
                 let height = image?.size.height ?? 0
                 cellHeight += height / adjustRation

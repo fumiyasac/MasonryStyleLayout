@@ -15,7 +15,28 @@ class MasonryStyleLayoutTests: XCTestCase {
 
     override func tearDown() {}
 
-    func testPhotoGalleryViewModel() {
+    // MEMO: こちらはStateがSingletonでない場合
+    func testPhotoGalleryDetailViewModel() {
+
+        // テスト対象のStateを初期化
+        let state = PhotoGalleryDetailState()
+
+        // 必要なViewModelを初期化する(APIアクセス部分はMockを利用)
+        let viewModel = PhotoGalleryDetailViewModel(notificationCenter: NotificationCenter(), state: state, api: MockMealsAPIManager.shared)
+
+        // フェッチを実行前の初期状態
+        XCTAssertNil(state.getTargetPhoto())
+        XCTAssertEqual(0, state.getRecommendPhotos().count, "PhotoEntity総数は0である")
+        
+        // 詳細データのフェッチを実行
+        fetchDetail(state: state, viewModel: viewModel, timeOutSec: 10.0)
+
+        // おすすめデータのフェッチを実行
+        fetchRecommend(state: state, viewModel: viewModel, timeOutSec: 20.0)
+    }
+
+    // MEMO: こちらはStateがSingletonである場合
+    func testPhotoGalleryListViewModel() {
 
         // 必要なViewModelを初期化する(APIアクセス部分とState部分はMockを利用)
         let viewModel = PhotoGalleryListViewModel(notificationCenter: NotificationCenter(), state: MockPhotoGalleryListState.shared, api: MockMealsAPIManager.shared)
@@ -39,6 +60,57 @@ class MasonryStyleLayoutTests: XCTestCase {
     }
     
     // MARK: - Private Function
+
+    // 詳細データのフェッチを実行
+    private func fetchDetail(state: PhotoGalleryDetailStateProtocol, viewModel: PhotoGalleryDetailViewModel, timeOutSec: TimeInterval) {
+
+        var photosForTesting: PhotoEntity? = nil
+
+        let fetchDetailRequestExpectation: XCTestExpectation? = self.expectation(description: "fetchDetailRequestExpectation")
+
+        // サブスレッドでViewModelのメソッドを実行する
+        DispatchQueue.global().async {
+
+            viewModel.fetchDetailPhotoBy(targetId: 1)
+
+            // メインスレッドでStateのデータを取得する
+            DispatchQueue.main.async {
+                photosForTesting = state.getTargetPhoto()
+                fetchDetailRequestExpectation?.fulfill()
+            }
+        }
+
+        // 引数で指定したタイムアウト時間内に処理された場合
+        waitForExpectations(timeout: timeOutSec, handler: { _ in
+            XCTAssertNotNil(photosForTesting)
+            XCTAssertEqual(1, photosForTesting?.id, "IDの値は1である")
+        })
+    }
+
+    // おすすめデータののフェッチを実行
+    private func fetchRecommend(state: PhotoGalleryDetailStateProtocol, viewModel: PhotoGalleryDetailViewModel, timeOutSec: TimeInterval) {
+
+        var photosForTesting: [PhotoEntity] = []
+
+        let fetchRecommendRequestExpectation: XCTestExpectation? = self.expectation(description: "fetchRecommendRequestExpectation")
+
+        // サブスレッドでViewModelのメソッドを実行する
+        DispatchQueue.global().async {
+
+            viewModel.fetchRecommendPhotoList()
+
+            // メインスレッドでStateのデータを取得する
+            DispatchQueue.main.async {
+                photosForTesting = state.getRecommendPhotos()
+                fetchRecommendRequestExpectation?.fulfill()
+            }
+        }
+
+        // 引数で指定したタイムアウト時間内に処理された場合
+        waitForExpectations(timeout: timeOutSec, handler: { _ in
+            XCTAssertEqual(5, photosForTesting.count, "おすすめデータの総数は5と合致する")
+        })
+    }
 
     // 1回目のフェッチを実行
     private func fetchFirst(viewModel: PhotoGalleryListViewModel, timeOutSec: TimeInterval) {

@@ -40,7 +40,7 @@ class PhotoGalleryDetailPickButtonView: CustomViewBase {
     // MARK: - Function
 
     func changeState(isPicked: Bool = false) {
-        let iconColor: UIColor = isPicked ? .red : .white
+        let iconColor: UIColor = isPicked ? UIColor(code: "#ff0000") : UIColor(code: "#ffdbe9")
         iconImageView.image = UIImage.fontAwesomeIcon(name: .heart, style: .solid, textColor: iconColor, size: iconSize)
     }
 
@@ -57,12 +57,22 @@ class PhotoGalleryDetailPickButtonView: CustomViewBase {
 
     // 画像アイコン部分の初期設定を行う
     private func setupIconImageView() {
-        let iconColor: UIColor = .white
+        let iconColor: UIColor = UIColor(code: "#ffdbe9")
         iconImageView.image = UIImage.fontAwesomeIcon(name: .heart, style: .solid, textColor: iconColor, size: iconSize)
     }
 
     // ボタンのViewに関する初期設定を行う
     private func setupPhotoGalleryDetailPickButtonView() {
+        let borderColor: CGColor = UIColor(code: "#dddddd").cgColor
+        let shadowColor: CGColor = UIColor(code: "#aaaaaa").cgColor
+        let shadowSize: CGSize = CGSize(width: 0.75, height: 1.75)
+
+        self.layer.masksToBounds = false
+        self.layer.borderColor = borderColor
+        self.layer.shadowColor = shadowColor
+        self.layer.shadowOffset = shadowSize
+        self.layer.shadowRadius = 2.5
+        self.layer.shadowOpacity = 0.33
         self.layer.cornerRadius = self.frame.width / 2
     }
 }

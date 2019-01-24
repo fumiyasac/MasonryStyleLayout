@@ -58,7 +58,6 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="250" constant="180" id="3ee-8C-o5m"/>
-                                                    <constraint firstAttribute="width" priority="250" constant="375" id="4Pg-tR-U7w"/>
                                                     <constraint firstItem="zOK-Ct-8Qt" firstAttribute="leading" secondItem="9B5-ct-Q9V" secondAttribute="leading" constant="2" id="Ftd-pL-3rY"/>
                                                     <constraint firstAttribute="trailing" secondItem="8W6-cT-gGw" secondAttribute="trailing" id="MET-aX-5Rg"/>
                                                     <constraint firstItem="8W6-cT-gGw" firstAttribute="top" secondItem="9B5-ct-Q9V" secondAttribute="top" id="MTc-OR-beM"/>
@@ -68,7 +67,6 @@
                                                     <constraint firstAttribute="bottom" secondItem="8W6-cT-gGw" secondAttribute="bottom" id="VhI-aA-ank"/>
                                                     <constraint firstAttribute="trailing" secondItem="ZxG-Fd-cUA" secondAttribute="trailing" constant="16" id="Woy-VJ-3up"/>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" id="ZDf-Bp-goD"/>
-                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" id="edJ-Iw-7VN"/>
                                                     <constraint firstItem="8W6-cT-gGw" firstAttribute="leading" secondItem="9B5-ct-Q9V" secondAttribute="leading" id="mAm-3u-GJO"/>
                                                     <constraint firstAttribute="bottom" secondItem="otB-Fv-Nka" secondAttribute="bottom" constant="16" id="yV0-Sx-M3W"/>
                                                 </constraints>
@@ -138,6 +136,7 @@
                         <outlet property="detailPhotoPageControl" destination="zOK-Ct-8Qt" id="DVc-Ok-tCR"/>
                         <outlet property="detailPickButtonView" destination="ZxG-Fd-cUA" id="iNt-Jo-1aT"/>
                         <outlet property="detailRatingView" destination="otB-Fv-Nka" id="Tma-Qv-hiC"/>
+                        <outlet property="imageSlideHeightConstraint" destination="3ee-8C-o5m" id="2gB-sD-m9o"/>
                         <outlet property="relatedCollectionView" destination="NZ3-qS-OPK" id="GHy-HZ-1Ol"/>
                         <outlet property="relatedCollectionViewHeightConstraint" destination="9X2-gc-IIo" id="bot-04-EiN"/>
                         <outlet property="relatedErrorView" destination="dPV-EN-viG" id="e4E-Ks-9UW"/>
@@ -150,16 +149,16 @@
         <!--Detail Photo Page View Controller-->
         <scene sceneID="wtP-B3-jg2">
             <objects>
-                <viewController id="4iW-MQ-qTC" customClass="DetailPhotoPageViewController" customModule="MasonryStyleLayout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailPhotoPageViewController" id="4iW-MQ-qTC" customClass="DetailPhotoPageViewController" customModule="MasonryStyleLayout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2ur-G8-Mw3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-vt-JVI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-vt-JVI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="OmU-vt-JVI" firstAttribute="leading" secondItem="2ur-G8-Mw3" secondAttribute="leading" id="3bz-Iv-ZK6"/>
                             <constraint firstAttribute="trailing" secondItem="OmU-vt-JVI" secondAttribute="trailing" id="7zv-1d-z1N"/>
@@ -179,7 +178,7 @@
         <!--Page View Controller-->
         <scene sceneID="d8h-1X-TPR">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="gbl-M5-RNW" sceneMemberID="viewController"/>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="gbl-M5-RNW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1j-t6-6hv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1706" y="-193"/>
