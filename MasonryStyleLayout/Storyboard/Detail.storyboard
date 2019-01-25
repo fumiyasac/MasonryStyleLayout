@@ -22,13 +22,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7h3-R2-Tng">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="670"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="730"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9B5-ct-Q9V">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                                 <subviews>
                                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8W6-cT-gGw">
-                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
                                                         <connections>
                                                             <segue destination="gbl-M5-RNW" kind="embed" id="kSu-IX-lZ8"/>
                                                         </connections>
@@ -39,16 +39,18 @@
                                                             <constraint firstAttribute="width" constant="80" id="F27-PC-g5w"/>
                                                             <constraint firstAttribute="height" constant="24" id="cnj-EY-2gQ"/>
                                                         </constraints>
+                                                        <color key="pageIndicatorTintColor" red="0.0" green="0.65098039220000004" blue="1" alpha="0.24738666373239437" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        <color key="currentPageIndicatorTintColor" red="0.0" green="0.65098039220000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     </pageControl>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZxG-Fd-cUA" customClass="PhotoGalleryDetailPickButtonView" customModule="MasonryStyleLayout" customModuleProvider="target">
-                                                        <rect key="frame" x="323" y="128" width="36" height="36"/>
+                                                        <rect key="frame" x="323" y="188" width="36" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="36" id="3x8-qQ-8ty"/>
                                                             <constraint firstAttribute="height" constant="36" id="ZVQ-jO-cnk"/>
                                                         </constraints>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="otB-Fv-Nka" customClass="PhotoGalleryDetailRatingView" customModule="MasonryStyleLayout" customModuleProvider="target">
-                                                        <rect key="frame" x="243" y="128" width="72" height="36"/>
+                                                        <rect key="frame" x="243" y="188" width="72" height="36"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="EuZ-Y9-52z"/>
                                                             <constraint firstAttribute="width" constant="72" id="uWS-Iy-QmX"/>
@@ -57,7 +59,7 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" priority="250" constant="180" id="3ee-8C-o5m"/>
+                                                    <constraint firstAttribute="height" priority="250" constant="240" id="3ee-8C-o5m"/>
                                                     <constraint firstItem="zOK-Ct-8Qt" firstAttribute="leading" secondItem="9B5-ct-Q9V" secondAttribute="leading" constant="2" id="Ftd-pL-3rY"/>
                                                     <constraint firstAttribute="trailing" secondItem="8W6-cT-gGw" secondAttribute="trailing" id="MET-aX-5Rg"/>
                                                     <constraint firstItem="8W6-cT-gGw" firstAttribute="top" secondItem="9B5-ct-Q9V" secondAttribute="top" id="MTc-OR-beM"/>
@@ -72,7 +74,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qgk-7G-bhL" customClass="PhotoGalleryDetailInformationView" customModule="MasonryStyleLayout" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="180" width="375" height="158"/>
+                                                <rect key="frame" x="0.0" y="240" width="375" height="158"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="250" constant="158" id="9ft-wu-2db"/>
@@ -80,14 +82,14 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTK-OR-cFy" customClass="PhotoGalleryRelatedTitleView" customModule="MasonryStyleLayout" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="338" width="375" height="44"/>
+                                                <rect key="frame" x="0.0" y="398" width="375" height="44"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="gVB-7D-mad"/>
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NZ3-qS-OPK">
-                                                <rect key="frame" x="0.0" y="382" width="375" height="128"/>
+                                                <rect key="frame" x="0.0" y="442" width="375" height="128"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="250" constant="128" id="9X2-gc-IIo"/>
@@ -102,7 +104,7 @@
                                                 <cells/>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dPV-EN-viG" customClass="PhotoGalleryRelatedErrorView" customModule="MasonryStyleLayout" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="510" width="375" height="160"/>
+                                                <rect key="frame" x="0.0" y="570" width="375" height="160"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" priority="250" constant="160" id="57V-Ud-Qks"/>
@@ -154,7 +156,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-vt-JVI">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OmU-vt-JVI">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" red="0.84313725490000002" green="0.84313725490000002" blue="0.84313725490000002" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
@@ -173,7 +175,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ut7-Ma-q6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1704.8" y="294.60269865067471"/>
+            <point key="canvasLocation" x="1705" y="321"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="d8h-1X-TPR">
@@ -181,7 +183,7 @@
                 <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="gbl-M5-RNW" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d1j-t6-6hv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1706" y="-193"/>
+            <point key="canvasLocation" x="1705" y="-166"/>
         </scene>
     </scenes>
 </document>

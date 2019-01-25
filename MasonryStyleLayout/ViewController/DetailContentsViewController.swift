@@ -147,8 +147,8 @@ final class DetailContentsViewController: UIViewController {
             targetPhotoEntity?.imageUrl,
 
             // MEMO: UIPageViewControllerを利用することで複数画像でもある程度対応できるようにする
-            //Constants.adImageUrl1,
-            //Constants.adImageUrl2,
+            Constants.adImageUrl1,
+            Constants.adImageUrl2,
         ]
 
         let _ = targetPhotosUrls.enumerated().map{
@@ -180,7 +180,7 @@ final class DetailContentsViewController: UIViewController {
         detailPhotoPageControl.isHidden = (targetPhotosUrls.count <= 1)
 
         // サムネイルの高さに合わせた画像の表示エリアを設定する
-        initializeImageSlideHeight(index: 0)
+        //initializeImageSlideHeight(index: 0)
 
         // MEMO: 表示タイプはInterfaceBuilderでスクロールを設定する
         pageViewController!.setViewControllers([photoPageViewControllers[0]], direction: .forward, animated: false, completion: nil)
