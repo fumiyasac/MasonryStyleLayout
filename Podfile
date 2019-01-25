@@ -11,7 +11,7 @@ target 'MasonryStyleLayout' do
   pod 'Alamofire'
   pod 'PromiseKit'
   pod 'SwiftyJSON'
-  pod 'RealmSwift'
+  pod 'SwiftyMarkdown'
   pod 'AlamofireImage'
   pod 'FontAwesome.swift'
 end

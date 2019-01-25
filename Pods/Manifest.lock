@@ -12,20 +12,16 @@ PODS:
     - PromiseKit/CorePromise
   - PromiseKit/UIKit (6.7.1):
     - PromiseKit/CorePromise
-  - Realm (3.13.1):
-    - Realm/Headers (= 3.13.1)
-  - Realm/Headers (3.13.1)
-  - RealmSwift (3.13.1):
-    - Realm (= 3.13.1)
   - SwiftyJSON (4.2.0)
+  - SwiftyMarkdown (0.6.0)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
   - FontAwesome.swift
   - PromiseKit
-  - RealmSwift
   - SwiftyJSON
+  - SwiftyMarkdown
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -33,19 +29,17 @@ SPEC REPOS:
     - AlamofireImage
     - FontAwesome.swift
     - PromiseKit
-    - Realm
-    - RealmSwift
     - SwiftyJSON
+    - SwiftyMarkdown
 
 SPEC CHECKSUMS:
   Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
   AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
   FontAwesome.swift: fb8637bffb9a588c7e8c753c084565b27b20a39d
   PromiseKit: ef376fb8b4e92edfeb66bd403b983eaa07fbde0c
-  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
-  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
   SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  SwiftyMarkdown: 698fe6b283dddac69747f4e08ed0d067c18e0356
 
-PODFILE CHECKSUM: 80af7ab9a3dbda06e299c1f7039220af0dc3f82c
+PODFILE CHECKSUM: 6ecc8082d6d791db0ab3a6233a77211dbe650803
 
 COCOAPODS: 1.5.3

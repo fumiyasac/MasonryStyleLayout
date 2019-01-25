@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		6962692B8CE9CF4740829139 /* Pods_MasonryStyleLayoutTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A4C14690FA320780EEB20B /* Pods_MasonryStyleLayoutTests.framework */; };
 		DE1A0D9121F0D88D004EBAF9 /* CategoryNumberType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */; };
+		DE2823B321FABA6600D1CBE3 /* GlobalTabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2823B121FABA6600D1CBE3 /* GlobalTabBar.storyboard */; };
+		DE2823B621FABA9A00D1CBE3 /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2823B421FABA9A00D1CBE3 /* Detail.storyboard */; };
+		DE2823B821FABE1200D1CBE3 /* TabBarItemsType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2823B721FABE1200D1CBE3 /* TabBarItemsType.swift */; };
+		DE2823BD21FABFCA00D1CBE3 /* Setting.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2823BB21FABFCA00D1CBE3 /* Setting.storyboard */; };
+		DE2823BF21FAC23B00D1CBE3 /* GlobaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2823BE21FAC23B00D1CBE3 /* GlobaTabBarController.swift */; };
+		DE2823C121FAC26800D1CBE3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2823C021FAC26800D1CBE3 /* SettingViewController.swift */; };
+		DE2823C321FADBE300D1CBE3 /* setting.md in Resources */ = {isa = PBXBuildFile; fileRef = DE2823C221FADBE200D1CBE3 /* setting.md */; };
 		DE57379821F1E9E6006DE44A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE57379721F1E9E6006DE44A /* UIViewControllerExtension.swift */; };
 		DE5737AF21F5B08B006DE44A /* page3.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AA21F5B08B006DE44A /* page3.json */; };
 		DE5737B021F5B08B006DE44A /* page1.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AB21F5B08B006DE44A /* page1.json */; };
@@ -18,7 +25,6 @@
 		DE5737B521F5B0E2006DE44A /* MockPhotoGalleryListState.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737B421F5B0E2006DE44A /* MockPhotoGalleryListState.swift */; };
 		DE5737B721F5B15B006DE44A /* MockMealsAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */; };
 		DE5737BB21F73405006DE44A /* DetailContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */; };
-		DE5737BD21F73482006DE44A /* Detail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE5737BC21F73481006DE44A /* Detail.storyboard */; };
 		DE5737C021F76D56006DE44A /* PhotoGalleryDetailInformationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737BF21F76D56006DE44A /* PhotoGalleryDetailInformationView.swift */; };
 		DE5737C221F76D66006DE44A /* PhotoGalleryDetailInformationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE5737C121F76D66006DE44A /* PhotoGalleryDetailInformationView.xib */; };
 		DE5737C621F81535006DE44A /* DetailPhotoPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5737C521F81535006DE44A /* DetailPhotoPageViewController.swift */; };
@@ -85,6 +91,13 @@
 		B971CF1B5CD79F18299B1A47 /* Pods-MasonryStyleLayout.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayout.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout.debug.xcconfig"; sourceTree = "<group>"; };
 		CEA5238B3B8CCEAA9E6C8ED6 /* Pods-MasonryStyleLayoutTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasonryStyleLayoutTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryNumberType.swift; sourceTree = "<group>"; };
+		DE2823B221FABA6600D1CBE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/GlobalTabBar.storyboard; sourceTree = "<group>"; };
+		DE2823B521FABA9A00D1CBE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Detail.storyboard; sourceTree = "<group>"; };
+		DE2823B721FABE1200D1CBE3 /* TabBarItemsType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemsType.swift; sourceTree = "<group>"; };
+		DE2823BC21FABFCA00D1CBE3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Setting.storyboard; sourceTree = "<group>"; };
+		DE2823BE21FAC23B00D1CBE3 /* GlobaTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobaTabBarController.swift; sourceTree = "<group>"; };
+		DE2823C021FAC26800D1CBE3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		DE2823C221FADBE200D1CBE3 /* setting.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = setting.md; sourceTree = "<group>"; };
 		DE57379721F1E9E6006DE44A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DE5737AA21F5B08B006DE44A /* page3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page3.json; sourceTree = "<group>"; };
 		DE5737AB21F5B08B006DE44A /* page1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page1.json; sourceTree = "<group>"; };
@@ -94,7 +107,6 @@
 		DE5737B421F5B0E2006DE44A /* MockPhotoGalleryListState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPhotoGalleryListState.swift; sourceTree = "<group>"; };
 		DE5737B621F5B15B006DE44A /* MockMealsAPIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMealsAPIManager.swift; sourceTree = "<group>"; };
 		DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContentsViewController.swift; sourceTree = "<group>"; };
-		DE5737BC21F73481006DE44A /* Detail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Detail.storyboard; sourceTree = "<group>"; };
 		DE5737BF21F76D56006DE44A /* PhotoGalleryDetailInformationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryDetailInformationView.swift; sourceTree = "<group>"; };
 		DE5737C121F76D66006DE44A /* PhotoGalleryDetailInformationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryDetailInformationView.xib; sourceTree = "<group>"; };
 		DE5737C521F81535006DE44A /* DetailPhotoPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoPageViewController.swift; sourceTree = "<group>"; };
@@ -192,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				DE1A0D9021F0D88D004EBAF9 /* CategoryNumberType.swift */,
+				DE2823B721FABE1200D1CBE3 /* TabBarItemsType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -348,6 +361,7 @@
 		DED117C821E2ED5300ABD919 /* MasonryStyleLayout */ = {
 			isa = PBXGroup;
 			children = (
+				DE2823C221FADBE200D1CBE3 /* setting.md */,
 				DED117D521E2ED5900ABD919 /* Info.plist */,
 				DED117C921E2ED5300ABD919 /* AppDelegate.swift */,
 				DED117D021E2ED5900ABD919 /* Assets.xcassets */,
@@ -389,7 +403,9 @@
 			children = (
 				DED117D221E2ED5900ABD919 /* LaunchScreen.storyboard */,
 				DED117CD21E2ED5300ABD919 /* Main.storyboard */,
-				DE5737BC21F73481006DE44A /* Detail.storyboard */,
+				DE2823B421FABA9A00D1CBE3 /* Detail.storyboard */,
+				DE2823B121FABA6600D1CBE3 /* GlobalTabBar.storyboard */,
+				DE2823BB21FABFCA00D1CBE3 /* Setting.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -400,6 +416,8 @@
 				DED117CB21E2ED5300ABD919 /* MainContentsViewController.swift */,
 				DE5737BA21F73405006DE44A /* DetailContentsViewController.swift */,
 				DE5737C521F81535006DE44A /* DetailPhotoPageViewController.swift */,
+				DE2823BE21FAC23B00D1CBE3 /* GlobaTabBarController.swift */,
+				DE2823C021FAC26800D1CBE3 /* SettingViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -567,6 +585,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2823B321FABA6600D1CBE3 /* GlobalTabBar.storyboard in Resources */,
 				DEFFA03921F05082006C1C1B /* PhotoGalleryHandleButtonView.xib in Resources */,
 				DE5737D321F86EE6006DE44A /* PhotoGalleryRelatedTitleView.xib in Resources */,
 				DED1180421E3551D00ABD919 /* PhotoGalleryCollectionViewCell.xib in Resources */,
@@ -575,9 +594,11 @@
 				DE5737C221F76D66006DE44A /* PhotoGalleryDetailInformationView.xib in Resources */,
 				DE5737D721F87047006DE44A /* PhotoGalleryRelatedErrorView.xib in Resources */,
 				DEFFA03021EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.xib in Resources */,
+				DE2823BD21FABFCA00D1CBE3 /* Setting.storyboard in Resources */,
 				DE5737CA21F81A7A006DE44A /* PhotoGalleryDetailRatingView.xib in Resources */,
-				DE5737BD21F73482006DE44A /* Detail.storyboard in Resources */,
+				DE2823B621FABA9A00D1CBE3 /* Detail.storyboard in Resources */,
 				DED117D121E2ED5900ABD919 /* Assets.xcassets in Resources */,
+				DE2823C321FADBE300D1CBE3 /* setting.md in Resources */,
 				DED117CF21E2ED5300ABD919 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -618,9 +639,8 @@
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
-				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyMarkdown/SwiftyMarkdown.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -630,9 +650,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyMarkdown.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -719,6 +738,7 @@
 				DEFFA03221EEEE7D006C1C1B /* WaterFallLayout.swift in Sources */,
 				DE5737C021F76D56006DE44A /* PhotoGalleryDetailInformationView.swift in Sources */,
 				DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */,
+				DE2823C121FAC26800D1CBE3 /* SettingViewController.swift in Sources */,
 				DE5737DE21F9626C006DE44A /* PhotoGalleryDetailState.swift in Sources */,
 				DE57379821F1E9E6006DE44A /* UIViewControllerExtension.swift in Sources */,
 				DED117FD21E34E7300ABD919 /* NSObjectProtocolExtension.swift in Sources */,
@@ -731,9 +751,11 @@
 				DE5737D921F87062006DE44A /* PhotoGalleryRelatedErrorView.swift in Sources */,
 				DE5737E221F9696E006DE44A /* PhotoGalleryDetailViewModel.swift in Sources */,
 				DE5737DC21F8C1B9006DE44A /* DesignFormatter.swift in Sources */,
+				DE2823BF21FAC23B00D1CBE3 /* GlobaTabBarController.swift in Sources */,
 				DE5737D521F86EF4006DE44A /* PhotoGalleryRelatedTitleView.swift in Sources */,
 				DEFFA03721F05066006C1C1B /* PhotoGalleryHandleButtonView.swift in Sources */,
 				DED117CC21E2ED5300ABD919 /* MainContentsViewController.swift in Sources */,
+				DE2823B821FABE1200D1CBE3 /* TabBarItemsType.swift in Sources */,
 				DE5737BB21F73405006DE44A /* DetailContentsViewController.swift in Sources */,
 				DED117CA21E2ED5300ABD919 /* AppDelegate.swift in Sources */,
 				DEFFA02F21EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.swift in Sources */,
@@ -778,6 +800,30 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DE2823B121FABA6600D1CBE3 /* GlobalTabBar.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE2823B221FABA6600D1CBE3 /* Base */,
+			);
+			name = GlobalTabBar.storyboard;
+			sourceTree = "<group>";
+		};
+		DE2823B421FABA9A00D1CBE3 /* Detail.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE2823B521FABA9A00D1CBE3 /* Base */,
+			);
+			name = Detail.storyboard;
+			sourceTree = "<group>";
+		};
+		DE2823BB21FABFCA00D1CBE3 /* Setting.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE2823BC21FABFCA00D1CBE3 /* Base */,
+			);
+			name = Setting.storyboard;
+			sourceTree = "<group>";
+		};
 		DED117CD21E2ED5300ABD919 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
