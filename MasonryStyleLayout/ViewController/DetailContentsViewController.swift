@@ -180,6 +180,9 @@ final class DetailContentsViewController: UIViewController {
         detailPhotoPageControl.isHidden = (targetPhotosUrls.count <= 1)
 
         // サムネイルの高さに合わせた画像の表示エリアを設定する
+        // MEMO: アスペクト比を写真表示用のUIPageViewControllerに合わせる場合は下記の対応をする
+        // 修正1. DetailPhotoPageViewControllerのUIImageViewのContentModeを「AspectFit」に修正する
+        // 修正2. 高さを合わせる「initializeImageSlideHeight(index: 0)」を実行しないようにする
         initializeImageSlideHeight(index: 0)
 
         // MEMO: 表示タイプはInterfaceBuilderでスクロールを設定する
