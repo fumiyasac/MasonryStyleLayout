@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="auv-4v-Csi">
-                                <rect key="frame" x="8" y="74" width="375" height="583"/>
+                                <rect key="frame" x="2" y="74" width="371" height="583"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -28,8 +28,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="auv-4v-Csi" firstAttribute="bottom" secondItem="L4J-9u-kmu" secondAttribute="bottom" constant="-10" id="BRX-tB-C5s"/>
-                            <constraint firstItem="auv-4v-Csi" firstAttribute="leading" secondItem="L4J-9u-kmu" secondAttribute="leading" constant="8" id="D87-gp-qoh"/>
-                            <constraint firstItem="auv-4v-Csi" firstAttribute="trailing" secondItem="L4J-9u-kmu" secondAttribute="trailing" constant="8" id="Phl-x1-txe"/>
+                            <constraint firstItem="auv-4v-Csi" firstAttribute="leading" secondItem="L4J-9u-kmu" secondAttribute="leading" constant="2" id="D87-gp-qoh"/>
+                            <constraint firstItem="L4J-9u-kmu" firstAttribute="trailing" secondItem="auv-4v-Csi" secondAttribute="trailing" constant="2" id="X9z-rF-t73"/>
                             <constraint firstItem="auv-4v-Csi" firstAttribute="top" secondItem="L4J-9u-kmu" secondAttribute="top" constant="10" id="qiw-g9-GP0"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L4J-9u-kmu"/>
