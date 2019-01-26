@@ -38,6 +38,7 @@ final class MainContentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.navigationController?.delegate = self
         setupNavigationBar()
         setupNotificationsForDataBinding()
         setupMainCollectionView()
@@ -141,6 +142,23 @@ final class MainContentsViewController: UIViewController {
     }
 }
 
+extension MainContentsViewController: UINavigationControllerDelegate {
+
+    func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+
+        let fromVCA = fromVC as? ZoomInOutTransitionProtocol
+
+        if fromVCA != nil {
+            let transition = ZoomInOutTransition()
+            transition.targetDirection = .push
+            return  transition
+        } else {
+            return nil
+        }
+        
+    }
+}
+
 // MARK: - UICollectionViewDelegate, UICollectionViewDataSource
 
 extension MainContentsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -194,6 +212,14 @@ extension MainContentsViewController: UICollectionViewDelegate, UICollectionView
         let vc = UIStoryboard(name: "Detail", bundle: nil).instantiateInitialViewController() as! DetailContentsViewController
         vc.setTargetPhoto(photo)
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+}
+
+// MARK: - ZoomInOutTransitionProtocol
+
+extension MainContentsViewController: ZoomInOutTransitionProtocol {
+    func transitionCollectionView() -> UICollectionView {
+        return mainContentsCollectionView
     }
 }
 

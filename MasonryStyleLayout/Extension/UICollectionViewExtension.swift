@@ -50,4 +50,10 @@ extension UICollectionView {
     func dequeueReusableCustomFooterView<T: UICollectionReusableView>(with cellType: T.Type, indexPath: IndexPath) -> T {
         return dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionFooter, withReuseIdentifier: T.identifier, for: indexPath) as! T
     }
+
+    //
+    func fromPageIndexPath () -> IndexPath {
+        let index: Int = Int(contentOffset.x / frame.size.width)
+        return IndexPath(row: index, section: 0)
+    }
 }

@@ -16,6 +16,7 @@
 		DE2823BF21FAC23B00D1CBE3 /* GlobaTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2823BE21FAC23B00D1CBE3 /* GlobaTabBarController.swift */; };
 		DE2823C121FAC26800D1CBE3 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2823C021FAC26800D1CBE3 /* SettingViewController.swift */; };
 		DE2823C321FADBE300D1CBE3 /* setting.md in Resources */ = {isa = PBXBuildFile; fileRef = DE2823C221FADBE200D1CBE3 /* setting.md */; };
+		DE2823C521FC155E00D1CBE3 /* ZoomInOutTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2823C421FC155E00D1CBE3 /* ZoomInOutTransition.swift */; };
 		DE57379821F1E9E6006DE44A /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE57379721F1E9E6006DE44A /* UIViewControllerExtension.swift */; };
 		DE5737AF21F5B08B006DE44A /* page3.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AA21F5B08B006DE44A /* page3.json */; };
 		DE5737B021F5B08B006DE44A /* page1.json in Resources */ = {isa = PBXBuildFile; fileRef = DE5737AB21F5B08B006DE44A /* page1.json */; };
@@ -98,6 +99,7 @@
 		DE2823BE21FAC23B00D1CBE3 /* GlobaTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobaTabBarController.swift; sourceTree = "<group>"; };
 		DE2823C021FAC26800D1CBE3 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		DE2823C221FADBE200D1CBE3 /* setting.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = setting.md; sourceTree = "<group>"; };
+		DE2823C421FC155E00D1CBE3 /* ZoomInOutTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomInOutTransition.swift; sourceTree = "<group>"; };
 		DE57379721F1E9E6006DE44A /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		DE5737AA21F5B08B006DE44A /* page3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page3.json; sourceTree = "<group>"; };
 		DE5737AB21F5B08B006DE44A /* page1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = page1.json; sourceTree = "<group>"; };
@@ -290,6 +292,7 @@
 			children = (
 				DE5737DB21F8C1B8006DE44A /* DesignFormatter.swift */,
 				DE5737E321F99C91006DE44A /* Constants.swift */,
+				DE2823C421FC155E00D1CBE3 /* ZoomInOutTransition.swift */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -751,6 +754,7 @@
 				DE5737D921F87062006DE44A /* PhotoGalleryRelatedErrorView.swift in Sources */,
 				DE5737E221F9696E006DE44A /* PhotoGalleryDetailViewModel.swift in Sources */,
 				DE5737DC21F8C1B9006DE44A /* DesignFormatter.swift in Sources */,
+				DE2823C521FC155E00D1CBE3 /* ZoomInOutTransition.swift in Sources */,
 				DE2823BF21FAC23B00D1CBE3 /* GlobaTabBarController.swift in Sources */,
 				DE5737D521F86EF4006DE44A /* PhotoGalleryRelatedTitleView.swift in Sources */,
 				DEFFA03721F05066006C1C1B /* PhotoGalleryHandleButtonView.swift in Sources */,

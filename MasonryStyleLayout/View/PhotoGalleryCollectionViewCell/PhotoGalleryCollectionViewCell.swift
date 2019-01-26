@@ -73,3 +73,15 @@ class PhotoGalleryCollectionViewCell: UICollectionViewCell {
         iconImageView.image = UIImage.fontAwesomeIcon(name: .image, style: .solid, textColor: iconColor, size: iconSize)
     }
 }
+
+// MARK: - ZoomInOutTransitionWaterfallGridViewProtocol
+
+extension PhotoGalleryCollectionViewCell: ZoomInOutTransitionWaterfallGridViewProtocol {
+
+    //
+    func snapShotForTransition() -> UIView {
+        let snapShotView = UIImageView(image: thumbnailImageView.image)
+        snapShotView.frame = thumbnailImageView.frame
+        return snapShotView
+    }
+}
