@@ -185,6 +185,14 @@ final class DetailContentsViewController: UIViewController {
         // 修正2. 高さを合わせる「initializeImageSlideHeight(index: 0)」を実行しないようにする
         initializeImageSlideHeight(index: 0)
 
+        // UIPageViewController内のUIScrollViewに対して処理をする
+        let _ = pageViewController!.view.subviews.map {
+            if let scrollView = $0 as? UIScrollView {
+                // UIPageViewControllerでスワイプの切り替えをしないようにする
+                scrollView.isScrollEnabled = (targetPhotosUrls.count > 1)
+            }
+        }
+
         // MEMO: 表示タイプはInterfaceBuilderでスクロールを設定する
         pageViewController!.setViewControllers([photoPageViewControllers[0]], direction: .forward, animated: false, completion: nil)
     }
