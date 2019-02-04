@@ -32,7 +32,6 @@ final class DetailContentsViewController: UIViewController {
     // ViewModelの初期化
     private lazy var viewModel = PhotoGalleryDetailViewModel(notificationCenter: notificationCenter, state: state, api: api)
 
-    @IBOutlet weak private var detailPhotoCountainer: UIView!
     @IBOutlet weak private var detailPhotoPageControl: UIPageControl!
 
     @IBOutlet weak private var detailPickButtonView: PhotoGalleryDetailPickButtonView!

@@ -134,7 +134,6 @@
                     </view>
                     <connections>
                         <outlet property="detailInformationView" destination="qgk-7G-bhL" id="sHf-IF-q3X"/>
-                        <outlet property="detailPhotoCountainer" destination="8W6-cT-gGw" id="4dz-G6-IVY"/>
                         <outlet property="detailPhotoPageControl" destination="zOK-Ct-8Qt" id="DVc-Ok-tCR"/>
                         <outlet property="detailPickButtonView" destination="ZxG-Fd-cUA" id="iNt-Jo-1aT"/>
                         <outlet property="detailRatingView" destination="otB-Fv-Nka" id="Tma-Qv-hiC"/>
