@@ -120,7 +120,7 @@ final class DetailContentsViewController: UIViewController {
         relatedCollectionView.delegate = self
         
         // 表示用のUICollectionViewの初期高さ制約を0にしておく
-        relatedCollectionViewHeightConstraint.constant = relatedCollectionView.contentSize.height
+        relatedCollectionViewHeightConstraint.constant = 0
         
         // エラー発生時のViewに関する初期設定
         relatedErrorView.isHidden = true
