@@ -18,7 +18,7 @@ extension UIViewController {
         // NavigationControllerのフォントに関するデザイン調整を行う
         var attributes = [NSAttributedString.Key : Any]()
         attributes[NSAttributedString.Key.font] = UIFont(name: "HiraKakuProN-W6", size: 14.0)
-        attributes[NSAttributedString.Key.foregroundColor]  = UIColor.white
+        attributes[NSAttributedString.Key.foregroundColor] = UIColor.white
 
         // NavigationControllerの配色に関するデザイン調整を行う
         self.navigationController!.navigationBar.isTranslucent = false

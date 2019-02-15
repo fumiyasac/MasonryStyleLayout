@@ -219,12 +219,12 @@ final class DetailContentsViewController: UIViewController {
         var height: CGFloat = 180.0
         if let imageUrl = targetPhotosUrls[index] {
             do {
+                // MEMO: 写真データから縦横比を計算して表示を合わせる
                 let data = try Data(contentsOf: imageUrl)
                 let image = UIImage(data: data)
                 if let image = image {
                     let ratio = UIScreen.main.bounds.width / image.size.width
                     height = image.size.height * ratio
-                    
                 }
             } catch let error {
                 print(error.localizedDescription)
