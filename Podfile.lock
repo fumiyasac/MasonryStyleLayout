@@ -1,19 +1,20 @@
 PODS:
-  - Alamofire (4.8.0)
-  - AlamofireImage (3.5.0):
+  - Alamofire (4.9.0)
+  - AlamofireImage (3.5.2):
     - Alamofire (~> 4.8)
-  - FontAwesome.swift (1.4.8)
-  - PromiseKit (6.7.1):
-    - PromiseKit/CorePromise (= 6.7.1)
-    - PromiseKit/Foundation (= 6.7.1)
-    - PromiseKit/UIKit (= 6.7.1)
-  - PromiseKit/CorePromise (6.7.1)
-  - PromiseKit/Foundation (6.7.1):
+  - FontAwesome.swift (1.8.2)
+  - PromiseKit (6.11.0):
+    - PromiseKit/CorePromise (= 6.11.0)
+    - PromiseKit/Foundation (= 6.11.0)
+    - PromiseKit/UIKit (= 6.11.0)
+  - PromiseKit/CorePromise (6.11.0)
+  - PromiseKit/Foundation (6.11.0):
     - PromiseKit/CorePromise
-  - PromiseKit/UIKit (6.7.1):
+  - PromiseKit/UIKit (6.11.0):
     - PromiseKit/CorePromise
-  - SwiftyJSON (4.2.0)
+  - SwiftyJSON (5.0.0)
   - SwiftyMarkdown (0.6.0)
+  - WaterfallLayout (0.2)
 
 DEPENDENCIES:
   - Alamofire
@@ -22,6 +23,7 @@ DEPENDENCIES:
   - PromiseKit
   - SwiftyJSON
   - SwiftyMarkdown
+  - WaterfallLayout
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -31,15 +33,17 @@ SPEC REPOS:
     - PromiseKit
     - SwiftyJSON
     - SwiftyMarkdown
+    - WaterfallLayout
 
 SPEC CHECKSUMS:
-  Alamofire: 3ec537f71edc9804815215393ae2b1a8ea33a844
-  AlamofireImage: 1aea346f4dda2f6c67622fa5a89fcbb80d79cc16
-  FontAwesome.swift: fb8637bffb9a588c7e8c753c084565b27b20a39d
-  PromiseKit: ef376fb8b4e92edfeb66bd403b983eaa07fbde0c
-  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  Alamofire: afc3e7c6db61476cb45cdd23fed06bad03bbc321
+  AlamofireImage: 63cfe3baf1370be6c498149687cf6db3e3b00999
+  FontAwesome.swift: 7938d6a03113ff3f39001bde7f50be8a0903d605
+  PromiseKit: e4863d06976e7dee5e41c04fc7371c16b3600292
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   SwiftyMarkdown: 698fe6b283dddac69747f4e08ed0d067c18e0356
+  WaterfallLayout: 030e04b041e5c6c47ae2c1eaa685c60289fab0b1
 
-PODFILE CHECKSUM: 6ecc8082d6d791db0ab3a6233a77211dbe650803
+PODFILE CHECKSUM: 68bcbf9012f7c8a1c00a059752be6a618f45a64e
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.7.5

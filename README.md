@@ -23,9 +23,6 @@ __2-1. iOSアプリ:__
 - [PromiseKit](https://github.com/mxcl/PromiseKit)
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 - [SwiftyMarkdown](https://github.com/SimonFairbairn/SwiftyMarkdown)
-
-下記はUI構築の際に利用したライブラリになります。こちらのライブラリはCocoaPodsを利用せずにコードを手動で追加＆一部の処理にForkを加えています。
-
 - [WaterFallLayout](https://github.com/sgr-ksmt/WaterfallLayout)
 
 __2-2. Mockサーバー:__
@@ -36,7 +33,10 @@ APIのモックサーバー構築用に利用しました。node.jsを利用し�
 
 ### 3. Mockサーバーの起動
 
-モック用サーバーを準備していますので実行する際は下記のようにお願いします。
+iOSシミュレータでAPI通信(GET)Mock用サーバーを準備していますので、実行する際は下記のような手順でお願いします。
+
+1. 実機検証はできません。
+2. 事前にnode.jsのインストールが必要になります。
 
 __3-1. 必要なパッケージのインストール:__
 
@@ -51,6 +51,19 @@ __3-2. サーバー起動:__
 $ node index.js
 ```
 
-### その他資料に関して
+### 4. その他
 
-※ 現在鋭意作成中でございますので、しばらくお待ち頂ければ幸いです。
+ひととおりこのような形までプロトタイプを作成するまでにあたり、まとめているメモや図解を掲載しています。
+
+__4-1. UI実装をする前にまとめておくメモ:__
+
+![4-1図解](https://github.com/fumiyasac/MasonryStyleLayout/blob/master/images/ui_practice.jpg)
+
+__4-2. このサンプルで実践したアーキテクチャ:__
+
+![4-2図解](https://github.com/fumiyasac/MasonryStyleLayout/blob/master/images/architecture_practice.png)
+
+__4-3. 改善を施した方が良い気がする部分:__
+
++ せっかくMVVMにしているのに一時的な値を保持するためだけにStateを準備しているのはあまりよくないのでは？
++ UICollectionViewのレイアウト構築用にAPIレスポンス内に「画像の縦横比」または「幅・高さ」のキーを返せばもっと楽ができる＆ライブラリとも合わせやすいのでは？

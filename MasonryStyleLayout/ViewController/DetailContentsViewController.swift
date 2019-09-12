@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WaterfallLayout
 
 final class DetailContentsViewController: UIViewController {
 
@@ -261,7 +262,7 @@ extension DetailContentsViewController: UIPageViewControllerDelegate, UIPageView
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
 
         // インデックスを取得する
-        guard let index = photoPageViewControllers.index(of: viewController) else {
+        guard let index = photoPageViewControllers.firstIndex(of: viewController) else {
             return nil
         }
 
@@ -277,7 +278,7 @@ extension DetailContentsViewController: UIPageViewControllerDelegate, UIPageView
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
 
         // インデックスを取得する
-        guard let index = photoPageViewControllers.index(of: viewController) else {
+        guard let index = photoPageViewControllers.firstIndex(of: viewController) else {
             return nil
         }
 

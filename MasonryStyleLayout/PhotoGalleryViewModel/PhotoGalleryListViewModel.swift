@@ -76,7 +76,6 @@ final class PhotoGalleryListViewModel {
     // MARK: - Private Function
 
     // MEMO: 取得できたJSONを元にStateへ格納するためのデータを生成する
-
     private func parseJSON(_ json: JSON) -> (mealPhotoList: [PhotoEntity], hasNextPage: Bool) {
         let hasNextPage   = json[0]["has_next_page"].boolValue
         let mealPhotoList = json[0]["meals"].map{ PhotoEntity($1) }

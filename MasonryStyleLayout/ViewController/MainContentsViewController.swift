@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WaterfallLayout
 
 // MEMO: RxSwiftを利用しないMVVMパターンの利用をする
 // → 書籍「iOS設計パターン入門 第6章 MVVM」で紹介されていたコードを参考に構築しました。

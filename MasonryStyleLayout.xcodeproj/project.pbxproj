@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -59,7 +59,6 @@
 		DEFFA02B21EDC2F3006C1C1B /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFA02A21EDC2F3006C1C1B /* UIColorExtension.swift */; };
 		DEFFA02F21EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFA02D21EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.swift */; };
 		DEFFA03021EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFFA02E21EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.xib */; };
-		DEFFA03221EEEE7D006C1C1B /* WaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFA03121EEEE7D006C1C1B /* WaterFallLayout.swift */; };
 		DEFFA03521F04FA0006C1C1B /* CustomViewBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFA03421F04FA0006C1C1B /* CustomViewBase.swift */; };
 		DEFFA03721F05066006C1C1B /* PhotoGalleryHandleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEFFA03621F05066006C1C1B /* PhotoGalleryHandleButtonView.swift */; };
 		DEFFA03921F05082006C1C1B /* PhotoGalleryHandleButtonView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEFFA03821F05082006C1C1B /* PhotoGalleryHandleButtonView.xib */; };
@@ -147,7 +146,6 @@
 		DEFFA02A21EDC2F3006C1C1B /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		DEFFA02D21EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryCollectionHeaderView.swift; sourceTree = "<group>"; };
 		DEFFA02E21EEE2A6006C1C1B /* PhotoGalleryCollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryCollectionHeaderView.xib; sourceTree = "<group>"; };
-		DEFFA03121EEEE7D006C1C1B /* WaterFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallLayout.swift; sourceTree = "<group>"; };
 		DEFFA03421F04FA0006C1C1B /* CustomViewBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewBase.swift; sourceTree = "<group>"; };
 		DEFFA03621F05066006C1C1B /* PhotoGalleryHandleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryHandleButtonView.swift; sourceTree = "<group>"; };
 		DEFFA03821F05082006C1C1B /* PhotoGalleryHandleButtonView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGalleryHandleButtonView.xib; sourceTree = "<group>"; };
@@ -302,14 +300,6 @@
 			path = APIManager;
 			sourceTree = "<group>";
 		};
-		DED072A921E710490073963C /* WaterFallLayout */ = {
-			isa = PBXGroup;
-			children = (
-				DEFFA03121EEEE7D006C1C1B /* WaterFallLayout.swift */,
-			);
-			path = WaterFallLayout;
-			sourceTree = "<group>";
-		};
 		DED072AC21E74D0D0073963C /* PhotoGalleryViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +424,6 @@
 				DEFFA03321F04E72006C1C1B /* PhotoGalleryHandleButtonView */,
 				DE5737D121F86EB2006DE44A /* PhotoGalleryRelatedErrorView */,
 				DE5737D021F86E94006DE44A /* PhotoGalleryRelatedTitleView */,
-				DED072A921E710490073963C /* WaterFallLayout */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -549,13 +538,16 @@
 				TargetAttributes = {
 					DED117C521E2ED5200ABD919 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 					};
 					DED117D921E2ED5900ABD919 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = DED117C521E2ED5200ABD919;
 					};
 					DED117E421E2ED5900ABD919 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1030;
 						TestTargetID = DED117C521E2ED5200ABD919;
 					};
 				};
@@ -632,30 +624,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
-				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyMarkdown/SwiftyMarkdown.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyMarkdown.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MasonryStyleLayout/Pods-MasonryStyleLayout-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		14BB993BDDEEF403E4798765 /* [CP] Embed Pods Frameworks */ = {
@@ -664,22 +641,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MasonryStyleLayoutTests/Pods-MasonryStyleLayoutTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6B370375C5D5D069D2392424 /* [CP] Check Pods Manifest.lock */ = {
@@ -735,7 +705,6 @@
 			files = (
 				DED072B221E85F640073963C /* PhotoGalleryListState.swift in Sources */,
 				DED072A821E4B70E0073963C /* MealsAPIManager.swift in Sources */,
-				DEFFA03221EEEE7D006C1C1B /* WaterFallLayout.swift in Sources */,
 				DE5737C021F76D56006DE44A /* PhotoGalleryDetailInformationView.swift in Sources */,
 				DED117FF21E352EC00ABD919 /* UICollectionViewExtension.swift in Sources */,
 				DE2823C121FAC26800D1CBE3 /* SettingViewController.swift in Sources */,
@@ -973,7 +942,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MasonryStyleLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -992,7 +961,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MasonryStyleLayout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1013,7 +982,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MasonryStyleLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MasonryStyleLayout.app/MasonryStyleLayout";
 			};
@@ -1035,7 +1004,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MasonryStyleLayoutTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MasonryStyleLayout.app/MasonryStyleLayout";
 			};
@@ -1055,7 +1024,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MasonryStyleLayoutUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MasonryStyleLayout;
 			};
@@ -1075,7 +1044,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.just1factory.MasonryStyleLayoutUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = MasonryStyleLayout;
 			};

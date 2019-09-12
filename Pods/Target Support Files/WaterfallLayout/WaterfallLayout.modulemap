@@ -1,0 +1,6 @@
+framework module WaterfallLayout {
+  umbrella header "WaterfallLayout-umbrella.h"
+
+  export *
+  module * { export * }
+}
