@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import WaterfallLayout
 
 final class DetailContentsViewController: UIViewController {
 

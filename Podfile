@@ -12,7 +12,6 @@ target 'MasonryStyleLayout' do
   pod 'SwiftyMarkdown'
   pod 'AlamofireImage'
   pod 'FontAwesome.swift'
-  pod 'WaterfallLayout'
 end
 
 # MEMO: テストコードで利用する
@@ -28,7 +27,7 @@ end
 # MEMO: 一部ライブラリのバージョンを4.2で固定する
 post_install do |installer|
   installer.pods_project.targets.each do |target|
-    if ['WaterfallLayout','WaterfallLayout'].include? target.name
+    if ['SwiftyMarkdown'].include? target.name
       target.build_configurations.each do |config|
         config.build_settings['SWIFT_VERSION'] = '4.2'
       end

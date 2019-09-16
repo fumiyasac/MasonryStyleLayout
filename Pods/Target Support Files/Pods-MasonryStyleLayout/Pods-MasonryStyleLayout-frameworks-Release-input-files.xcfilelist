@@ -5,4 +5,3 @@ ${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework
 ${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyMarkdown/SwiftyMarkdown.framework
-${BUILT_PRODUCTS_DIR}/WaterfallLayout/WaterfallLayout.framework

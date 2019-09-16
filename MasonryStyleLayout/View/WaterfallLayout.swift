@@ -155,10 +155,20 @@ public class WaterfallLayout: UICollectionViewLayout {
     }
 
     public override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
-        return newBounds.width != (collectionView?.bounds ?? .zero).width
+        // 2019/09/16: Modified by fumiyasac
+        // MEMO: 強制的に常時trueにしない場合に読み込み完了時に次のコンテンツが表示されなかったのでやむなくこの形にしています。
+        return true
     }
 
     override public func shouldInvalidateLayout(forPreferredLayoutAttributes preferredAttributes: UICollectionViewLayoutAttributes, withOriginalAttributes originalAttributes: UICollectionViewLayoutAttributes) -> Bool {
+        if let delegate = delegate {
+            // For .waterfall mode, disabling shouldInvalidateLayout will prevent infinite loop to occur due to unstable constraints.
+            // e.g. UIImageView causes AL constraints to be updated due to content hugging that causes infinite UI update.
+            if case .waterfall = delegate.collectionViewLayout(for: originalAttributes.indexPath.section) {
+                return false
+            }
+        }
+
         return cachedItemSizes[originalAttributes.indexPath] != preferredAttributes.size
     }
 
@@ -176,7 +186,7 @@ public class WaterfallLayout: UICollectionViewLayout {
          let indexPaths: [IndexPath] = (originalAttributes.indexPath.item..<collectionView.numberOfItems(inSection: originalAttributes.indexPath.section))
             .map { [originalAttributes.indexPath.section, $0] }
          context.invalidateItems(at: indexPaths)
- */
+         */
         _ = context.invalidateEverything
         return context
     }
@@ -358,4 +368,3 @@ public class WaterfallLayout: UICollectionViewLayout {
         return collectionView.flatMap { delegate?.collectionView($0, layout: self, estimatedSizeForItemAt: indexPath) } ?? estimatedItemSize
     }
 }
-

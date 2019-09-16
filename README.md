@@ -23,6 +23,9 @@ __2-1. iOSアプリ:__
 - [PromiseKit](https://github.com/mxcl/PromiseKit)
 - [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
 - [SwiftyMarkdown](https://github.com/SimonFairbairn/SwiftyMarkdown)
+
+処理の関係で一部Forkして利用しているもの（ライブラリは手動で導入しました）
+
 - [WaterFallLayout](https://github.com/sgr-ksmt/WaterfallLayout)
 
 __2-2. Mockサーバー:__
