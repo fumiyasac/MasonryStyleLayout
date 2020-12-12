@@ -22,7 +22,7 @@ final class DetailPhotoPageViewController: UIViewController {
     func setPhoto(_ url: URL?) {
         if let imageUrl = url {
             // MEMO: サーバーサイドで画像リサイズ処理を施したサムネイルを表示する
-            photoImageView.af_setImage(withURL: imageUrl)
+            photoImageView.af.setImage(withURL: imageUrl)
         }
     }
 }

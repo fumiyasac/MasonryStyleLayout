@@ -30,10 +30,10 @@ class PhotoGalleryCollectionViewCell: UICollectionViewCell {
     // MARK: - Function
 
     func setCellDisplayData(_ photo: PhotoEntity) {
-        
+
         // 画像データを表示する
         if let photoImageURL = photo.imageUrl {
-            thumbnailImageView.af_setImage(withURL: photoImageURL)
+            thumbnailImageView.af.setImage(withURL: photoImageURL)
         }
 
         // タイトル表示用ラベルの装飾を適用して表示する

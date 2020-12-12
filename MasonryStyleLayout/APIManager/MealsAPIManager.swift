@@ -24,10 +24,10 @@ class MealsAPIManager: APIManagerProtocol {
 
     // MEMO: 仮のUserAgent
     private static let bundleIdentifier = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as! String
-    private static let requestHeader = [
-        "User-Agent" : bundleIdentifier,
-        "Content-Type" : "application/x-www-from-urlencoded"
-    ]
+    private static let requestHeader = HTTPHeaders(
+        arrayLiteral: HTTPHeader(name: "User-Agent", value: bundleIdentifier),
+        HTTPHeader(name: "Content-Type", value: "application/x-www-from-urlencoded")
+    )
 
     // MARK: - Singleton Instance
 
@@ -101,8 +101,10 @@ class MealsAPIManager: APIManagerProtocol {
     private class func handleMealsApiRequest(url: String, params: [String : Any] = [:]) -> Promise<JSON> {
 
         return Promise { seal in
-            Alamofire.request(url, method: .get, parameters: params, encoding: JSONEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
+            AF.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
 
+                dump(response)
+                
                 switch response.result {
 
                 // 成功時の処理(表示に必要な部分だけを抜き出して返す)

@@ -30,9 +30,16 @@ extension UIViewController {
 
     // 戻るボタンの「戻る」テキストを削除した状態にするメソッド
     func removeBackButtonText() {
-        let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        // MEMO: NavigationBarのBackボタン長押し時にタイトルを表示するためにiOS14.0以上とそれ以外での条件分岐をする
+        // 参考: https://speakerdeck.com/daichikuwa0618/towards-ios-14-in-yumemi-dot-inc
         self.navigationController!.navigationBar.tintColor = UIColor.white
-        self.navigationItem.backBarButtonItem = backButtonItem
+        if #available(iOS 14.0, *) {
+            self.navigationItem.backButtonDisplayMode = .minimal
+            self.navigationItem.backButtonTitle = self.navigationItem.title
+        } else {
+            let backButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            self.navigationItem.backBarButtonItem = backButtonItem
+        }
     }
 }
 
