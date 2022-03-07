@@ -101,10 +101,9 @@ class MealsAPIManager: APIManagerProtocol {
     private class func handleMealsApiRequest(url: String, params: [String : Any] = [:]) -> Promise<JSON> {
 
         return Promise { seal in
-            AF.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: MealsAPIManager.requestHeader).validate().responseJSON { response in
+            AF.request(url, method: .get, parameters: params, encoding: URLEncoding.default, headers: MealsAPIManager.requestHeader)
+                .responseData { response in
 
-                dump(response)
-                
                 switch response.result {
 
                 // 成功時の処理(表示に必要な部分だけを抜き出して返す)
