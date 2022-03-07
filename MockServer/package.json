@@ -7,11 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "4.17.21"
   },
   "author": "fumiyasac(Fumiya Sakai)",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "^0.16.3"
+    "json-server": "^0.17.0"
   }
 }
